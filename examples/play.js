@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import Element from 'main/index.js';
+import HongHuUi from 'main/index.js';
 import App from './play/index.vue';
 import 'packages/theme-chalk/src/index.scss';
 
-Vue.use(Element);
+Vue.use(HongHuUi);
 
 new Vue({ // eslint-disable-line
   render: h => h(App)

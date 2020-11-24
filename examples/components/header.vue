@@ -91,17 +91,24 @@
       display: none;
     }
 
+    .logo-title{
+      font-size: 30px;
+      font-weight: bold;
+      color: #409EFF;
+      width: 100px;
+    }
+
     .nav-item {
       margin: 0;
       float: left;
       list-style: none;
       position: relative;
       cursor: pointer;
-    
+
       &.nav-algolia-search {
         cursor: default;
       }
-    
+
       &.lang-item,
       &:last-child {
         cursor: default;
@@ -195,7 +202,7 @@
       }
     }
   }
-  
+
   .nav-dropdown-list {
     width: auto;
   }
@@ -215,7 +222,7 @@
         &:last-child {
           margin-left: 10px;
         }
-         
+
         a {
           padding: 0 5px;
         }
@@ -239,11 +246,11 @@
 
         &.lang-item {
           height: 100%;
-         
+
           .nav-lang {
             display: flex;
             align-items: center;
-            
+
             span {
               padding-bottom: 0;
             }
@@ -272,14 +279,7 @@
         <h1><router-link :to="`/${ lang }`">
           <!-- logo -->
           <slot>
-            <img
-              src="../assets/images/element-logo.svg"
-              alt="element-logo"
-              class="nav-logo">
-            <img
-              src="../assets/images/element-logo-small.svg"
-              alt="element-logo"
-              class="nav-logo-small">
+            <span class="logo-title">鸿鹄</span>
           </slot>
 
         </router-link></h1>
@@ -301,7 +301,7 @@
               :to="`/${ lang }/component`">{{ langConfig.components }}
             </router-link>
           </li>
-          <li 
+          <li
             class="nav-item nav-item-theme"
           >
             <router-link
@@ -434,7 +434,7 @@
           ga('send', 'event', 'DocView', 'Ele', 'Outer');
           console.error(err);
         });
-  
+
       const testInnerImg = new Image();
       testInnerImg.onload = () => {
         this.$isEle = true;
