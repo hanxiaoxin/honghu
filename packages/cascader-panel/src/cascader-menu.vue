@@ -1,5 +1,5 @@
 <script>
-import ElScrollbar from 'element-ui/packages/scrollbar';
+import HuScrollbar from 'element-ui/packages/scrollbar';
 import CascaderNode from './cascader-node.vue';
 import Locale from 'element-ui/src/mixins/locale';
 import { generateId } from 'element-ui/src/utils/util';
@@ -12,7 +12,7 @@ export default {
   inject: ['panel'],
 
   components: {
-    ElScrollbar,
+    HuScrollbar,
     CascaderNode
   },
 
@@ -119,7 +119,7 @@ export default {
     }
 
     return (
-      <el-scrollbar
+      <hu-scrollbar
         tag="ul"
         role="menu"
         id={ menuId }
@@ -131,7 +131,7 @@ export default {
         }}
         { ...events }>
         { isEmpty ? this.renderEmptyText(h) : this.renderNodeList(h) }
-      </el-scrollbar>
+      </hu-scrollbar>
     );
   }
 };

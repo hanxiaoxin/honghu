@@ -59,7 +59,7 @@ router.afterEach(route => {
       return;
     }
   }
-  document.title = 'Element';
+  document.title = 'HongHu';
   ga('send', 'event', 'PageView', route.name);
 });
 

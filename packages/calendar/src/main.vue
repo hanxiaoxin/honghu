@@ -7,26 +7,26 @@
       <div
         class="el-calendar__button-group"
         v-if="validatedRange.length === 0">
-        <el-button-group>
-          <el-button
+        <hu-button-group>
+          <hu-button
             type="plain"
             size="mini"
             @click="selectDate('prev-month')">
             {{ t('el.datepicker.prevMonth') }}
-          </el-button>
-          <el-button
+          </hu-button>
+          <hu-button
             type="plain"
             size="mini"
             @click="selectDate('today')">
             {{ t('el.datepicker.today') }}
-          </el-button>
-          <el-button
+          </hu-button>
+          <hu-button
             type="plain"
             size="mini"
             @click="selectDate('next-month')">
             {{ t('el.datepicker.nextMonth') }}
-          </el-button>
-        </el-button-group>
+          </hu-button>
+        </hu-button-group>
       </div>
     </div>
     <div
@@ -59,7 +59,7 @@
 <script>
 import Locale from 'element-ui/src/mixins/locale';
 import fecha from 'element-ui/src/utils/date';
-import ElButton from 'element-ui/packages/button';
+import HuButton from 'element-ui/packages/button';
 import ElButtonGroup from 'element-ui/packages/button-group';
 import DateTable from './date-table';
 import { validateRangeInOneMonth } from 'element-ui/src/utils/date-util';
@@ -75,7 +75,7 @@ export default {
 
   components: {
     DateTable,
-    ElButton,
+    HuButton,
     ElButtonGroup
   },
 

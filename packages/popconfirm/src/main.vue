@@ -15,20 +15,20 @@
       {{title}}
     </p>
     <div class="el-popconfirm__action">
-      <el-button 
-        size="mini" 
-        :type="cancelButtonType" 
+      <hu-button
+        size="mini"
+        :type="cancelButtonType"
         @click="cancel"
       >
         {{cancelButtonText}}
-      </el-button>
-      <el-button 
-        size="mini" 
-        :type="confirmButtonType" 
+      </hu-button>
+      <hu-button
+        size="mini"
+        :type="confirmButtonType"
         @click="confirm"
       >
         {{confirmButtonText}}
-      </el-button>
+      </hu-button>
     </div>
   </div>
   <slot name="reference" slot="reference"></slot>
@@ -37,7 +37,7 @@
 
 <script>
 import ElPopover from 'element-ui/packages/popover';
-import ElButton from 'element-ui/packages/button';
+import HuButton from 'element-ui/packages/button';
 import {t} from 'element-ui/src/locale';
 
 export default {
@@ -77,7 +77,7 @@ export default {
   },
   components: {
     ElPopover,
-    ElButton
+    HuButton
   },
   data() {
     return {

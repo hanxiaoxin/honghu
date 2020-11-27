@@ -51,7 +51,7 @@
           </div>
         </div>
         <div class="el-message-box__btns">
-          <el-button
+          <hu-button
             :loading="cancelButtonLoading"
             :class="[ cancelButtonClasses ]"
             v-if="showCancelButton"
@@ -60,8 +60,8 @@
             @click.native="handleAction('cancel')"
             @keydown.enter="handleAction('cancel')">
             {{ cancelButtonText || t('el.messagebox.cancel') }}
-          </el-button>
-          <el-button
+          </hu-button>
+          <hu-button
             :loading="confirmButtonLoading"
             ref="confirm"
             :class="[ confirmButtonClasses ]"
@@ -71,7 +71,7 @@
             @click.native="handleAction('confirm')"
             @keydown.enter="handleAction('confirm')">
             {{ confirmButtonText || t('el.messagebox.confirm') }}
-          </el-button>
+          </hu-button>
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@
   import Popup from 'element-ui/src/utils/popup';
   import Locale from 'element-ui/src/mixins/locale';
   import ElInput from 'element-ui/packages/input';
-  import ElButton from 'element-ui/packages/button';
+  import HuButton from 'element-ui/packages/button';
   import { addClass, removeClass } from 'element-ui/src/utils/dom';
   import { t } from 'element-ui/src/locale';
   import Dialog from 'element-ui/src/utils/aria-dialog';
@@ -130,7 +130,7 @@
 
     components: {
       ElInput,
-      ElButton
+      HuButton
     },
 
     computed: {
@@ -140,7 +140,7 @@
       },
 
       confirmButtonClasses() {
-        return `el-button--primary ${ this.confirmButtonClass }`;
+        return `hu-button--primary ${ this.confirmButtonClass }`;
       },
       cancelButtonClasses() {
         return `${ this.cancelButtonClass }`;
@@ -226,7 +226,7 @@
         return true;
       },
       getFirstFocus() {
-        const btn = this.$el.querySelector('.el-message-box__btns .el-button');
+        const btn = this.$el.querySelector('.el-message-box__btns .hu-button');
         const title = this.$el.querySelector('.el-message-box__btns .el-message-box__title');
         return btn || title;
       },

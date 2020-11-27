@@ -19,25 +19,25 @@
             size="mini">
           </el-input>
         </span>
-        <!-- <el-button
+        <!-- <hu-button
           size="mini"
           type="text"
           class="el-color-dropdown__link-btn"
           @click="$emit('clear')">
           {{ t('el.colorpicker.clear') }}
-        </el-button> -->
-        <el-button
+        </hu-button> -->
+        <hu-button
           plain
           size="mini"
           type="primary"
           class="el-color-dropdown__btn"
           @click="confirmValue">
           {{ t('el.colorpicker.confirm') }}
-        </el-button>
+        </hu-button>
       </div>
-      <color-list 
-        v-if="colorList && colorList.length > 0" 
-        :color="color" 
+      <color-list
+        v-if="colorList && colorList.length > 0"
+        :color="color"
         :colors="colorList"
         @select=onColorListSelect
       ></color-list>
@@ -54,7 +54,7 @@
   import Popper from 'element-ui/src/utils/vue-popper';
   import Locale from 'element-ui/src/mixins/locale';
   import ElInput from 'element-ui/packages/input';
-  import ElButton from 'element-ui/packages/button';
+  import HuButton from 'element-ui/packages/button';
 
   export default {
     name: 'el-color-picker-dropdown',
@@ -66,7 +66,7 @@
       HueSlider,
       AlphaSlider,
       ElInput,
-      ElButton,
+      HuButton,
       Predefine,
       ColorList
     },

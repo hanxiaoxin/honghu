@@ -1,7 +1,7 @@
 <template>
   <div class="el-time-spinner" :class="{ 'has-seconds': showSeconds }">
     <template v-if="!arrowControl">
-      <el-scrollbar
+      <hu-scrollbar
         @mouseenter.native="emitSelectRange('hours')"
         @mousemove.native="adjustCurrentSpinner('hours')"
         class="el-time-spinner__wrapper"
@@ -16,8 +16,8 @@
           class="el-time-spinner__item"
           :key="hour"
           :class="{ 'active': hour === hours, 'disabled': disabled }">{{ ('0' + (amPmMode ? (hour % 12 || 12) : hour )).slice(-2) }}{{ amPm(hour) }}</li>
-      </el-scrollbar>
-      <el-scrollbar
+      </hu-scrollbar>
+      <hu-scrollbar
         @mouseenter.native="emitSelectRange('minutes')"
         @mousemove.native="adjustCurrentSpinner('minutes')"
         class="el-time-spinner__wrapper"
@@ -32,8 +32,8 @@
           :key="key"
           class="el-time-spinner__item"
           :class="{ 'active': key === minutes, disabled: !enabled }">{{ ('0' + key).slice(-2) }}</li>
-      </el-scrollbar>
-      <el-scrollbar
+      </hu-scrollbar>
+      <hu-scrollbar
         v-show="showSeconds"
         @mouseenter.native="emitSelectRange('seconds')"
         @mousemove.native="adjustCurrentSpinner('seconds')"
@@ -49,7 +49,7 @@
           class="el-time-spinner__item"
           :class="{ 'active': key === seconds }"
           :key="key">{{ ('0' + key).slice(-2) }}</li>
-      </el-scrollbar>
+      </hu-scrollbar>
     </template>
     <template v-if="arrowControl">
       <div
@@ -102,11 +102,11 @@
 
 <script type="text/babel">
   import { getRangeHours, getRangeMinutes, modifyTime } from 'element-ui/src/utils/date-util';
-  import ElScrollbar from 'element-ui/packages/scrollbar';
+  import HuScrollbar from 'element-ui/packages/scrollbar';
   import RepeatClick from 'element-ui/src/directives/repeat-click';
 
   export default {
-    components: { ElScrollbar },
+    components: { HuScrollbar },
 
     directives: {
       repeatClick: RepeatClick

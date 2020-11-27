@@ -6,20 +6,20 @@
       :style="{ width: width + 'px' }"
       :class="popperClass"
       class="el-picker-panel time-select el-popper">
-      <el-scrollbar noresize wrap-class="el-picker-panel__content">
+      <hu-scrollbar noresize wrap-class="el-picker-panel__content">
         <div class="time-select-item"
           v-for="item in items"
           :class="{ selected: value === item.value, disabled: item.disabled, default: item.value === defaultValue }"
           :disabled="item.disabled"
           :key="item.value"
           @click="handleClick(item)">{{ item.value }}</div>
-      </el-scrollbar>
+      </hu-scrollbar>
     </div>
   </transition>
 </template>
 
 <script type="text/babel">
-  import ElScrollbar from 'element-ui/packages/scrollbar';
+  import HuScrollbar from 'element-ui/packages/scrollbar';
   import scrollIntoView from 'element-ui/src/utils/scroll-into-view';
 
   const parseTime = function(time) {
@@ -74,7 +74,7 @@
   };
 
   export default {
-    components: { ElScrollbar },
+    components: { HuScrollbar },
 
     watch: {
       value(val) {

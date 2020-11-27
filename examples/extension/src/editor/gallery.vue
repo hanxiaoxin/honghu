@@ -1,5 +1,5 @@
 <template>
-  <div :style="{ 
+  <div :style="{
     height: `${height}px`,
       width: `${width}px`
       }"
@@ -22,8 +22,8 @@
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="closeCopyForm">取消</el-button>
-        <el-button type="primary" @click="copyToUser">确认</el-button>
+        <hu-button @click="closeCopyForm">取消</hu-button>
+        <hu-button type="primary" @click="copyToUser">确认</hu-button>
       </div>
     </el-dialog>
   </div>

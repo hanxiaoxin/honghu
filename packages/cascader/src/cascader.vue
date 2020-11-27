@@ -80,7 +80,7 @@
           :render-label="$scopedSlots.default"
           @expand-change="handleExpandChange"
           @close="toggleDropDownVisible(false)"></el-cascader-panel>
-        <el-scrollbar
+        <hu-scrollbar
           ref="suggestionPanel"
           v-if="filterable"
           v-show="filtering"
@@ -105,7 +105,7 @@
           <slot v-else name="empty">
             <li class="el-cascader__empty-text">{{ t('el.cascader.noMatch') }}</li>
           </slot>
-        </el-scrollbar>
+        </hu-scrollbar>
       </div>
     </transition>
   </div>
@@ -119,7 +119,7 @@ import Locale from 'element-ui/src/mixins/locale';
 import Migrating from 'element-ui/src/mixins/migrating';
 import ElInput from 'element-ui/packages/input';
 import ElTag from 'element-ui/packages/tag';
-import ElScrollbar from 'element-ui/packages/scrollbar';
+import HuScrollbar from 'element-ui/packages/scrollbar';
 import ElCascaderPanel from 'element-ui/packages/cascader-panel';
 import AriaUtils from 'element-ui/src/utils/aria-utils';
 import { t } from 'element-ui/src/locale';
@@ -191,7 +191,7 @@ export default {
   components: {
     ElInput,
     ElTag,
-    ElScrollbar,
+    HuScrollbar,
     ElCascaderPanel
   },
 

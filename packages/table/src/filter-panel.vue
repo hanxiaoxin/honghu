@@ -6,14 +6,14 @@
       v-clickoutside="handleOutsideClick"
       v-show="showPopper">
       <div class="el-table-filter__content">
-        <el-scrollbar wrap-class="el-table-filter__wrap">
+        <hu-scrollbar wrap-class="el-table-filter__wrap">
           <el-checkbox-group class="el-table-filter__checkbox-group" v-model="filteredValue">
             <el-checkbox
               v-for="filter in filters"
               :key="filter.value"
               :label="filter.value">{{ filter.text }}</el-checkbox>
           </el-checkbox-group>
-        </el-scrollbar>
+        </hu-scrollbar>
       </div>
       <div class="el-table-filter__bottom">
         <button @click="handleConfirm"
@@ -50,7 +50,7 @@
   import Dropdown from './dropdown';
   import ElCheckbox from 'element-ui/packages/checkbox';
   import ElCheckboxGroup from 'element-ui/packages/checkbox-group';
-  import ElScrollbar from 'element-ui/packages/scrollbar';
+  import HuScrollbar from 'element-ui/packages/scrollbar';
 
   export default {
     name: 'ElTableFilterPanel',
@@ -64,7 +64,7 @@
     components: {
       ElCheckbox,
       ElCheckboxGroup,
-      ElScrollbar
+      HuScrollbar
     },
 
     props: {

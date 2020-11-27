@@ -2,7 +2,7 @@
   import Clickoutside from 'element-ui/src/utils/clickoutside';
   import Emitter from 'element-ui/src/mixins/emitter';
   import Migrating from 'element-ui/src/mixins/migrating';
-  import ElButton from 'element-ui/packages/button';
+  import HuButton from 'element-ui/packages/button';
   import ElButtonGroup from 'element-ui/packages/button-group';
   import { generateId } from 'element-ui/src/utils/util';
 
@@ -16,7 +16,7 @@
     directives: { Clickoutside },
 
     components: {
-      ElButton,
+      HuButton,
       ElButtonGroup
     },
 
@@ -259,14 +259,14 @@
 
       let triggerElm = !splitButton
         ? this.$slots.default
-        : (<el-button-group>
-          <el-button type={type} size={dropdownSize} nativeOn-click={handleMainButtonClick}>
+        : (<hu-button-group>
+          <hu-button type={type} size={dropdownSize} nativeOn-click={handleMainButtonClick}>
             {this.$slots.default}
-          </el-button>
-          <el-button ref="trigger" type={type} size={dropdownSize} class="el-dropdown__caret-button">
+          </hu-button>
+          <hu-button ref="trigger" type={type} size={dropdownSize} class="el-dropdown__caret-button">
             <i class="el-dropdown__icon el-icon-arrow-down"></i>
-          </el-button>
-        </el-button-group>);
+          </hu-button>
+        </hu-button-group>);
 
       return (
         <div class="el-dropdown" v-clickoutside={hide}>

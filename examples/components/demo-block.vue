@@ -28,14 +28,14 @@
       </transition>
       <el-tooltip effect="dark" :content="langConfig['tooltip-text']" placement="right">
         <transition name="text-slide">
-          <el-button
+          <hu-button
             v-show="hovering || isExpanded"
             size="small"
             type="text"
             class="control-button"
             @click.stop="goCodepen">
             {{ langConfig['button-text'] }}
-          </el-button>
+          </hu-button>
         </transition>
       </el-tooltip>
     </div>
@@ -131,7 +131,7 @@
       color: #d3dce6;
       cursor: pointer;
       position: relative;
-    
+
       &.is-fixed {
         position: fixed;
         bottom: 0;
@@ -166,7 +166,7 @@
         opacity: 0;
         transform: translateX(10px);
       }
-      
+
       .control-button {
         line-height: 26px;
         position: absolute;
@@ -182,9 +182,9 @@
 
 <script type="text/babel">
   import compoLang from '../i18n/component.json';
-  import Element from 'main/index.js';
+  import HongHu from 'main/index.js';
   import { stripScript, stripStyle, stripTemplate } from '../util';
-  const { version } = Element;
+  const { version } = HongHu;
 
   export default {
     data() {
@@ -294,7 +294,7 @@
           return;
         }
         setTimeout(() => {
-          this.scrollParent = document.querySelector('.page-component__scroll > .el-scrollbar__wrap');
+          this.scrollParent = document.querySelector('.page-component__scroll > .hu-scrollbar__wrap');
           this.scrollParent && this.scrollParent.addEventListener('scroll', this.scrollHandler);
           this.scrollHandler();
         }, 200);

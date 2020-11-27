@@ -1,26 +1,26 @@
 {
   "zh-CN": {
-    "home": "Element - 网站快速成型工具",
-    "guide": "指南 | Element",
-    "component": "组件 | Element",
-    "resource": "资源 | Element"
+    "home": "HongHu - 网站快速成型工具",
+    "guide": "指南 | HongHu",
+    "component": "组件 | HongHu",
+    "resource": "资源 | HongHu"
   },
   "en-US": {
-    "home": "Element - A Desktop UI Toolkit for Web",
-    "guide": "Guide | Element",
-    "component": "Component | Element",
-    "resource": "Resource | Element"
+    "home": "HongHu - A Desktop UI Toolkit for Web",
+    "guide": "Guide | HongHu",
+    "component": "Component | HongHu",
+    "resource": "Resource | HongHu"
   },
   "es": {
-    "home": "Element - Un kit de interfaz de usuario para la web",
-    "guide": "Guía | Element",
-    "component": "Componentes | Element",
-    "resource": "Recursos | Element"
+    "home": "HongHu - Un kit de interfaz de usuario para la web",
+    "guide": "Guía | HongHu",
+    "component": "Componentes | HongHu",
+    "resource": "Recursos | HongHu"
   },
   "fr-FR": {
-    "home": "Element - Un kit de composants d'interface pour le web",
-    "guide": "Guide | Element",
-    "component": "Composants | Element",
-    "resource": "Ressources | Element"
+    "home": "HongHu - Un kit de composants d'interface pour le web",
+    "guide": "Guide | HongHu",
+    "component": "Composants | HongHu",
+    "resource": "Ressources | HongHu"
   }
 }

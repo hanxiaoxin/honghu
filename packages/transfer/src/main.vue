@@ -11,22 +11,22 @@
       <slot name="left-footer"></slot>
     </transfer-panel>
     <div class="el-transfer__buttons">
-      <el-button
+      <hu-button
         type="primary"
         :class="['el-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
         @click.native="addToLeft"
         :disabled="rightChecked.length === 0">
         <i class="el-icon-arrow-left"></i>
         <span v-if="buttonTexts[0] !== undefined">{{ buttonTexts[0] }}</span>
-      </el-button>
-      <el-button
+      </hu-button>
+      <hu-button
         type="primary"
         :class="['el-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
         @click.native="addToRight"
         :disabled="leftChecked.length === 0">
         <span v-if="buttonTexts[1] !== undefined">{{ buttonTexts[1] }}</span>
         <i class="el-icon-arrow-right"></i>
-      </el-button>
+      </hu-button>
     </div>
     <transfer-panel
       v-bind="$props"
@@ -42,7 +42,7 @@
 </template>
 
 <script>
-  import ElButton from 'element-ui/packages/button';
+  import HuButton from 'element-ui/packages/button';
   import Emitter from 'element-ui/src/mixins/emitter';
   import Locale from 'element-ui/src/mixins/locale';
   import TransferPanel from './transfer-panel.vue';
@@ -55,7 +55,7 @@
 
     components: {
       TransferPanel,
-      ElButton
+      HuButton
     },
 
     props: {
@@ -136,7 +136,7 @@
         const key = this.props.key;
         return this.data.reduce((o, cur) => (o[cur[key]] = cur) && o, {});
       },
-  
+
       sourceData() {
         return this.data.filter(item => this.value.indexOf(item[this.props.key]) === -1);
       },

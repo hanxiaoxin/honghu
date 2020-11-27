@@ -6,24 +6,24 @@
       :class="{ 'is-loading': !parent.hideLoading && parent.loading }"
       :style="{ width: dropdownWidth }"
       role="region">
-      <el-scrollbar
+      <hu-scrollbar
         tag="ul"
         wrap-class="el-autocomplete-suggestion__wrap"
         view-class="el-autocomplete-suggestion__list">
         <li v-if="!parent.hideLoading && parent.loading"><i class="el-icon-loading"></i></li>
         <slot v-else>
         </slot>
-      </el-scrollbar>
+      </hu-scrollbar>
     </div>
   </transition>
 </template>
 <script>
   import Popper from 'element-ui/src/utils/vue-popper';
   import Emitter from 'element-ui/src/mixins/emitter';
-  import ElScrollbar from 'element-ui/packages/scrollbar';
+  import HuScrollbar from 'element-ui/packages/scrollbar';
 
   export default {
-    components: { ElScrollbar },
+    components: { HuScrollbar },
     mixins: [Popper, Emitter],
 
     componentName: 'ElAutocompleteSuggestions',

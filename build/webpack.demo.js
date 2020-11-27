@@ -11,13 +11,12 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const config = require('./config');
 
 const isProd = process.env.NODE_ENV === 'production';
-const isPlay = !!process.env.PLAY_ENV;
 
 const webpackConfig = {
   mode: process.env.NODE_ENV,
   entry: isProd ? {
     docs: './examples/entry.js'
-  } : (isPlay ? './examples/play.js' : './examples/entry.js'),
+  } : './examples/entry.js',
   output: {
     path: path.resolve(process.cwd(), './examples/honghu/'),
     publicPath: process.env.CI_ENV || '',

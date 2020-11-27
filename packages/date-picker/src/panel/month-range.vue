@@ -89,7 +89,7 @@
   import Locale from 'element-ui/src/mixins/locale';
   import MonthTable from '../basic/month-table';
   import ElInput from 'element-ui/packages/input';
-  import ElButton from 'element-ui/packages/button';
+  import HuButton from 'element-ui/packages/button';
 
   const calcDefaultValue = (defaultValue) => {
     if (Array.isArray(defaultValue)) {
@@ -284,6 +284,6 @@
       }
     },
 
-    components: { MonthTable, ElInput, ElButton }
+    components: { MonthTable, ElInput, HuButton }
   };
 </script>

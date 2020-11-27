@@ -1,8 +1,8 @@
-import ElButton from './src/button';
+import HuButton from './src/button';
 
 /* istanbul ignore next */
-ElButton.install = function(Vue) {
-  Vue.component(ElButton.name, ElButton);
+HuButton.install = function(Vue) {
+  Vue.component(HuButton.name, HuButton);
 };
 
-export default ElButton;
+export default HuButton;
