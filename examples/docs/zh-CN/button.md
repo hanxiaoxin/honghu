@@ -9,7 +9,7 @@
 
 ```html
 <el-row>
-  <hu-button>默认按钮111</hu-button>
+  <hu-button>默认按钮</hu-button>
   <hu-button type="primary">主要按钮</hu-button>
   <hu-button type="success">成功按钮</hu-button>
   <hu-button type="info">信息按钮</hu-button>
@@ -111,9 +111,9 @@
   <hu-button type="primary">下一页<i class="el-icon-arrow-right el-icon--right"></i></hu-button>
 </hu-button-group>
 <hu-button-group>
-  <hu-button type="primary" icon="el-icon-edit"></hu-button>
-  <hu-button type="primary" icon="el-icon-share"></hu-button>
-  <hu-button type="primary" icon="el-icon-delete"></hu-button>
+  <hu-button type="primary" icon="hu-icon-edit"></hu-button>
+  <hu-button type="primary" icon="hu-icon-share"></hu-button>
+  <hu-button type="primary" icon="hu-icon-delete"></hu-button>
 </hu-button-group>
 ```
 :::
@@ -137,10 +137,16 @@ Button 组件提供除了默认值以外的三种尺寸，可以在不同场景�
 
 ```html
 <el-row>
-  <hu-button>默认按钮</hu-button>
-  <hu-button size="medium">中等按钮</hu-button>
-  <hu-button size="small">小型按钮</hu-button>
-  <hu-button size="mini">超小按钮</hu-button>
+  <hu-button>创建</hu-button>
+  <hu-button size="medium">创建</hu-button>
+  <hu-button size="small">创建</hu-button>
+  <hu-button size="mini">创建</hu-button>
+</el-row>
+<el-row>
+    <hu-button type="primary">创建</hu-button>
+    <hu-button size="medium" type="primary">创建</hu-button>
+    <hu-button size="small" type="primary">创建</hu-button>
+    <hu-button size="mini" type="primary">创建</hu-button>
 </el-row>
 <el-row>
   <hu-button round>默认按钮</hu-button>

@@ -1,8 +1,8 @@
 <template>
   <label
-    class="el-checkbox-button"
+    class="hu-checkbox-button"
       :class="[
-        size ? 'el-checkbox-button--' + size : '',
+        size ? 'hu-checkbox-button--' + size : '',
         { 'is-disabled': isDisabled },
         { 'is-checked': isChecked },
         { 'is-focus': focus },
@@ -13,7 +13,7 @@
     >
     <input
       v-if="trueLabel || falseLabel"
-      class="el-checkbox-button__original"
+      class="hu-checkbox-button__original"
       type="checkbox"
       :name="name"
       :disabled="isDisabled"
@@ -25,7 +25,7 @@
       @blur="focus = false">
     <input
       v-else
-      class="el-checkbox-button__original"
+      class="hu-checkbox-button__original"
       type="checkbox"
       :name="name"
       :disabled="isDisabled"
@@ -35,7 +35,7 @@
       @focus="focus = true"
       @blur="focus = false">
 
-    <span class="el-checkbox-button__inner"
+    <span class="hu-checkbox-button__inner"
       v-if="$slots.default || label"
       :style="isChecked ? activeStyle : null">
       <slot>{{label}}</slot>
@@ -47,7 +47,7 @@
   import Emitter from 'element-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElCheckboxButton',
+    name: 'HuCheckboxButton',
 
     mixins: [Emitter],
 
@@ -97,7 +97,7 @@
               (this.isLimitExceeded = true));
 
             this.isLimitExceeded === false &&
-            this.dispatch('ElCheckboxGroup', 'input', [val]);
+            this.dispatch('HuCheckboxGroup', 'input', [val]);
           } else if (this.value !== undefined) {
             this.$emit('input', val);
           } else {
@@ -119,7 +119,7 @@
       _checkboxGroup() {
         let parent = this.$parent;
         while (parent) {
-          if (parent.$options.componentName !== 'ElCheckboxGroup') {
+          if (parent.$options.componentName !== 'HuCheckboxGroup') {
             parent = parent.$parent;
           } else {
             return parent;

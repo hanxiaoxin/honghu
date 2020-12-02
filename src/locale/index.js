@@ -7,6 +7,7 @@ const format = Format(Vue);
 let lang = defaultLang;
 let merged = false;
 let i18nHandler = function() {
+  // $t is vue-i18n plugin design， element has made a compatibility
   const vuei18n = Object.getPrototypeOf(this || Vue).$t;
   if (typeof vuei18n === 'function' && !!Vue.locale) {
     if (!merged) {

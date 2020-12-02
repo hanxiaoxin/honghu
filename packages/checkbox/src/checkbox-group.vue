@@ -2,9 +2,9 @@
   import Emitter from 'element-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElCheckboxGroup',
+    name: 'HuCheckboxGroup',
 
-    componentName: 'ElCheckboxGroup',
+    componentName: 'HuCheckboxGroup',
 
     mixins: [Emitter],
 
@@ -42,7 +42,7 @@
 </script>
 
 <template>
-  <div class="el-checkbox-group" role="group" aria-label="checkbox-group">
+  <div class="hu-checkbox-group" role="group" aria-label="checkbox-group">
     <slot></slot>
   </div>
 </template>

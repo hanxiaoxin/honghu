@@ -1,8 +1,8 @@
 <template>
   <label
-    class="el-radio-button"
+    class="hu-radio-button"
     :class="[
-      size ? 'el-radio-button--' + size : '',
+      size ? 'hu-radio-button--' + size : '',
       { 'is-active': value === label },
       { 'is-disabled': isDisabled },
       { 'is-focus': focus }
@@ -14,7 +14,7 @@
     @keydown.space.stop.prevent="value = isDisabled ? value : label"
   >
     <input
-      class="el-radio-button__orig-radio"
+      class="hu-radio-button__orig-radio"
       :value="label"
       type="radio"
       v-model="value"
@@ -26,7 +26,7 @@
       @blur="focus = false"
     >
     <span
-      class="el-radio-button__inner"
+      class="hu-radio-button__inner"
       :style="value === label ? activeStyle : null"
       @keydown.stop>
       <slot></slot>
@@ -38,7 +38,7 @@
   import Emitter from 'element-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElRadioButton',
+    name: 'HuRadioButton',
 
     mixins: [Emitter],
 
@@ -73,7 +73,7 @@
       _radioGroup() {
         let parent = this.$parent;
         while (parent) {
-          if (parent.$options.componentName !== 'ElRadioGroup') {
+          if (parent.$options.componentName !== 'HuRadioGroup') {
             parent = parent.$parent;
           } else {
             return parent;
@@ -106,7 +106,7 @@
     methods: {
       handleChange() {
         this.$nextTick(() => {
-          this.dispatch('ElRadioGroup', 'handleChange', this.value);
+          this.dispatch('HuRadioGroup', 'handleChange', this.value);
         });
       }
     }

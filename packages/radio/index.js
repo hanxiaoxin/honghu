@@ -1,8 +1,8 @@
-import Radio from './src/radio';
+import HuRadio from './src/radio';
 
 /* istanbul ignore next */
-Radio.install = function(Vue) {
-  Vue.component(Radio.name, Radio);
+HuRadio.install = function(Vue) {
+  Vue.component(HuRadio.name, HuRadio);
 };
 
-export default Radio;
+export default HuRadio;

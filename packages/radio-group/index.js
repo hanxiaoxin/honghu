@@ -1,8 +1,8 @@
-import RadioGroup from '../radio/src/radio-group.vue';
+import HuRadioGroup from '../radio/src/radio-group.vue';
 
 /* istanbul ignore next */
-RadioGroup.install = function(Vue) {
-  Vue.component(RadioGroup.name, RadioGroup);
+HuRadioGroup.install = function(Vue) {
+  Vue.component(HuRadioGroup.name, HuRadioGroup);
 };
 
-export default RadioGroup;
+export default HuRadioGroup;

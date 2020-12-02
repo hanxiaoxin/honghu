@@ -1,8 +1,8 @@
-import ElButtonGroup from '../button/src/button-group';
+import HuButtonGroup from '../button/src/button-group';
 
 /* istanbul ignore next */
-ElButtonGroup.install = function(Vue) {
-  Vue.component(ElButtonGroup.name, ElButtonGroup);
+HuButtonGroup.install = function(Vue) {
+  Vue.component(HuButtonGroup.name, HuButtonGroup);
 };
 
-export default ElButtonGroup;
+export default HuButtonGroup;

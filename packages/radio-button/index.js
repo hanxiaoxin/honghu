@@ -1,8 +1,8 @@
-import RadioButton from '../radio/src/radio-button.vue';
+import HuRadioButton from '../radio/src/radio-button.vue';
 
 /* istanbul ignore next */
-RadioButton.install = function(Vue) {
-  Vue.component(RadioButton.name, RadioButton);
+HuRadioButton.install = function(Vue) {
+  Vue.component(HuRadioButton.name, HuRadioButton);
 };
 
-export default RadioButton;
+export default HuRadioButton;

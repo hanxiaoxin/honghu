@@ -1,7 +1,7 @@
 <template>
   <component
     :is="_elTag"
-    class="el-radio-group"
+    class="hu-radio-group"
     role="radiogroup"
     @keydown="handleKeydown"
   >
@@ -18,9 +18,9 @@
     DOWN: 40
   });
   export default {
-    name: 'ElRadioGroup',
+    name: 'HuRadioGroup',
 
-    componentName: 'ElRadioGroup',
+    componentName: 'HuRadioGroup',
 
     inject: {
       elFormItem: {
