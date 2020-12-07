@@ -1,8 +1,8 @@
-import ElTabs from './src/tabs';
+import HuTabs from './src/tabs';
 
 /* istanbul ignore next */
-ElTabs.install = function(Vue) {
-  Vue.component(ElTabs.name, ElTabs);
+HuTabs.install = function(Vue) {
+  Vue.component(HuTabs.name, HuTabs);
 };
 
-export default ElTabs;
+export default HuTabs;

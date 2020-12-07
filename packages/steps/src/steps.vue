@@ -1,19 +1,19 @@
 <template>
   <div
-    class="el-steps"
+    class="hu-steps"
     :class="[
-       !simple && 'el-steps--' + direction,
-       simple && 'el-steps--simple'
+       !simple && 'hu-steps--' + direction,
+       simple && 'hu-steps--simple'
      ]">
       <slot></slot>
   </div>
 </template>
 
 <script>
-import Migrating from 'element-ui/src/mixins/migrating';
+import Migrating from 'honghu-ui/src/mixins/migrating';
 
 export default {
-  name: 'ElSteps',
+  name: 'HuSteps',
 
   mixins: [Migrating],
 

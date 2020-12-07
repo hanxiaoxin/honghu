@@ -27,8 +27,10 @@
     width: 100%;
 
     @include when(process) {
-      color: $--color-text-primary;
-      border-color: $--color-text-primary;
+     /* color: $--color-text-primary;
+      border-color: $--color-text-primary;*/
+      color: $--color-primary;
+      border-color: $--color-primary;
     }
 
     @include when(wait) {
@@ -37,8 +39,8 @@
     }
 
     @include when(success) {
-      color: $--color-success;
-      border-color: $--color-success;
+      color: $--color-primary;
+      border-color: $--color-primary;
     }
 
     @include when(error) {
@@ -47,8 +49,8 @@
     }
 
     @include when(finish) {
-      color: $--color-primary;
-      border-color: $--color-primary;
+      color: $--color-success;
+      border-color: $--color-success;
     }
   }
 
@@ -84,7 +86,7 @@
     line-height: 1;
     color: inherit;
 
-    &[class*=el-icon]:not(.is-status) {
+    &[class*=hu-icon]:not(.is-status) {
       font-size: 25px;
       font-weight: normal;
     }
@@ -123,7 +125,8 @@
 
     @include when(process) {
       font-weight: bold;
-      color: $--color-text-primary;
+      //color: $--color-text-primary;
+      color: $--color-primary;
     }
 
     @include when(wait) {
@@ -131,7 +134,7 @@
     }
 
     @include when(success) {
-      color: $--color-success;
+      color: $--color-primary;
     }
 
     @include when(error) {
@@ -139,7 +142,7 @@
     }
 
     @include when(finish) {
-      color: $--color-primary;
+      color: $--color-success;
     }
   }
 
@@ -151,7 +154,8 @@
     font-weight: normal;
 
     @include when(process) {
-      color: $--color-text-primary;
+      //color: $--color-text-primary;
+      color: $--color-primary;
     }
 
     @include when(wait) {
@@ -159,7 +163,7 @@
     }
 
     @include when(success) {
-      color: $--color-success;
+      color: $--color-primary;
     }
 
     @include when(error) {
@@ -167,7 +171,7 @@
     }
 
     @include when(finish) {
-      color: $--color-primary;
+      color: $--color-success;
     }
   }
 
@@ -253,7 +257,7 @@
     }
 
     @include e(icon-inner) {
-      &[class*=el-icon]:not(.is-status) {
+      &[class*=hu-icon]:not(.is-status) {
         font-size: 18px;
       }
 

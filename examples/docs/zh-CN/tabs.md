@@ -10,18 +10,18 @@
 
 ```html
 <template>
-  <el-tabs v-model="activeName" @tab-click="handleClick">
-    <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-    <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-    <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-    <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
-  </el-tabs>
+  <hu-tabs v-model="activeName" @tab-click="handleClick">
+    <hu-tab-pane label="用户管理" name="用户管理">用户管理</hu-tab-pane>
+    <hu-tab-pane label="配置管理" name="配置管理">配置管理</hu-tab-pane>
+    <hu-tab-pane label="角色管理" name="角色管理">角色管理</hu-tab-pane>
+    <hu-tab-pane label="定时任务补偿" name="定时任务补偿">定时任务补偿</hu-tab-pane>
+  </hu-tabs>
 </template>
 <script>
   export default {
     data() {
       return {
-        activeName: 'second'
+        activeName: '用户管理'
       };
     },
     methods: {
@@ -42,12 +42,12 @@
 
 ```html
 <template>
-  <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-    <el-tab-pane label="用户管理" name="first">用户管理</el-tab-pane>
-    <el-tab-pane label="配置管理" name="second">配置管理</el-tab-pane>
-    <el-tab-pane label="角色管理" name="third">角色管理</el-tab-pane>
-    <el-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</el-tab-pane>
-  </el-tabs>
+  <hu-tabs v-model="activeName" type="card" @tab-click="handleClick">
+    <hu-tab-pane label="用户管理" name="first">用户管理</hu-tab-pane>
+    <hu-tab-pane label="配置管理" name="second">配置管理</hu-tab-pane>
+    <hu-tab-pane label="角色管理" name="third">角色管理</hu-tab-pane>
+    <hu-tab-pane label="定时任务补偿" name="fourth">定时任务补偿</hu-tab-pane>
+  </hu-tabs>
 </template>
 <script>
   export default {
@@ -72,12 +72,12 @@
 
 :::demo 将`type`设置为`border-card`。
 ```html
-<el-tabs type="border-card">
-  <el-tab-pane label="用户管理">用户管理</el-tab-pane>
-  <el-tab-pane label="配置管理">配置管理</el-tab-pane>
-  <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-  <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-</el-tabs>
+<hu-tabs type="border-card">
+  <hu-tab-pane label="用户管理">用户管理</hu-tab-pane>
+  <hu-tab-pane label="配置管理">配置管理</hu-tab-pane>
+  <hu-tab-pane label="角色管理">角色管理</hu-tab-pane>
+  <hu-tab-pane label="定时任务补偿">定时任务补偿</hu-tab-pane>
+</hu-tabs>
 ```
 :::
 
@@ -89,19 +89,19 @@
 
 ```html
 <template>
-  <el-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
-    <el-radio-button label="top">top</el-radio-button>
-    <el-radio-button label="right">right</el-radio-button>
-    <el-radio-button label="bottom">bottom</el-radio-button>
-    <el-radio-button label="left">left</el-radio-button>
-  </el-radio-group>
+  <hu-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
+    <hu-radio-button label="top">top</hu-radio-button>
+    <hu-radio-button label="right">right</hu-radio-button>
+    <hu-radio-button label="bottom">bottom</hu-radio-button>
+    <hu-radio-button label="left">left</hu-radio-button>
+  </hu-radio-group>
 
-  <el-tabs :tab-position="tabPosition" style="height: 200px;">
-    <el-tab-pane label="用户管理">用户管理</el-tab-pane>
-    <el-tab-pane label="配置管理">配置管理</el-tab-pane>
-    <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-    <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-  </el-tabs>
+  <hu-tabs :tab-position="tabPosition" style="height: 200px;">
+    <hu-tab-pane label="用户管理">用户管理</hu-tab-pane>
+    <hu-tab-pane label="配置管理">配置管理</hu-tab-pane>
+    <hu-tab-pane label="角色管理">角色管理</hu-tab-pane>
+    <hu-tab-pane label="定时任务补偿">定时任务补偿</hu-tab-pane>
+  </hu-tabs>
 </template>
 <script>
   export default {
@@ -121,15 +121,15 @@
 
 :::demo
 ```html
-<el-tabs type="border-card">
-  <el-tab-pane>
-    <span slot="label"><i class="el-icon-date"></i> 我的行程</span>
+<hu-tabs type="border-card">
+  <hu-tab-pane>
+    <span slot="label"><i class="hu-icon-date"></i> 我的行程</span>
     我的行程
-  </el-tab-pane>
-  <el-tab-pane label="消息中心">消息中心</el-tab-pane>
-  <el-tab-pane label="角色管理">角色管理</el-tab-pane>
-  <el-tab-pane label="定时任务补偿">定时任务补偿</el-tab-pane>
-</el-tabs>
+  </hu-tab-pane>
+  <hu-tab-pane label="消息中心">消息中心</hu-tab-pane>
+  <hu-tab-pane label="角色管理">角色管理</hu-tab-pane>
+  <hu-tab-pane label="定时任务补偿">定时任务补偿</hu-tab-pane>
+</hu-tabs>
 ```
 :::
 
@@ -139,16 +139,16 @@
 
 :::demo
 ```html
-<el-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
-  <el-tab-pane
+<hu-tabs v-model="editableTabsValue" type="card" editable @edit="handleTabsEdit">
+  <hu-tab-pane
     :key="item.name"
     v-for="(item, index) in editableTabs"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </el-tab-pane>
-</el-tabs>
+  </hu-tab-pane>
+</hu-tabs>
 <script>
   export default {
     data() {
@@ -206,23 +206,23 @@
 :::demo
 ```html
 <div style="margin-bottom: 20px;">
-  <el-button
+  <hu-button
     size="small"
     @click="addTab(editableTabsValue)"
   >
     add tab
-  </el-button>
+  </hu-button>
 </div>
-<el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
-  <el-tab-pane
+<hu-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
+  <hu-tab-pane
     v-for="(item, index) in editableTabs"
     :key="item.name"
     :label="item.title"
     :name="item.name"
   >
     {{item.content}}
-  </el-tab-pane>
-</el-tabs>
+  </hu-tab-pane>
+</hu-tabs>
 <script>
   export default {
     data() {
