@@ -11,49 +11,49 @@
 ```html
 <div class="box">
   <div class="top">
-    <el-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">
-      <el-button>上左</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Top Center 提示文字" placement="top">
-      <el-button>上边</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Top Right 提示文字" placement="top-end">
-      <el-button>上右</el-button>
-    </el-tooltip>
+    <hu-tooltip class="item" effect="dark" content="Top Left 提示文字" placement="top-start">
+      <hu-button>上左</hu-button>
+    </hu-tooltip>
+    <hu-tooltip class="item" effect="dark" content="Top Center 提示文字" placement="top">
+      <hu-button>上边</hu-button>
+    </hu-tooltip>
+    <hu-tooltip class="item" effect="dark" content="Top Right 提示文字" placement="top-end">
+      <hu-button>上右</hu-button>
+    </hu-tooltip>
   </div>
   <div class="left">
-    <el-tooltip class="item" effect="dark" content="Left Top 提示文字" placement="left-start">
-      <el-button>左上</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Left Center 提示文字" placement="left">
-      <el-button>左边</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Left Bottom 提示文字" placement="left-end">
-      <el-button>左下</el-button>
-    </el-tooltip>
+    <hu-tooltip class="item" effect="dark" content="Left Top 提示文字" placement="left-start">
+      <hu-button>左上</hu-button>
+    </hu-tooltip>
+    <hu-tooltip class="item" effect="dark" content="Left Center 提示文字" placement="left">
+      <hu-button>左边</hu-button>
+    </hu-tooltip>
+    <hu-tooltip class="item" effect="dark" content="Left Bottom 提示文字" placement="left-end">
+      <hu-button>左下</hu-button>
+    </hu-tooltip>
   </div>
 
   <div class="right">
-    <el-tooltip class="item" effect="dark" content="Right Top 提示文字" placement="right-start">
-      <el-button>右上</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Right Center 提示文字" placement="right">
-      <el-button>右边</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Right Bottom 提示文字" placement="right-end">
-      <el-button>右下</el-button>
-    </el-tooltip>
+    <hu-tooltip class="item" effect="dark" content="Right Top 提示文字" placement="right-start">
+      <hu-button>右上</hu-button>
+    </hu-tooltip>
+    <hu-tooltip class="item" effect="dark" content="Right Center 提示文字" placement="right">
+      <hu-button>右边</hu-button>
+    </hu-tooltip>
+    <hu-tooltip class="item" effect="dark" content="Right Bottom 提示文字" placement="right-end">
+      <hu-button>右下</hu-button>
+    </hu-tooltip>
   </div>
   <div class="bottom">
-    <el-tooltip class="item" effect="dark" content="Bottom Left 提示文字" placement="bottom-start">
-      <el-button>下左</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Bottom Center 提示文字" placement="bottom">
-      <el-button>下边</el-button>
-    </el-tooltip>
-    <el-tooltip class="item" effect="dark" content="Bottom Right 提示文字" placement="bottom-end">
-      <el-button>下右</el-button>
-    </el-tooltip>
+    <hu-tooltip class="item" effect="dark" content="Bottom Left 提示文字" placement="bottom-start">
+      <hu-button>下左</hu-button>
+    </hu-tooltip>
+    <hu-tooltip class="item" effect="dark" content="Bottom Center 提示文字" placement="bottom">
+      <hu-button>下边</hu-button>
+    </hu-tooltip>
+    <hu-tooltip class="item" effect="dark" content="Bottom Right 提示文字" placement="bottom-end">
+      <hu-button>下右</hu-button>
+    </hu-tooltip>
   </div>
 </div>
 
@@ -84,8 +84,8 @@
       margin: 4px;
     }
 
-    .left .el-tooltip__popper,
-    .right .el-tooltip__popper {
+    .left .hu-tooltip__popper,
+    .right .hu-tooltip__popper {
       padding: 8px 10px;
     }
   }
@@ -100,12 +100,12 @@ Tooltip 组件提供了两个不同的主题：`dark`和`light`。
 
 :::demo 通过设置`effect`属性来改变主题，默认为`dark`。
 ```html
-<el-tooltip content="Top center" placement="top">
-  <el-button>Dark</el-button>
-</el-tooltip>
-<el-tooltip content="Bottom center" placement="bottom" effect="light">
-  <el-button>Light</el-button>
-</el-tooltip>
+<hu-tooltip content="Top center" placement="top">
+  <hu-button>Dark</hu-button>
+</hu-tooltip>
+<hu-tooltip content="Bottom center" placement="bottom" effect="light">
+  <hu-button>Light</hu-button>
+</hu-tooltip>
 ```
 :::
 
@@ -115,10 +115,10 @@ Tooltip 组件提供了两个不同的主题：`dark`和`light`。
 
 :::demo 用具名 slot 分发`content`，替代`tooltip`中的`content`属性。
 ```html
-<el-tooltip placement="top">
+<hu-tooltip placement="top">
   <div slot="content">多行信息<br/>第二行信息</div>
-  <el-button>Top center</el-button>
-</el-tooltip>
+  <hu-button>Top center</hu-button>
+</hu-tooltip>
 ```
 :::
 
@@ -135,9 +135,9 @@ Tooltip 组件提供了两个不同的主题：`dark`和`light`。
 :::demo
 ```html
 <template>
-  <el-tooltip :disabled="disabled" content="点击关闭 tooltip 功能" placement="bottom" effect="light">
-    <el-button @click="disabled = !disabled">点击{{disabled ? '开启' : '关闭'}} tooltip 功能</el-button>
-  </el-tooltip>
+  <hu-tooltip :disabled="disabled" content="点击关闭 tooltip 功能" placement="bottom" effect="light">
+    <hu-button @click="disabled = !disabled">点击{{disabled ? '开启' : '关闭'}} tooltip 功能</hu-button>
+  </hu-tooltip>
 </template>
 <script>
   export default {

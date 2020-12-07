@@ -2,7 +2,7 @@ import LayoutObserver from './layout-observer';
 import { mapStates } from './store/helper';
 
 export default {
-  name: 'ElTableFooter',
+  name: 'HuTableFooter',
 
   mixins: [LayoutObserver],
 
@@ -44,7 +44,7 @@ export default {
 
     return (
       <table
-        class="el-table__footer"
+        class="hu-table__footer"
         cellspacing="0"
         cellpadding="0"
         border="0">

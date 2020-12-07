@@ -1,8 +1,8 @@
-import ElTableColumn from '../table/src/table-column';
+import HuTableColumn from '../table/src/table-column';
 
 /* istanbul ignore next */
-ElTableColumn.install = function(Vue) {
-  Vue.component(ElTableColumn.name, ElTableColumn);
+HuTableColumn.install = function(Vue) {
+  Vue.component(HuTableColumn.name, HuTableColumn);
 };
 
-export default ElTableColumn;
+export default HuTableColumn;

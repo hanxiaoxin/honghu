@@ -1,11 +1,11 @@
-import Popper from 'element-ui/src/utils/vue-popper';
+import Popper from 'honghu-ui/src/utils/vue-popper';
 import debounce from 'throttle-debounce/debounce';
-import { addClass, removeClass, on, off } from 'element-ui/src/utils/dom';
-import { generateId } from 'element-ui/src/utils/util';
+import { addClass, removeClass, on, off } from 'honghu-ui/src/utils/dom';
+import { generateId } from 'honghu-ui/src/utils/util';
 import Vue from 'vue';
 
 export default {
-  name: 'ElTooltip',
+  name: 'HuTooltip',
 
   mixins: [Popper],
 
@@ -90,7 +90,7 @@ export default {
             aria-hidden={ (this.disabled || !this.showPopper) ? 'true' : 'false' }
             v-show={!this.disabled && this.showPopper}
             class={
-              ['el-tooltip__popper', 'is-' + this.effect, this.popperClass]
+              ['hu-tooltip__popper', 'is-' + this.effect, this.popperClass]
             }>
             { this.$slots.content || this.content }
           </div>
@@ -170,9 +170,9 @@ export default {
 
     addTooltipClass(prev) {
       if (!prev) {
-        return 'el-tooltip';
+        return 'hu-tooltip';
       } else {
-        return 'el-tooltip ' + prev.replace('el-tooltip', '');
+        return 'hu-tooltip ' + prev.replace('hu-tooltip', '');
       }
     },
 

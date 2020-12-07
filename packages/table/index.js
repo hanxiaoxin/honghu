@@ -1,8 +1,8 @@
-import ElTable from './src/table';
+import HuTable from './src/table';
 
 /* istanbul ignore next */
-ElTable.install = function(Vue) {
-  Vue.component(ElTable.name, ElTable);
+HuTable.install = function(Vue) {
+  Vue.component(HuTable.name, HuTable);
 };
 
-export default ElTable;
+export default HuTable;

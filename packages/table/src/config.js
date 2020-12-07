@@ -1,4 +1,4 @@
-import { getPropByPath } from 'element-ui/src/utils/util';
+import { getPropByPath } from 'honghu-ui/src/utils/util';
 
 export const cellStarts = {
   default: {
@@ -9,7 +9,7 @@ export const cellStarts = {
     minWidth: 48,
     realWidth: 48,
     order: '',
-    className: 'el-table-column--selection'
+    className: 'hu-table-column--selection'
   },
   expand: {
     width: 48,
@@ -29,14 +29,14 @@ export const cellStarts = {
 export const cellForced = {
   selection: {
     renderHeader: function(h, { store }) {
-      return <el-checkbox
+      return <hu-checkbox
         disabled={ store.states.data && store.states.data.length === 0 }
         indeterminate={ store.states.selection.length > 0 && !this.isAllSelected }
         nativeOn-click={ this.toggleAllSelection }
         value={ this.isAllSelected } />;
     },
     renderCell: function(h, { row, column, store, $index }) {
-      return <el-checkbox
+      return <hu-checkbox
         nativeOn-click={ (event) => event.stopPropagation() }
         value={ store.isSelected(row) }
         disabled={ column.selectable ? !column.selectable.call(null, row, $index) : false }
@@ -68,9 +68,9 @@ export const cellForced = {
       return column.label || '';
     },
     renderCell: function(h, { row, store }) {
-      const classes = ['el-table__expand-icon'];
+      const classes = ['hu-table__expand-icon'];
       if (store.states.expandRows.indexOf(row) > -1) {
-        classes.push('el-table__expand-icon--expanded');
+        classes.push('hu-table__expand-icon--expanded');
       }
       const callback = function(e) {
         e.stopPropagation();
@@ -78,12 +78,12 @@ export const cellForced = {
       };
       return (<div class={ classes }
         on-click={callback}>
-        <i class='el-icon el-icon-arrow-right'></i>
+        <i class='hu-icon hu-icon-arrow-right'></i>
       </div>);
     },
     sortable: false,
     resizable: false,
-    className: 'el-table__expand-column'
+    className: 'hu-table__expand-column'
   }
 };
 
@@ -104,20 +104,20 @@ export function treeCellPrefix(h, { row, treeNode, store }) {
     store.loadOrToggle(row);
   };
   if (treeNode.indent) {
-    ele.push(<span class="el-table__indent" style={{'padding-left': treeNode.indent + 'px'}}></span>);
+    ele.push(<span class="hu-table__indent" style={{'padding-left': treeNode.indent + 'px'}}></span>);
   }
   if (typeof treeNode.expanded === 'boolean' && !treeNode.noLazyChildren) {
-    const expandClasses = ['el-table__expand-icon', treeNode.expanded ? 'el-table__expand-icon--expanded' : ''];
-    let iconClasses = ['el-icon-arrow-right'];
+    const expandClasses = ['hu-table__expand-icon', treeNode.expanded ? 'hu-table__expand-icon--expanded' : ''];
+    let iconClasses = ['hu-icon-arrow-right'];
     if (treeNode.loading) {
-      iconClasses = ['el-icon-loading'];
+      iconClasses = ['hu-icon-loading'];
     }
     ele.push(<div class={ expandClasses }
       on-click={ callback }>
       <i class={ iconClasses }></i>
     </div>);
   } else {
-    ele.push(<span class="el-table__placeholder"></span>);
+    ele.push(<span class="hu-table__placeholder"></span>);
   }
   return ele;
 }

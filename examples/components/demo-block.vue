@@ -26,7 +26,7 @@
       <transition name="text-slide">
         <span v-show="hovering">{{ controlText }}</span>
       </transition>
-      <el-tooltip effect="dark" :content="langConfig['tooltip-text']" placement="right">
+      <hu-tooltip effect="dark" :content="langConfig['tooltip-text']" placement="right">
         <transition name="text-slide">
           <hu-button
             v-show="hovering || isExpanded"
@@ -37,7 +37,7 @@
             {{ langConfig['button-text'] }}
           </hu-button>
         </transition>
-      </el-tooltip>
+      </hu-tooltip>
     </div>
   </div>
 </template>

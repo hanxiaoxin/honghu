@@ -19,14 +19,14 @@
       </div>
       <div class="footer-social">
         <p class="footer-social-title">HongHu {{ version && version.slice(0, 3) }} Fullerene</p>
-        <el-popover
+        <hu-popover
           ref="weixin"
           placement="top"
           width="120"
           popper-class="footer-popover"
           trigger="hover">
           <div class="footer-popover-title">UED</div>
-        </el-popover>
+        </hu-popover>
         <i class="doc-icon-weixin elementdoc" v-popover:weixin></i>
         <a target="_blank">
           <i class="doc-icon-github elementdoc"></i>

@@ -1,21 +1,21 @@
 <template>
   <transition name="el-zoom-in-top">
     <div
-      class="el-table-filter"
+      class="hu-table-filter"
       v-if="multiple"
       v-clickoutside="handleOutsideClick"
       v-show="showPopper">
-      <div class="el-table-filter__content">
-        <hu-scrollbar wrap-class="el-table-filter__wrap">
-          <el-checkbox-group class="el-table-filter__checkbox-group" v-model="filteredValue">
-            <el-checkbox
+      <div class="hu-table-filter__content">
+        <hu-scrollbar wrap-class="hu-table-filter__wrap">
+          <hu-checkbox-group class="hu-table-filter__checkbox-group" v-model="filteredValue">
+            <hu-checkbox
               v-for="filter in filters"
               :key="filter.value"
-              :label="filter.value">{{ filter.text }}</el-checkbox>
-          </el-checkbox-group>
+              :label="filter.value">{{ filter.text }}</hu-checkbox>
+          </hu-checkbox-group>
         </hu-scrollbar>
       </div>
-      <div class="el-table-filter__bottom">
+      <div class="hu-table-filter__bottom">
         <button @click="handleConfirm"
           :class="{ 'is-disabled': filteredValue.length === 0 }"
           :disabled="filteredValue.length === 0">{{ t('el.table.confirmFilter') }}</button>
@@ -23,15 +23,15 @@
       </div>
     </div>
     <div
-      class="el-table-filter"
+      class="hu-table-filter"
       v-else
       v-clickoutside="handleOutsideClick"
       v-show="showPopper">
-      <ul class="el-table-filter__list">
-        <li class="el-table-filter__list-item"
+      <ul class="hu-table-filter__list">
+        <li class="hu-table-filter__list-item"
             :class="{ 'is-active': filterValue === undefined || filterValue === null }"
             @click="handleSelect(null)">{{ t('el.table.clearFilter') }}</li>
-        <li class="el-table-filter__list-item"
+        <li class="hu-table-filter__list-item"
             v-for="filter in filters"
             :label="filter.value"
             :key="filter.value"
@@ -43,17 +43,17 @@
 </template>
 
 <script type="text/babel">
-  import Popper from 'element-ui/src/utils/vue-popper';
-  import { PopupManager } from 'element-ui/src/utils/popup';
-  import Locale from 'element-ui/src/mixins/locale';
-  import Clickoutside from 'element-ui/src/utils/clickoutside';
+  import Popper from 'honghu-ui/src/utils/vue-popper';
+  import { PopupManager } from 'honghu-ui/src/utils/popup';
+  import Locale from 'honghu-ui/src/mixins/locale';
+  import Clickoutside from 'honghu-ui/src/utils/clickoutside';
   import Dropdown from './dropdown';
-  import ElCheckbox from 'element-ui/packages/checkbox';
-  import ElCheckboxGroup from 'element-ui/packages/checkbox-group';
-  import HuScrollbar from 'element-ui/packages/scrollbar';
+  import HuCheckbox from 'honghu-ui/packages/checkbox';
+  import HuCheckboxGroup from 'honghu-ui/packages/checkbox-group';
+  import HuScrollbar from 'honghu-ui/packages/scrollbar';
 
   export default {
-    name: 'ElTableFilterPanel',
+    name: 'HuTableFilterPanel',
 
     mixins: [Popper, Locale],
 
@@ -62,8 +62,8 @@
     },
 
     components: {
-      ElCheckbox,
-      ElCheckboxGroup,
+      HuCheckbox,
+      HuCheckboxGroup,
       HuScrollbar
     },
 
