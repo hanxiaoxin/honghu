@@ -26,10 +26,12 @@
 
     &.hover, &:hover {
       background-color: $--select-option-hover-background;
+      color: rgba(69, 120, 248, 1);
     }
 
     &.selected {
-      color: $--select-option-selected-font-color;
+      color: $--color-white;
+      background-color: rgba(69, 120, 248, 1);
       font-weight: bold;
     }
   }

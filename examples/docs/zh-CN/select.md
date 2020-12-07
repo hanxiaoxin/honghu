@@ -16,16 +16,6 @@
       :value="item.value">
     </hu-option>
   </hu-select>
-
-    <hu-select v-model="value" placeholder="请选择">
-        <hu-button slot="suffix" type="primary" icon="hu-icon-search">搜索</hu-button>
-        <hu-option
-                v-for="item in options"
-                :key="item.value"
-                :label="item.label"
-                :value="item.value">
-        </hu-option>
-    </hu-select>
 </template>
 
 <script>

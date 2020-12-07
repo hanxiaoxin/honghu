@@ -109,6 +109,7 @@
       <hu-select-menu
         ref="popper"
         :append-to-body="popperAppendToBody"
+        :visible-arrow="false"
         v-show="visible && emptyText !== false">
         <hu-scrollbar
           tag="ul"

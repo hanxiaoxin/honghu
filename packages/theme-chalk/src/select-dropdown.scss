@@ -12,13 +12,19 @@
   box-sizing: border-box;
   margin: 5px 0;
 
+  // set as static, butter to modify popper.js
+  margin-top: 4px !important;
+  margin-bottom: 4px !important;
+
   @include when(multiple) {
+    margin: 5px 0;
     & .hu-select-dropdown__item.selected {
-      color: $--select-option-selected-font-color;
-      background-color: $--select-dropdown-background;
+      color: $--color-white;
+      background-color: rgba(69, 120, 248, 1);
 
       &.hover {
         background-color: $--select-option-hover-background;
+        color: rgba(69, 120, 248, 1);
       }
 
       &::after {

@@ -296,7 +296,7 @@ $--select-option-disabled-color: $--color-text-placeholder !default;
 $--select-option-disabled-background: $--color-white !default;
 /// height||Other|4
 $--select-option-height: 34px !default;
-$--select-option-hover-background: $--background-color-base !default;
+$--select-option-hover-background: rgba(69, 120, 248, 0.1) !default;
 /// color||Color|0
 $--select-option-selected-font-color: $--color-primary !default;
 $--select-option-selected-hover: $--background-color-base !default;
