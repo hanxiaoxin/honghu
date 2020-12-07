@@ -7,7 +7,14 @@
 :::demo 要使用它，只需要在`el-input-number`元素中使用`v-model`绑定变量即可，变量的初始值即为默认值。
 ```html
 <template>
-  <hu-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="描述文字"></hu-input-number>
+    <hu-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="描述文字"></hu-input-number>
+    
+    <div style="margin-bottom: 20px;"></div>
+    
+    <hu-input-number v-model="num" @change="handleChange" :min="1" :max="10" label="描述文字" subtext="核"></hu-input-number>
+    <hu-input-number v-model="num" @change="handleChange" size="medium" :min="1" :max="10" label="描述文字" subtext="核"></hu-input-number>
+    <hu-input-number v-model="num" @change="handleChange" size="small" :min="1" :max="10" label="描述文字" subtext="核"></hu-input-number>
+    <hu-input-number v-model="num" @change="handleChange" size="mini" :min="1" :max="10" label="描述文字" subtext="核"></hu-input-number>
 </template>
 <script>
   export default {
@@ -181,6 +188,7 @@
 | name | 原生属性 | string | — | — |
 | label | 输入框关联的label文字 | string | — | — |
 | placeholder | 输入框默认 placeholder | string | - | - |
+| subtext | 辅助文字 | string | - | - |
 
 ### Events
 | 事件名称 | 说明 | 回调参数 |

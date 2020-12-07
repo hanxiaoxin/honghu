@@ -18,6 +18,12 @@
       <i :class="`hu-icon-${controlsAtRight ? 'arrow-down' : 'minus'}`"></i>
     </span>
     <span
+        class="hu-input-number__subtext"
+        v-if="subtext"
+        >
+        {{subtext}}
+    </span>
+    <span
       class="hu-input-number__increase"
       role="button"
       v-if="controls"
@@ -36,6 +42,7 @@
       :min="min"
       :name="name"
       :label="label"
+      :class="subtext ? 'hu-input-number__with-text' : ''"
       @keydown.up.native.prevent="increase"
       @keydown.down.native.prevent="decrease"
       @blur="handleBlur"
@@ -103,6 +110,10 @@
         validator(val) {
           return val >= 0 && val === parseInt(val, 10);
         }
+      },
+      subtext: {
+        type: String,
+        default: ''
       }
     },
     data() {
