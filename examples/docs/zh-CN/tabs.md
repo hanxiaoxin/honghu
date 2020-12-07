@@ -2,6 +2,45 @@
 
 分隔内容上有关联但属于不同类别的数据集合。
 
+### apusic背景选项卡样式
+
+apusic背景选项卡样式的标签页。
+
+:::demo 只需要设置 `type` 属性为 `bg-card` 就可以使选项卡改变为标签风格。
+
+```html
+<template>
+    <hu-tabs v-model="activeName" type="bg-card" @tab-click="handleClick">
+        <hu-tab-pane label="选项卡片一" name="first">用户</hu-tab-pane>
+        <hu-tab-pane label="选项卡片二" name="second">配置</hu-tab-pane>
+        <hu-tab-pane label="选项卡片三" name="third">角色</hu-tab-pane>
+        <hu-tab-pane label="选项卡片四" name="fourth">定时任务</hu-tab-pane>
+    </hu-tabs>
+    <div style="margin-top: 20px"></div>
+  <hu-tabs v-model="activeName" type="bg-card" @tab-click="handleClick" closable>
+    <hu-tab-pane label="选项卡片一" name="first">用户</hu-tab-pane>
+    <hu-tab-pane label="选项卡片二" name="second">配置</hu-tab-pane>
+    <hu-tab-pane label="选项卡片三" name="third">角色</hu-tab-pane>
+    <hu-tab-pane label="选项卡片四" name="fourth">定时任务</hu-tab-pane>
+  </hu-tabs>
+</template>
+<script>
+  export default {
+    data() {
+      return {
+        activeName: 'first'
+      };
+    },
+    methods: {
+      handleClick(tab, event) {
+        console.log(tab, event);
+      }
+    }
+  };
+</script>
+```
+:::
+
 ### 基础用法
 
 基础的、简洁的标签页。
@@ -34,6 +73,7 @@
 ```
 :::
 
+
 ### 选项卡样式
 
 选项卡样式的标签页。
@@ -42,7 +82,7 @@
 
 ```html
 <template>
-  <hu-tabs v-model="activeName" type="card" @tab-click="handleClick">
+  <hu-tabs v-model="activeName" type="card" @tab-click="handleClick" editable>
     <hu-tab-pane label="用户管理" name="first">用户管理</hu-tab-pane>
     <hu-tab-pane label="配置管理" name="second">配置管理</hu-tab-pane>
     <hu-tab-pane label="角色管理" name="third">角色管理</hu-tab-pane>

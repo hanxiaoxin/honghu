@@ -164,6 +164,7 @@
         <div class={{
           'hu-tabs': true,
           'hu-tabs--card': type === 'card',
+          'hu-tabs--bg-card': type === 'bg-card',
           [`hu-tabs--${tabPosition}`]: true,
           'hu-tabs--border-card': type === 'border-card'
         }}>

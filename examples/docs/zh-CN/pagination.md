@@ -2,23 +2,37 @@
 
 当数据量过多时，使用分页分解数据。
 
-### 基础用法
+### apusic分页
 
 :::demo 设置`layout`，表示需要显示的内容，用逗号分隔，布局元素会依次显示。`prev`表示上一页，`next`为下一页，`pager`表示页码列表，除此以外还提供了`jumper`和`total`，`size`和特殊的布局符号`->`，`->`后的元素会靠右显示，`jumper`表示跳页元素，`total`表示总条目数，`size`用于设置每页显示的页码数量。
 ```html
 <div class="block">
+  <hu-pagination
+    layout="prev, pager, next, jumper"
+    background
+    :total="1000">
+  </hu-pagination>
+</div>
+```
+:::
+
+### 基础用法
+
+:::demo 设置`layout`，表示需要显示的内容，用逗号分隔，布局元素会依次显示。`prev`表示上一页，`next`为下一页，`pager`表示页码列表，除此以外还提供了`jumper`和`total`，`size`和特殊的布局符号`->`，`->`后的元素会靠右显示，`jumper`表示跳页元素，`total`表示总条目数，`size`用于设置每页显示的页码数量。
+```html
+<div class="block" style="margin-bottom: 20px;">
   <span class="demonstration">页数较少时的效果</span>
-  <el-pagination
+  <hu-pagination
     layout="prev, pager, next"
     :total="50">
-  </el-pagination>
+  </hu-pagination>
 </div>
 <div class="block">
   <span class="demonstration">大于 7 页时的效果</span>
-  <el-pagination
+  <hu-pagination
     layout="prev, pager, next"
     :total="1000">
-  </el-pagination>
+  </hu-pagination>
 </div>
 ```
 :::
@@ -27,12 +41,12 @@
 
 :::demo 默认情况下，当总页数超过 7 页时，Pagination 会折叠多余的页码按钮。通过`pager-count`属性可以设置最大页码按钮数。
 ```html
-<el-pagination
+<hu-pagination
   :page-size="20"
   :pager-count="11"
   layout="prev, pager, next"
   :total="1000">
-</el-pagination>
+</hu-pagination>
 ```
 :::
 
@@ -40,11 +54,11 @@
 
 :::demo 设置`background`属性可以为分页按钮添加背景色。
 ```html
-<el-pagination
+<hu-pagination
   background
   layout="prev, pager, next"
   :total="1000">
-</el-pagination>
+</hu-pagination>
 ```
 :::
 
@@ -54,11 +68,11 @@
 
 :::demo 只需要一个`small`属性，它接受一个`Boolean`，默认为`false`，设为`true`即可启用。
 ```html
-<el-pagination
+<hu-pagination
   small
   layout="prev, pager, next"
   :total="50">
-</el-pagination>
+</hu-pagination>
 ```
 :::
 
@@ -72,18 +86,18 @@
 <template>
   <div class="block">
     <span class="demonstration">显示总数</span>
-    <el-pagination
+    <hu-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
       :current-page.sync="currentPage1"
       :page-size="100"
       layout="total, prev, pager, next"
       :total="1000">
-    </el-pagination>
+    </hu-pagination>
   </div>
   <div class="block">
     <span class="demonstration">调整每页显示条数</span>
-    <el-pagination
+    <hu-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
       :current-page.sync="currentPage2"
@@ -91,22 +105,22 @@
       :page-size="100"
       layout="sizes, prev, pager, next"
       :total="1000">
-    </el-pagination>
+    </hu-pagination>
   </div>
   <div class="block">
     <span class="demonstration">直接前往</span>
-    <el-pagination
+    <hu-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
       :current-page.sync="currentPage3"
       :page-size="100"
       layout="prev, pager, next, jumper"
       :total="1000">
-    </el-pagination>
+    </hu-pagination>
   </div>
   <div class="block">
     <span class="demonstration">完整功能</span>
-    <el-pagination
+    <hu-pagination
       @size-change="handleSizeChange"
       @current-change="handleCurrentChange"
       :current-page="currentPage4"
@@ -114,7 +128,7 @@
       :page-size="100"
       layout="total, sizes, prev, pager, next, jumper"
       :total="400">
-    </el-pagination>
+    </hu-pagination>
   </div>
 </template>
 <script>
@@ -147,13 +161,13 @@
 :::demo
 ```html
 <div>
- <el-switch v-model="value">
- </el-switch>
- <el-pagination
+ <hu-switch v-model="value">
+ </hu-switch>
+ <hu-pagination
   :hide-on-single-page="value"
   :total="5"
   layout="prev, pager, next">
-</el-pagination>
+</hu-pagination>
 </div>
 
 <script>

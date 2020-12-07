@@ -206,6 +206,74 @@
       }
     }
   }
+  @include m(bg-card) {
+    > .hu-tabs__header {
+      border-bottom: 1px solid $--border-color-light;
+    }
+    > .hu-tabs__header .hu-tabs__nav-wrap::after {
+      content: none;
+    }
+    > .hu-tabs__header .hu-tabs__nav {
+      //border: 1px solid $--border-color-light;
+      border-bottom: none;
+      border-radius: 4px 4px 0 0;
+      box-sizing: border-box;
+    }
+    > .hu-tabs__header .hu-tabs__active-bar {
+      display: none;
+    }
+    > .hu-tabs__header .hu-tabs__item .hu-icon-close {
+      position: relative;
+      font-size: 12px;
+      width: 0;
+      height: 14px;
+      vertical-align: middle;
+      line-height: 15px;
+      overflow: hidden;
+      top: -1px;
+      right: -2px;
+      transform-origin: 100% 50%;
+    }
+    > .hu-tabs__header .hu-tabs__item {
+      border-bottom: 1px solid $--border-color-light;
+      border-left: 1px solid $--border-color-light;
+      border-right: 1px solid $--border-color-light;
+      border-top: 1px solid $--border-color-light;
+      transition: color .3s cubic-bezier(.645,.045,.355,1), padding .3s cubic-bezier(.645,.045,.355,1);
+      background-color: #F5F5F5;
+      padding: 0 20px !important;
+      font-size: 12px;
+      margin-right: 4px;
+
+      &:first-child {
+        border-left: 1px solid $--border-color-light;
+      }
+      &.is-closable {
+        &:hover {
+          padding-left: 13px;
+          padding-right: 13px;
+
+          & .hu-icon-close {
+            width: 14px;
+          }
+        }
+      }
+      &.is-active {
+        //border-bottom-color: $--color-white;
+        background-color: $--color-white;
+        border-bottom: 1px solid transparent;
+
+        &.is-closable {
+          padding-left: 20px;
+          padding-right: 20px;
+
+          .hu-icon-close {
+            width: 14px;
+          }
+        }
+      }
+    }
+  }
   @include m(border-card) {
     background: $--color-white;
     border: 1px solid $--border-color-base;
