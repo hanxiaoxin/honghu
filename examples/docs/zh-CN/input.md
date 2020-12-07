@@ -124,13 +124,13 @@ export default {
   <hu-input
     placeholder="请选择日期"
     v-model="input3">
-    <i slot="suffix" class="hu-input__icon el-icon-date"></i>
+    <i slot="suffix" class="hu-input__icon hu-icon-date"></i>
   </hu-input>
     <div style="margin: 20px 0;"></div>
   <hu-input
     placeholder="请输入内容"
     v-model="input4">
-    <i slot="prefix" class="hu-input__icon el-icon-search"></i>
+    <i slot="prefix" class="hu-input__icon hu-icon-search"></i>
   </hu-input>
 </div>
 

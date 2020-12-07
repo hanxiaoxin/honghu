@@ -330,7 +330,8 @@
         currentPlaceholder: '',
         menuVisibleOnFocus: false,
         isOnComposition: false,
-        isSilentBlur: false
+        isSilentBlur: false,
+        inputFocus: false // input focus event for new style
       };
     },
 

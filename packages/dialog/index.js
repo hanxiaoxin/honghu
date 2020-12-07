@@ -1,8 +1,8 @@
-import ElDialog from './src/component';
+import HuDialog from './src/component';
 
 /* istanbul ignore next */
-ElDialog.install = function(Vue) {
-  Vue.component(ElDialog.name, ElDialog);
+HuDialog.install = function(Vue) {
+  Vue.component(HuDialog.name, HuDialog);
 };
 
-export default ElDialog;
+export default HuDialog;
