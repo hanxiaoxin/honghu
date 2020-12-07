@@ -1,6 +1,6 @@
 <template>
   <div
-    class="el-switch"
+    class="hu-switch"
     :class="{ 'is-disabled': switchDisabled, 'is-checked': checked }"
     role="switch"
     :aria-checked="checked"
@@ -8,7 +8,7 @@
     @click.prevent="switchValue"
   >
     <input
-      class="el-switch__input"
+      class="hu-switch__input"
       type="checkbox"
       @change="handleChange"
       ref="input"
@@ -20,15 +20,17 @@
       @keydown.enter="switchValue"
     >
     <span
-      :class="['el-switch__label', 'el-switch__label--left', !checked ? 'is-active' : '']"
+      :class="['hu-switch__label', 'hu-switch__label--left', !checked ? 'is-active' : '']"
       v-if="inactiveIconClass || inactiveText">
       <i :class="[inactiveIconClass]" v-if="inactiveIconClass"></i>
       <span v-if="!inactiveIconClass && inactiveText" :aria-hidden="checked">{{ inactiveText }}</span>
     </span>
-    <span class="el-switch__core" ref="core" :style="{ 'width': coreWidth + 'px' }">
+    <span class="hu-switch__core" ref="core" :style="{ 'width': coreWidth + 'px' }">
+      <span v-if="activeInnerText && checked" class="hu-switch__innerText--left">{{activeInnerText}}</span>
+      <span v-if="inactiveInnerText && !checked" class="hu-switch__innerText--right">{{inactiveInnerText}}</span>
     </span>
     <span
-      :class="['el-switch__label', 'el-switch__label--right', checked ? 'is-active' : '']"
+      :class="['hu-switch__label', 'hu-switch__label--right', checked ? 'is-active' : '']"
       v-if="activeIconClass || activeText">
       <i :class="[activeIconClass]" v-if="activeIconClass"></i>
       <span v-if="!activeIconClass && activeText" :aria-hidden="!checked">{{ activeText }}</span>
@@ -41,7 +43,7 @@
   import Migrating from 'element-ui/src/mixins/migrating';
 
   export default {
-    name: 'ElSwitch',
+    name: 'HuSwitch',
     mixins: [Focus('input'), Migrating, emitter],
     inject: {
       elForm: {
@@ -71,6 +73,8 @@
       },
       activeText: String,
       inactiveText: String,
+      activeInnerText: String,
+      inactiveInnerText: String,
       activeColor: {
         type: String,
         default: ''

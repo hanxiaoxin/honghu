@@ -7,11 +7,17 @@
 :::demo 绑定`v-model`到一个`Boolean`类型的变量。可以使用`active-color`属性与`inactive-color`属性来设置开关的背景色。
 
 ```html
-<el-switch
+<hu-switch
   v-model="value"
   active-color="#13ce66"
   inactive-color="#ff4949">
-</el-switch>
+</hu-switch>
+<hu-switch
+        v-model="value"
+        active-inner-text="开"
+        inactive-inner-text="关"
+>
+</hu-switch>
 
 <script>
   export default {
@@ -30,19 +36,19 @@
 :::demo 使用`active-text`属性与`inactive-text`属性来设置开关的文字描述。
 
 ```html
-<el-switch
+<hu-switch
   v-model="value1"
   active-text="按月付费"
   inactive-text="按年付费">
-</el-switch>
-<el-switch
+</hu-switch>
+<hu-switch
   style="display: block"
   v-model="value2"
   active-color="#13ce66"
   inactive-color="#ff4949"
   active-text="按月付费"
   inactive-text="按年付费">
-</el-switch>
+</hu-switch>
 
 <script>
   export default {
@@ -63,13 +69,13 @@
 
 ```html
 <el-tooltip :content="'Switch value: ' + value" placement="top">
-  <el-switch
+  <hu-switch
     v-model="value"
     active-color="#13ce66"
     inactive-color="#ff4949"
     active-value="100"
     inactive-value="0">
-  </el-switch>
+  </hu-switch>
 </el-tooltip>
 
 <script>
@@ -91,14 +97,14 @@
 
 
 ```html
-<el-switch
+<hu-switch
   v-model="value1"
   disabled>
-</el-switch>
-<el-switch
+</hu-switch>
+<hu-switch
   v-model="value2"
   disabled>
-</el-switch>
+</hu-switch>
 <script>
   export default {
     data() {

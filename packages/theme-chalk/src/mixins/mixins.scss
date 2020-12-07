@@ -80,7 +80,7 @@
   $selector: &;
   $currentSelector: "";
   @each $unit in $element {
-    $currentSelector: #{$currentSelector + "." + $B + $element-separator + $unit + ","};
+    $currentSelector: #{$currentSelector + "." + $B + $hu-separator + $unit + ","};
   }
 
   @if hitAllSpecialNestRule($selector) {

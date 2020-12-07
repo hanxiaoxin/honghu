@@ -36,12 +36,12 @@
 </el-row>
 
 <el-row>
-  <hu-button icon="el-icon-search" circle></hu-button>
-  <hu-button type="primary" icon="el-icon-edit" circle></hu-button>
-  <hu-button type="success" icon="el-icon-check" circle></hu-button>
-  <hu-button type="info" icon="el-icon-message" circle></hu-button>
-  <hu-button type="warning" icon="el-icon-star-off" circle></hu-button>
-  <hu-button type="danger" icon="el-icon-delete" circle></hu-button>
+  <hu-button icon="hu-icon-search" circle></hu-button>
+  <hu-button type="primary" icon="hu-icon-edit" circle></hu-button>
+  <hu-button type="success" icon="hu-icon-check" circle></hu-button>
+  <hu-button type="info" icon="hu-icon-message" circle></hu-button>
+  <hu-button type="warning" icon="hu-icon-star-off" circle></hu-button>
+  <hu-button type="danger" icon="hu-icon-delete" circle></hu-button>
 </el-row>
 ```
 :::

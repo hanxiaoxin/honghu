@@ -1,8 +1,8 @@
-import ElTag from './src/tag';
+import HuTag from './src/tag';
 
 /* istanbul ignore next */
-ElTag.install = function(Vue) {
-  Vue.component(ElTag.name, ElTag);
+HuTag.install = function(Vue) {
+  Vue.component(HuTag.name, HuTag);
 };
 
-export default ElTag;
+export default HuTag;

@@ -2,7 +2,7 @@
   <li
     @mouseenter="hoverItem"
     @click.stop="selectOptionClick"
-    class="el-select-dropdown__item"
+    class="hu-select-dropdown__item"
     v-show="visible"
     :class="{
       'selected': itemSelected,
@@ -22,9 +22,9 @@
   export default {
     mixins: [Emitter],
 
-    name: 'ElOption',
+    name: 'HuOption',
 
-    componentName: 'ElOption',
+    componentName: 'HuOption',
 
     inject: ['select'],
 
@@ -92,7 +92,7 @@
           if (valueKey && typeof val === 'object' && typeof oldVal === 'object' && val[valueKey] === oldVal[valueKey]) {
             return;
           }
-          this.dispatch('ElSelect', 'setSelected');
+          this.dispatch('HuSelect', 'setSelected');
         }
       }
     },
@@ -130,7 +130,7 @@
 
       selectOptionClick() {
         if (this.disabled !== true && this.groupDisabled !== true) {
-          this.dispatch('ElSelect', 'handleOptionClick', [this, true]);
+          this.dispatch('HuSelect', 'handleOptionClick', [this, true]);
         }
       },
 

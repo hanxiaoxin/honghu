@@ -12,28 +12,32 @@
   display: inline-block;
   position: relative;
 
-  .el-select__tags
+  .hu-select__tags
     >span {
       display: contents;
     }
 
   &:hover {
-    .el-input__inner {
+    .hu-input__inner {
       border-color: $--select-border-color-hover;
     }
   }
 
-  .el-input__inner {
+  .hu-input__inner {
     cursor: pointer;
     padding-right: 35px;
 
     &:focus {
-      border-color: $--select-input-focus-border-color;
+      //border-color: $--select-input-focus-border-color;
+
+      .hu-input__suffix{
+        border-left: 1px solid $--select-input-focus-border-color;
+      }
     }
   }
 
-  .el-input {
-    & .el-select__caret {
+  .hu-input {
+    & .hu-select__caret {
       color: $--select-input-color;
       font-size: $--select-input-font-size;
       transition: transform .3s;
@@ -42,6 +46,7 @@
 
       @include when(reverse) {
         transform: rotateZ(0deg);
+        color: $--select-input-focus-border-color;
       }
 
       @include when(show-close) {
@@ -59,7 +64,7 @@
     }
 
     &.is-disabled {
-      & .el-input__inner {
+      & .hu-input__inner {
         cursor: not-allowed;
 
         &:hover {
@@ -68,12 +73,12 @@
       }
     }
 
-    &.is-focus .el-input__inner {
+    &.is-focus .hu-input__inner {
       border-color: $--select-input-focus-border-color;
     }
   }
 
-  > .el-input {
+  > .hu-input {
     display: block;
   }
 
@@ -119,17 +124,17 @@
     flex-wrap: wrap;
   }
 
-  .el-tag__close {
+  .hu-tag__close {
     margin-top: -2px;
   }
 
-  .el-tag {
+  .hu-tag {
     box-sizing: border-box;
     border-color: transparent;
     margin: 2px 0 2px 6px;
     background-color: #f0f2f5;
 
-    &__close.el-icon-close {
+    &__close.hu-icon-close {
       background-color: $--color-text-placeholder;
       right: -7px;
       top: 0;

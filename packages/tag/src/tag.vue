@@ -1,6 +1,6 @@
 <script>
   export default {
-    name: 'ElTag',
+    name: 'HuTag',
     props: {
       text: String,
       closable: Boolean,
@@ -34,10 +34,10 @@
     render(h) {
       const { type, tagSize, hit, effect } = this;
       const classes = [
-        'el-tag',
-        type ? `el-tag--${type}` : '',
-        tagSize ? `el-tag--${tagSize}` : '',
-        effect ? `el-tag--${effect}` : '',
+        'hu-tag',
+        type ? `hu-tag--${type}` : '',
+        tagSize ? `hu-tag--${tagSize}` : '',
+        effect ? `hu-tag--${effect}` : '',
         hit && 'is-hit'
       ];
       const tagEl = (
@@ -47,7 +47,7 @@
           on-click={ this.handleClick }>
           { this.$slots.default }
           {
-            this.closable && <i class="el-tag__close el-icon-close" on-click={ this.handleClose }></i>
+            this.closable && <i class="hu-tag__close hu-icon-close" on-click={ this.handleClose }></i>
           }
         </span>
       );

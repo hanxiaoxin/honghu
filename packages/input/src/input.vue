@@ -1,15 +1,15 @@
 <template>
   <div :class="[
-    type === 'textarea' ? 'el-textarea' : 'el-input',
-    inputSize ? 'el-input--' + inputSize : '',
+    type === 'textarea' ? 'hu-textarea' : 'hu-input',
+    inputSize ? 'hu-input--' + inputSize : '',
     {
       'is-disabled': inputDisabled,
       'is-exceed': inputExceed,
-      'el-input-group': $slots.prepend || $slots.append,
-      'el-input-group--append': $slots.append,
-      'el-input-group--prepend': $slots.prepend,
-      'el-input--prefix': $slots.prefix || prefixIcon,
-      'el-input--suffix': $slots.suffix || suffixIcon || clearable || showPassword
+      'hu-input-group': $slots.prepend || $slots.append,
+      'hu-input-group--append': $slots.append,
+      'hu-input-group--prepend': $slots.prepend,
+      'hu-input--prefix': $slots.prefix || prefixIcon,
+      'hu-input--suffix': $slots.suffix || suffixIcon || clearable || showPassword
     }
     ]"
     @mouseenter="hovering = true"
@@ -17,13 +17,13 @@
   >
     <template v-if="type !== 'textarea'">
       <!-- 前置元素 -->
-      <div class="el-input-group__prepend" v-if="$slots.prepend">
+      <div class="hu-input-group__prepend" v-if="$slots.prepend">
         <slot name="prepend"></slot>
       </div>
       <input
         :tabindex="tabindex"
         v-if="type !== 'textarea'"
-        class="el-input__inner"
+        class="hu-input__inner"
         v-bind="$attrs"
         :type="showPassword ? (passwordVisible ? 'text': 'password') : type"
         :disabled="inputDisabled"
@@ -40,54 +40,54 @@
         :aria-label="label"
       >
       <!-- 前置内容 -->
-      <span class="el-input__prefix" v-if="$slots.prefix || prefixIcon">
+      <span class="hu-input__prefix" v-if="$slots.prefix || prefixIcon">
         <slot name="prefix"></slot>
-        <i class="el-input__icon"
+        <i class="hu-input__icon"
            v-if="prefixIcon"
            :class="prefixIcon">
         </i>
       </span>
       <!-- 后置内容 -->
       <span
-        class="el-input__suffix"
+        class="hu-input__suffix"
         v-if="getSuffixVisible()">
-        <span class="el-input__suffix-inner">
+        <span class="hu-input__suffix-inner">
           <template v-if="!showClear || !showPwdVisible || !isWordLimitVisible">
             <slot name="suffix"></slot>
-            <i class="el-input__icon"
+            <i class="hu-input__icon"
               v-if="suffixIcon"
               :class="suffixIcon">
             </i>
           </template>
           <i v-if="showClear"
-            class="el-input__icon el-icon-circle-close el-input__clear"
+            class="hu-input__icon hu-icon-circle-close hu-input__clear"
             @mousedown.prevent
             @click="clear"
           ></i>
           <i v-if="showPwdVisible"
-            class="el-input__icon el-icon-view el-input__clear"
+            class="hu-input__icon hu-icon-view hu-input__clear"
             @click="handlePasswordVisible"
           ></i>
-          <span v-if="isWordLimitVisible" class="el-input__count">
-            <span class="el-input__count-inner">
+          <span v-if="isWordLimitVisible" class="hu-input__count">
+            <span class="hu-input__count-inner">
               {{ textLength }}/{{ upperLimit }}
             </span>
           </span>
         </span>
-        <i class="el-input__icon"
+        <i class="hu-input__icon"
           v-if="validateState"
-          :class="['el-input__validateIcon', validateIcon]">
+          :class="['hu-input__validateIcon', validateIcon]">
         </i>
       </span>
       <!-- 后置元素 -->
-      <div class="el-input-group__append" v-if="$slots.append">
+      <div class="hu-input-group__append" v-if="$slots.append">
         <slot name="append"></slot>
       </div>
     </template>
     <textarea
       v-else
       :tabindex="tabindex"
-      class="el-textarea__inner"
+      class="hu-textarea__inner"
       @compositionstart="handleCompositionStart"
       @compositionupdate="handleCompositionUpdate"
       @compositionend="handleCompositionEnd"
@@ -104,7 +104,7 @@
       :aria-label="label"
     >
     </textarea>
-    <span v-if="isWordLimitVisible && type === 'textarea'" class="el-input__count">{{ textLength }}/{{ upperLimit }}</span>
+    <span v-if="isWordLimitVisible && type === 'textarea'" class="hu-input__count">{{ textLength }}/{{ upperLimit }}</span>
   </div>
 </template>
 <script>
@@ -115,9 +115,9 @@
   import {isKorean} from 'element-ui/src/utils/shared';
 
   export default {
-    name: 'ElInput',
+    name: 'HuInput',
 
-    componentName: 'ElInput',
+    componentName: 'HuInput',
 
     mixins: [emitter, Migrating],
 
@@ -204,9 +204,9 @@
       },
       validateIcon() {
         return {
-          validating: 'el-icon-loading',
-          success: 'el-icon-circle-check',
-          error: 'el-icon-circle-close'
+          validating: 'hu-icon-loading',
+          success: 'hu-icon-circle-check',
+          error: 'hu-icon-circle-close'
         }[this.validateState];
       },
       textareaStyle() {
@@ -370,7 +370,7 @@
         this.$emit('change', event.target.value);
       },
       calcIconOffset(place) {
-        let elList = [].slice.call(this.$el.querySelectorAll(`.el-input__${place}`) || []);
+        let elList = [].slice.call(this.$el.querySelectorAll(`.hu-input__${place}`) || []);
         if (!elList.length) return;
         let el = null;
         for (let i = 0; i < elList.length; i++) {
@@ -387,7 +387,7 @@
 
         const pendant = pendantMap[place];
         if (this.$slots[pendant]) {
-          el.style.transform = `translateX(${place === 'suffix' ? '-' : ''}${this.$el.querySelector(`.el-input-group__${pendant}`).offsetWidth}px)`;
+          el.style.transform = `translateX(${place === 'suffix' ? '-' : ''}${this.$el.querySelector(`.hu-input-group__${pendant}`).offsetWidth}px)`;
         } else {
           el.removeAttribute('style');
         }

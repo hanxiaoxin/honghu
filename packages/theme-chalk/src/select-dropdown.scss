@@ -13,7 +13,7 @@
   margin: 5px 0;
 
   @include when(multiple) {
-    & .el-select-dropdown__item.selected {
+    & .hu-select-dropdown__item.selected {
       color: $--select-option-selected-font-color;
       background-color: $--select-dropdown-background;
 
@@ -24,7 +24,7 @@
       &::after {
         position: absolute;
         right: 20px;
-        font-family: 'element-icons';
+        font-family: 'hu-icons';
         content: "\e6da";
         font-size: 12px;
         font-weight: bold;
@@ -34,7 +34,7 @@
     }
   }
 
-  .hu-scrollbar.is-empty .el-select-dropdown__list{
+  .hu-scrollbar.is-empty .hu-select-dropdown__list{
     padding: 0;
   }
 }

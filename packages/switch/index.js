@@ -1,9 +1,9 @@
-import Switch from './src/component';
+import HuSwitch from './src/component';
 
 /* istanbul ignore next */
-Switch.install = function(Vue) {
-  Vue.component(Switch.name, Switch);
+HuSwitch.install = function(Vue) {
+  Vue.component(HuSwitch.name, HuSwitch);
 };
 
-export default Switch;
+export default HuSwitch;
 

@@ -1,8 +1,8 @@
 <template>
-  <ul class="el-select-group__wrap" v-show="visible">
-    <li class="el-select-group__title">{{ label }}</li>
+  <ul class="hu-select-group__wrap" v-show="visible">
+    <li class="hu-select-group__title">{{ label }}</li>
     <li>
-      <ul class="el-select-group">
+      <ul class="hu-select-group">
         <slot></slot>
       </ul>
     </li>
@@ -15,9 +15,9 @@
   export default {
     mixins: [Emitter],
 
-    name: 'ElOptionGroup',
+    name: 'HuOptionGroup',
 
-    componentName: 'ElOptionGroup',
+    componentName: 'HuOptionGroup',
 
     props: {
       label: String,
@@ -35,7 +35,7 @@
 
     watch: {
       disabled(val) {
-        this.broadcast('ElOption', 'handleGroupDisabled', val);
+        this.broadcast('HuOption', 'handleGroupDisabled', val);
       }
     },
 
@@ -53,7 +53,7 @@
 
     mounted() {
       if (this.disabled) {
-        this.broadcast('ElOption', 'handleGroupDisabled', this.disabled);
+        this.broadcast('HuOption', 'handleGroupDisabled', this.disabled);
       }
     }
   };
