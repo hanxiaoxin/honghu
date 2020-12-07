@@ -125,12 +125,12 @@
     }
 
     &:hover {
-      //border-color: $--input-hover-border;
+      border-color: $--input-hover-border;
     }
 
     &:focus {
       outline: none;
-      //border-color: $--input-focus-border;
+      border-color: $--input-focus-border !important;
     }
   }
 
@@ -369,6 +369,6 @@
 /**
         select focus suffix border
      */
-.hu-select .hu-input.is-focus .hu-input__suffix-box{
+.hu-select .hu-select-focus-suffix-box{
   border-left: 1px solid $--select-input-focus-border-color;
 }

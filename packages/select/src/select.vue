@@ -96,7 +96,7 @@
         <slot name="prefix"></slot>
       </template>
       <template slot="suffix">
-        <div :class="['hu-input__suffix-box', 'hu-input__suffix-box' + iconClass]" v-if="!remote">
+        <div :class="['hu-input__suffix-box', 'hu-input__suffix-box' + iconClass, this.inputFocus ? 'hu-select-focus-suffix-box': '']" v-if="!remote">
           <i v-show="!showClose" :class="['hu-select__caret', 'hu-input__icon', 'hu-icon-' + iconClass]"></i>
           <i v-if="showClose" class="hu-select__caret hu-input__icon hu-icon-circle-close" @click="handleClearClick"></i>
         </div>
@@ -595,6 +595,7 @@
           }
         }, 50);
         this.softFocus = false;
+        this.inputFocus = false;
       },
 
       handleClearClick(event) {
