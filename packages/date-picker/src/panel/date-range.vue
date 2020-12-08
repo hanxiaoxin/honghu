@@ -202,13 +202,13 @@
     nextDate,
     extractDateFormat,
     extractTimeFormat
-  } from 'element-ui/src/utils/date-util';
-  import Clickoutside from 'element-ui/src/utils/clickoutside';
-  import Locale from 'element-ui/src/mixins/locale';
+  } from 'honghu-ui/src/utils/date-util';
+  import Clickoutside from 'honghu-ui/src/utils/clickoutside';
+  import Locale from 'honghu-ui/src/mixins/locale';
   import TimePicker from './time';
   import DateTable from '../basic/date-table';
-  import ElInput from 'element-ui/packages/input';
-  import HuButton from 'element-ui/packages/button';
+  import ElInput from 'honghu-ui/packages/input';
+  import HuButton from 'honghu-ui/packages/button';
 
   const calcDefaultValue = (defaultValue) => {
     if (Array.isArray(defaultValue)) {

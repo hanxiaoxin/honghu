@@ -1,5 +1,5 @@
 <script>
-  import HuCollapseTransition from 'element-ui/src/transitions/collapse-transition';
+  import HuCollapseTransition from 'honghu-ui/src/transitions/collapse-transition';
   import menuMixin from './menu-mixin';
   import Emitter from 'honghu-ui/src/mixins/emitter';
   import Popper from 'honghu-ui/src/utils/vue-popper';

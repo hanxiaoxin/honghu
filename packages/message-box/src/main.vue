@@ -79,13 +79,13 @@
 </template>
 
 <script type="text/babel">
-  import Popup from 'element-ui/src/utils/popup';
-  import Locale from 'element-ui/src/mixins/locale';
-  import ElInput from 'element-ui/packages/input';
-  import HuButton from 'element-ui/packages/button';
-  import { addClass, removeClass } from 'element-ui/src/utils/dom';
-  import { t } from 'element-ui/src/locale';
-  import Dialog from 'element-ui/src/utils/aria-dialog';
+  import Popup from 'honghu-ui/src/utils/popup';
+  import Locale from 'honghu-ui/src/mixins/locale';
+  import ElInput from 'honghu-ui/packages/input';
+  import HuButton from 'honghu-ui/packages/button';
+  import { addClass, removeClass } from 'honghu-ui/src/utils/dom';
+  import { t } from 'honghu-ui/src/locale';
+  import Dialog from 'honghu-ui/src/utils/aria-dialog';
 
   let messageBox;
   let typeMap = {

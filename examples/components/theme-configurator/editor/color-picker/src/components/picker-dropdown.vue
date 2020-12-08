@@ -51,10 +51,10 @@
   import AlphaSlider from './alpha-slider';
   import Predefine from './predefine';
   import ColorList from './color-list';
-  import Popper from 'element-ui/src/utils/vue-popper';
-  import Locale from 'element-ui/src/mixins/locale';
-  import ElInput from 'element-ui/packages/input';
-  import HuButton from 'element-ui/packages/button';
+  import Popper from 'honghu-ui/src/utils/vue-popper';
+  import Locale from 'honghu-ui/src/mixins/locale';
+  import ElInput from 'honghu-ui/packages/input';
+  import HuButton from 'honghu-ui/packages/button';
 
   export default {
     name: 'hu-color-picker-dropdown',

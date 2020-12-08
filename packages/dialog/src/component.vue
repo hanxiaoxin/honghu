@@ -38,9 +38,9 @@
 </template>
 
 <script>
-  import Popup from 'element-ui/src/utils/popup';
-  import Migrating from 'element-ui/src/mixins/migrating';
-  import emitter from 'element-ui/src/mixins/emitter';
+  import Popup from 'honghu-ui/src/utils/popup';
+  import Migrating from 'honghu-ui/src/mixins/migrating';
+  import emitter from 'honghu-ui/src/mixins/emitter';
 
   export default {
     name: 'HuDialog',

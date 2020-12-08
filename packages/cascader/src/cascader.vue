@@ -112,21 +112,21 @@
 </template>
 
 <script>
-import Popper from 'element-ui/src/utils/vue-popper';
-import Clickoutside from 'element-ui/src/utils/clickoutside';
-import Emitter from 'element-ui/src/mixins/emitter';
-import Locale from 'element-ui/src/mixins/locale';
-import Migrating from 'element-ui/src/mixins/migrating';
-import ElInput from 'element-ui/packages/input';
-import ElTag from 'element-ui/packages/tag';
-import HuScrollbar from 'element-ui/packages/scrollbar';
-import ElCascaderPanel from 'element-ui/packages/cascader-panel';
-import AriaUtils from 'element-ui/src/utils/aria-utils';
-import { t } from 'element-ui/src/locale';
-import { isEqual, isEmpty, kebabCase } from 'element-ui/src/utils/util';
-import { isUndefined, isFunction } from 'element-ui/src/utils/types';
-import { isDef } from 'element-ui/src/utils/shared';
-import { addResizeListener, removeResizeListener } from 'element-ui/src/utils/resize-event';
+import Popper from 'honghu-ui/src/utils/vue-popper';
+import Clickoutside from 'honghu-ui/src/utils/clickoutside';
+import Emitter from 'honghu-ui/src/mixins/emitter';
+import Locale from 'honghu-ui/src/mixins/locale';
+import Migrating from 'honghu-ui/src/mixins/migrating';
+import ElInput from 'honghu-ui/packages/input';
+import ElTag from 'honghu-ui/packages/tag';
+import HuScrollbar from 'honghu-ui/packages/scrollbar';
+import ElCascaderPanel from 'honghu-ui/packages/cascader-panel';
+import AriaUtils from 'honghu-ui/src/utils/aria-utils';
+import { t } from 'honghu-ui/src/locale';
+import { isEqual, isEmpty, kebabCase } from 'honghu-ui/src/utils/util';
+import { isUndefined, isFunction } from 'honghu-ui/src/utils/types';
+import { isDef } from 'honghu-ui/src/utils/shared';
+import { addResizeListener, removeResizeListener } from 'honghu-ui/src/utils/resize-event';
 import debounce from 'throttle-debounce/debounce';
 
 const { keys: KeyCode } = AriaUtils;

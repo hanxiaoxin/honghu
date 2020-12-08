@@ -72,9 +72,9 @@
 </template>
 
 <script type="text/jsx">
-  import HuCollapseTransition from 'element-ui/src/transitions/collapse-transition';
-  import ElCheckbox from 'element-ui/packages/checkbox';
-  import emitter from 'element-ui/src/mixins/emitter';
+  import HuCollapseTransition from 'honghu-ui/src/transitions/collapse-transition';
+  import ElCheckbox from 'honghu-ui/packages/checkbox';
+  import emitter from 'honghu-ui/src/mixins/emitter';
   import { getNodeKey } from './model/util';
 
   export default {

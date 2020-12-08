@@ -9,10 +9,10 @@ var transitionList = fs.readdirSync(path.resolve(__dirname, '../src/transitions'
 var externals = {};
 
 Object.keys(Components).forEach(function(key) {
-  externals[`honghu-ui/packages/${key}`] = `element-ui/lib/${key}`;
+  externals[`honghu-ui/packages/${key}`] = `honghu-ui/lib/${key}`;
 });
 
-externals['element-ui/src/locale'] = 'honghu-ui/lib/locale';
+externals['honghu-ui/src/locale'] = 'honghu-ui/lib/locale';
 utilsList.forEach(function(file) {
   file = path.basename(file, '.js');
   externals[`honghu-ui/src/utils/${file}`] = `honghu-ui/lib/utils/${file}`;
@@ -36,7 +36,6 @@ exports.alias = {
   main: path.resolve(__dirname, '../src'),
   packages: path.resolve(__dirname, '../packages'),
   examples: path.resolve(__dirname, '../examples'),
-  'element-ui': path.resolve(__dirname, '../'),
   'honghu-ui': path.resolve(__dirname, '../')
 };
 

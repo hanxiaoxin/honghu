@@ -18,9 +18,9 @@
   </transition>
 </template>
 <script>
-  import Popper from 'element-ui/src/utils/vue-popper';
-  import Emitter from 'element-ui/src/mixins/emitter';
-  import HuScrollbar from 'element-ui/packages/scrollbar';
+  import Popper from 'honghu-ui/src/utils/vue-popper';
+  import Emitter from 'honghu-ui/src/mixins/emitter';
+  import HuScrollbar from 'honghu-ui/packages/scrollbar';
 
   export default {
     components: { HuScrollbar },

@@ -19,8 +19,8 @@
 </template>
 
 <script type="text/babel">
-  import HuScrollbar from 'element-ui/packages/scrollbar';
-  import scrollIntoView from 'element-ui/src/utils/scroll-into-view';
+  import HuScrollbar from 'honghu-ui/packages/scrollbar';
+  import scrollIntoView from 'honghu-ui/src/utils/scroll-into-view';
 
   const parseTime = function(time) {
     const values = (time || '').split(':');

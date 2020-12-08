@@ -1,8 +1,8 @@
 <script>
-import HuScrollbar from 'element-ui/packages/scrollbar';
+import HuScrollbar from 'honghu-ui/packages/scrollbar';
 import CascaderNode from './cascader-node.vue';
-import Locale from 'element-ui/src/mixins/locale';
-import { generateId } from 'element-ui/src/utils/util';
+import Locale from 'honghu-ui/src/mixins/locale';
+import { generateId } from 'honghu-ui/src/utils/util';
 
 export default {
   name: 'ElCascaderMenu',

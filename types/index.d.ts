@@ -1,4 +1,4 @@
-export * from './element-ui'
+export * from './honghu-ui'
 
-import * as ElementUI from './element-ui'
-export default ElementUI
+import * as HongHuUI from './honghu-ui'
+export default HongHuUI
