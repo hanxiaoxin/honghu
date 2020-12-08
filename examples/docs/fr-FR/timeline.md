@@ -108,22 +108,22 @@ Le timestamp peut être placé au-dessus du contenu lorsque celui-ci est trop ha
 <div class="block">
   <el-timeline>
     <el-timeline-item timestamp="2018/4/12" placement="top">
-      <el-card>
+      <hu-card>
         <h4>Mise à jour du template GitHub</h4>
         <p>Commit de Tom le 2018/4/12 20:46</p>
-      </el-card>
+      </hu-card>
     </el-timeline-item>
     <el-timeline-item timestamp="2018/4/3" placement="top">
-      <el-card>
+      <hu-card>
         <h4>Mise à jour du template GitHub</h4>
         <p>Commit de Tom le 2018/4/3 20:46</p>
-      </el-card>
+      </hu-card>
     </el-timeline-item>
     <el-timeline-item timestamp="2018/4/2" placement="top">
-      <el-card>
+      <hu-card>
         <h4>Mise à jour du template GitHub</h4>
         <p>Commit de Tom le 2018/4/2 20:46</p>
-      </el-card>
+      </hu-card>
     </el-timeline-item>
   </el-timeline>
 </div>

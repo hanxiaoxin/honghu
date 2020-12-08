@@ -1,22 +1,22 @@
 <template>
-  <div class="el-form-item" :class="[{
-      'el-form-item--feedback': elForm && elForm.statusIcon,
+  <div class="hu-form-item" :class="[{
+      'hu-form-item--feedback': elForm && elForm.statusIcon,
       'is-error': validateState === 'error',
       'is-validating': validateState === 'validating',
       'is-success': validateState === 'success',
       'is-required': isRequired || required,
       'is-no-asterisk': elForm && elForm.hideRequiredAsterisk
     },
-    sizeClass ? 'el-form-item--' + sizeClass : ''
+    sizeClass ? 'hu-form-item--' + sizeClass : ''
   ]">
     <label-wrap
       :is-auto-width="labelStyle && labelStyle.width === 'auto'"
       :update-all="form.labelWidth === 'auto'">
-      <label :for="labelFor" class="el-form-item__label" :style="labelStyle" v-if="label || $slots.label">
+      <label :for="labelFor" class="hu-form-item__label" :style="labelStyle" v-if="label || $slots.label">
         <slot name="label">{{label + form.labelSuffix}}</slot>
       </label>
     </label-wrap>
-    <div class="el-form-item__content" :style="contentStyle">
+    <div class="hu-form-item__content" :style="contentStyle">
       <slot></slot>
       <transition name="el-zoom-in-top">
         <slot
@@ -24,9 +24,9 @@
           name="error"
           :error="validateMessage">
           <div
-            class="el-form-item__error"
+            class="hu-form-item__error"
             :class="{
-              'el-form-item__error--inline': typeof inlineMessage === 'boolean'
+              'hu-form-item__error--inline': typeof inlineMessage === 'boolean'
                 ? inlineMessage
                 : (elForm && elForm.inlineMessage || false)
             }"
@@ -40,14 +40,14 @@
 </template>
 <script>
   import AsyncValidator from 'async-validator';
-  import emitter from 'element-ui/src/mixins/emitter';
-  import objectAssign from 'element-ui/src/utils/merge';
-  import { noop, getPropByPath } from 'element-ui/src/utils/util';
+  import emitter from 'honghu-ui/src/mixins/emitter';
+  import objectAssign from 'honghu-ui/src/utils/merge';
+  import { noop, getPropByPath } from 'honghu-ui/src/utils/util';
   import LabelWrap from './label-wrap';
   export default {
-    name: 'ElFormItem',
+    name: 'HuFormItem',
 
-    componentName: 'ElFormItem',
+    componentName: 'HuFormItem',
 
     mixins: [emitter],
 

@@ -1,20 +1,20 @@
 <template>
-  <el-popover
+  <hu-popover
     v-bind="$attrs"
     v-model="visible"
     trigger="click"
   >
-  <div class="el-popconfirm">
-    <p class="el-popconfirm__main">
+  <div class="hu-popconfirm">
+    <p class="hu-popconfirm__main">
     <i
       v-if="!hideIcon"
       :class="icon"
-      class="el-popconfirm__icon"
+      class="hu-popconfirm__icon"
       :style="{color: iconColor}"
     ></i>
       {{title}}
     </p>
-    <div class="el-popconfirm__action">
+    <div class="hu-popconfirm__action">
       <hu-button
         size="mini"
         :type="cancelButtonType"
@@ -32,16 +32,16 @@
     </div>
   </div>
   <slot name="reference" slot="reference"></slot>
-</el-popover>
+</hu-popover>
 </template>
 
 <script>
-import ElPopover from 'element-ui/packages/popover';
-import HuButton from 'element-ui/packages/button';
-import {t} from 'element-ui/src/locale';
+import HuPopover from 'honghu-ui/packages/popover';
+import HuButton from 'honghu-ui/packages/button';
+import {t} from 'honghu-ui/src/locale';
 
 export default {
-  name: 'ElPopconfirm',
+  name: 'HuPopconfirm',
   props: {
     title: {
       type: String
@@ -64,7 +64,7 @@ export default {
     },
     icon: {
       type: String,
-      default: 'el-icon-question'
+      default: 'hu-icon-question'
     },
     iconColor: {
       type: String,
@@ -76,7 +76,7 @@ export default {
     }
   },
   components: {
-    ElPopover,
+    HuPopover,
     HuButton
   },
   data() {

@@ -1,8 +1,8 @@
-import ElFormItem from '../form/src/form-item';
+import HuFormItem from '../form/src/form-item';
 
 /* istanbul ignore next */
-ElFormItem.install = function(Vue) {
-  Vue.component(ElFormItem.name, ElFormItem);
+HuFormItem.install = function(Vue) {
+  Vue.component(HuFormItem.name, HuFormItem);
 };
 
-export default ElFormItem;
+export default HuFormItem;

@@ -338,11 +338,11 @@
     </hu-row>
     <h4>Card</h4>
     <hu-row>
-      <el-card class="box-card">
+      <hu-card class="box-card">
         <div slot="header" class="clearfix">
           <span>Card name</span>
         </div>
-      </el-card>
+      </hu-card>
     </hu-row>
     <h4>Carousel</h4>
     <hu-row>

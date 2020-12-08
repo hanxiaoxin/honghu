@@ -8,7 +8,7 @@ Le composant Card comprend un titre, un contenu et des opérations.
 
 :::demo Card est composé d'un `header` et d'un `body`. `header` est optionnel et son contenu nécessite l'utilisation d'un slot.
 ```html
-<el-card class="box-card">
+<hu-card class="box-card">
   <div slot="header" class="clearfix">
     <span>Card name</span>
     <el-button style="float: right; padding: 3px 0" type="text">Bouton</el-button>
@@ -16,7 +16,7 @@ Le composant Card comprend un titre, un contenu et des opérations.
   <div v-for="o in 4" :key="o" class="text item">
     {{'List item ' + o }}
   </div>
-</el-card>
+</hu-card>
 
 <style>
   .text {
@@ -49,11 +49,11 @@ Le header peut être omis.
 
 :::demo
 ```html
-<el-card class="box-card">
+<hu-card class="box-card">
   <div v-for="o in 4" :key="o" class="text item">
     {{'List item ' + o }}
   </div>
-</el-card>
+</hu-card>
 
 <style>
   .text {
@@ -79,7 +79,7 @@ Affichez un contenu plus riche grâce à la configuration.
 ```html
 <hu-row>
   <hu-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
-    <el-card :body-style="{ padding: '0px' }">
+    <hu-card :body-style="{ padding: '0px' }">
       <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
       <div style="padding: 14px;">
         <span>Yummy hamburger</span>
@@ -88,7 +88,7 @@ Affichez un contenu plus riche grâce à la configuration.
           <el-button type="text" class="button">Operating</el-button>
         </div>
       </div>
-    </el-card>
+    </hu-card>
   </hu-col>
 </hu-row>
 
@@ -144,19 +144,19 @@ Vous pouvez définir quand l'ombre des Cards doivent apparaître.
 ```html
 <hu-row :gutter="12">
   <hu-col :span="8">
-    <el-card shadow="always">
+    <hu-card shadow="always">
       Always
-    </el-card>
+    </hu-card>
   </hu-col>
   <hu-col :span="8">
-    <el-card shadow="hover">
+    <hu-card shadow="hover">
       Hover
-    </el-card>
+    </hu-card>
   </hu-col>
   <hu-col :span="8">
-    <el-card shadow="never">
+    <hu-card shadow="never">
       Never
-    </el-card>
+    </hu-card>
   </hu-col>
 </hu-row>
 ```

@@ -10,11 +10,11 @@ describe('Popconfirm', () => {
     const createVM = () => {
       return createVue(`
         <div>
-          <el-popconfirm
+          <hu-popconfirm
             ref="popover"
             title="content">
             <button slot="reference">trigger</button>
-          </el-popconfirm>
+          </hu-popconfirm>
         </div>
       `, true);
     };
@@ -22,7 +22,7 @@ describe('Popconfirm', () => {
       vm = createVM();
       vm.$el.querySelector('button').click();
       document.body.click();
-      expect(document.body.querySelector('.el-popconfirm__action').style.display).to.equal('');
+      expect(document.body.querySelector('.hu-popconfirm__action').style.display).to.equal('');
     });
   });
 
