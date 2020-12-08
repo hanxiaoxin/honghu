@@ -21,11 +21,11 @@
   
   使用 [Scoped slot](https://vuejs.org/v2/guide/components.html#Scoped-Slots) 即可：
   ```html
-  <el-table-column label="操作">
+  <hu-table-column label="操作">
     <template slot-scope="props">
       <el-button @click.native="showDetail(props.row)">查看详情</el-button>
     </template>
-  </el-table-column>
+  </hu-table-column>
   ```
   参数 `row` 即为对应行的数据。
 </details>
@@ -93,11 +93,11 @@
   
   Just use [Scoped slot](https://vuejs.org/v2/guide/components.html#Scoped-Slots):
   ```html
-  <el-table-column label="Operations">
+  <hu-table-column label="Operations">
     <template slot-scope="props">
       <el-button @click.native="showDetail(props.row)">Details</el-button>
     </template>
-  </el-table-column>
+  </hu-table-column>
   ```
   The parameter `row` is the data object of corresponding row.
 </details>
@@ -167,11 +167,11 @@
   
   Simplemente agregue [“Scoped slot”](https://vuejs.org/v2/guide/components.html#Scoped-Slots):
   ```html
-  <el-table-column label="Operaciones">
+  <hu-table-column label="Operaciones">
     <template slot-scope="props">
       <el-button @click.native="verDetalles(props.row)">Detalles</el-button>
     </template>
-  </el-table-column>
+  </hu-table-column>
   ```
   El parámetro `row` contiene los datos de la linea correspondiente de la tabla.
 </details>

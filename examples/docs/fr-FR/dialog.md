@@ -59,11 +59,11 @@ Le contenu du modal peut être n'importe quoi, tableau ou formulaire compris.
 <el-button type="text" @click="dialogTableVisible = true">Ouvrir un modal avec tableau</el-button>
 
 <el-dialog title="Adresse d'expédition" :visible.sync="dialogTableVisible">
-  <el-table :data="gridData">
-    <el-table-column property="date" label="Date" width="150"></el-table-column>
-    <el-table-column property="name" label="Nom" width="200"></el-table-column>
-    <el-table-column property="address" label="Adresse"></el-table-column>
-  </el-table>
+  <hu-table :data="gridData">
+    <hu-table-column property="date" label="Date" width="150"></hu-table-column>
+    <hu-table-column property="name" label="Nom" width="200"></hu-table-column>
+    <hu-table-column property="address" label="Adresse"></hu-table-column>
+  </hu-table>
 </el-dialog>
 
 <!-- Form -->

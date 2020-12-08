@@ -22,21 +22,21 @@ Affiche le nombre de nouveaux messages.
   <el-button size="small">Réponses</el-button>
 </el-badge>
 
-<el-dropdown trigger="click">
-  <span class="el-dropdown-link">
+<hu-dropdown trigger="click">
+  <span class="hu-dropdown-link">
     Cliquez<i class="el-icon-caret-bottom el-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item class="clearfix">
+  <hu-dropdown-menu slot="dropdown">
+    <hu-dropdown-item class="clearfix">
       Commentaires
       <el-badge class="mark" :value="12" />
-    </el-dropdown-item>
-    <el-dropdown-item class="clearfix">
+    </hu-dropdown-item>
+    <hu-dropdown-item class="clearfix">
       Réponses
       <el-badge class="mark" :value="3" />
-    </el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+    </hu-dropdown-item>
+  </hu-dropdown-menu>
+</hu-dropdown>
 
 <style>
 .item {

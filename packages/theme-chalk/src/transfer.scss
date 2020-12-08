@@ -74,7 +74,7 @@
     height: $--transfer-panel-body-height;
 
     @include when(with-footer) {
-      padding-bottom: $--transfer-panel-footer-height;
+      padding-bottom: $--transfer-panhu-footer-height;
     }
   }
 
@@ -153,9 +153,9 @@
   }
 
   .el-transfer-panel__header {
-    height: $--transfer-panel-header-height;
-    line-height: $--transfer-panel-header-height;
-    background: $--transfer-panel-header-background-color;
+    height: $--transfer-panhu-header-height;
+    line-height: $--transfer-panhu-header-height;
+    background: $--transfer-panhu-header-background-color;
     margin: 0;
     padding-left: 15px;
     border-bottom: 1px solid $--transfer-border-color;
@@ -183,7 +183,7 @@
   }
 
   .el-transfer-panel__footer {
-    height: $--transfer-panel-footer-height;
+    height: $--transfer-panhu-footer-height;
     background: $--color-white;
     margin: 0;
     padding: 0;

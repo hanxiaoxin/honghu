@@ -59,11 +59,11 @@ The content of Dialog can be anything, even a table or a form. This example show
 <el-button type="text" @click="dialogTableVisible = true">open a Table nested Dialog</el-button>
 
 <el-dialog title="Shipping address" :visible.sync="dialogTableVisible">
-  <el-table :data="gridData">
-    <el-table-column property="date" label="Date" width="150"></el-table-column>
-    <el-table-column property="name" label="Name" width="200"></el-table-column>
-    <el-table-column property="address" label="Address"></el-table-column>
-  </el-table>
+  <hu-table :data="gridData">
+    <hu-table-column property="date" label="Date" width="150"></hu-table-column>
+    <hu-table-column property="name" label="Name" width="200"></hu-table-column>
+    <hu-table-column property="address" label="Address"></hu-table-column>
+  </hu-table>
 </el-dialog>
 
 <!-- Form -->

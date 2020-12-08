@@ -1,11 +1,11 @@
 <script type="text/jsx">
-  import emitter from 'element-ui/src/mixins/emitter';
-  import Migrating from 'element-ui/src/mixins/migrating';
-  import Menubar from 'element-ui/src/utils/menu/aria-menubar';
-  import { addClass, removeClass, hasClass } from 'element-ui/src/utils/dom';
+  import emitter from 'honghu-ui/src/mixins/emitter';
+  import Migrating from 'honghu-ui/src/mixins/migrating';
+  import Menubar from 'honghu-ui/src/utils/menu/aria-menubar';
+  import { addClass, removeClass, hasClass } from 'honghu-ui/src/utils/dom';
 
   export default {
-    name: 'ElMenu',
+    name: 'HuMenu',
 
     render (h) {
       const component = (
@@ -14,9 +14,9 @@
           key={ +this.collapse }
           style={{ backgroundColor: this.backgroundColor || '' }}
           class={{
-            'el-menu--horizontal': this.mode === 'horizontal',
-            'el-menu--collapse': this.collapse,
-            "el-menu": true
+            'hu-menu--horizontal': this.mode === 'horizontal',
+            'hu-menu--collapse': this.collapse,
+            "hu-menu": true
           }}
         >
           { this.$slots.default }
@@ -25,16 +25,16 @@
 
       if (this.collapseTransition) {
         return (
-          <el-menu-collapse-transition>
+          <hu-menu-collapse-transition>
             { component }
-          </el-menu-collapse-transition>
+          </hu-menu-collapse-transition>
         );
       } else {
         return component;
       }
     },
 
-    componentName: 'ElMenu',
+    componentName: 'HuMenu',
 
     mixins: [emitter, Migrating],
 
@@ -45,7 +45,7 @@
     },
 
     components: {
-      'el-menu-collapse-transition': {
+      'hu-menu-collapse-transition': {
         functional: true,
         render(createElement, context) {
           const data = {
@@ -70,16 +70,16 @@
               beforeLeave(el) {
                 if (!el.dataset) el.dataset = {};
 
-                if (hasClass(el, 'el-menu--collapse')) {
-                  removeClass(el, 'el-menu--collapse');
+                if (hasClass(el, 'hu-menu--collapse')) {
+                  removeClass(el, 'hu-menu--collapse');
                   el.dataset.oldOverflow = el.style.overflow;
                   el.dataset.scrollWidth = el.clientWidth;
-                  addClass(el, 'el-menu--collapse');
+                  addClass(el, 'hu-menu--collapse');
                 } else {
-                  addClass(el, 'el-menu--collapse');
+                  addClass(el, 'hu-menu--collapse');
                   el.dataset.oldOverflow = el.style.overflow;
                   el.dataset.scrollWidth = el.clientWidth;
-                  removeClass(el, 'el-menu--collapse');
+                  removeClass(el, 'hu-menu--collapse');
                 }
 
                 el.style.width = el.scrollWidth + 'px';
@@ -154,7 +154,7 @@
 
       collapse(value) {
         if (value) this.openedMenus = [];
-        this.broadcast('ElSubmenu', 'toggle-collapse', value);
+        this.broadcast('HuSubmenu', 'toggle-collapse', value);
       }
     },
     methods: {
@@ -272,7 +272,7 @@
           this.routeToItem(item, (error) => {
             this.activeIndex = oldActiveIndex;
             if (error) {
-              // vue-router 3.1.0+ push/replace cause NavigationDuplicated error 
+              // vue-router 3.1.0+ push/replace cause NavigationDuplicated error
               // https://github.com/ElemeFE/element/issues/17044
               if (error.name === 'NavigationDuplicated') return
               console.error(error)

@@ -98,7 +98,7 @@ Vous pouvez utiliser les transitions d'Element directement. Mais avant ça, merc
 
 ### Collapse
 
-Pour l'effet collapse, utilisez le composant `el-collapse-transition`.
+Pour l'effet collapse, utilisez le composant `hu-collapse-transition`.
 
 :::demo
 ```html
@@ -107,12 +107,12 @@ Pour l'effet collapse, utilisez le composant `el-collapse-transition`.
     <el-button @click="show3 = !show3">Cliquez ici</el-button>
 
     <div style="margin-top: 20px; height: 200px;">
-      <el-collapse-transition>
+      <hu-collapse-transition>
         <div v-show="show3">
-          <div class="transition-box">el-collapse-transition</div>
-          <div class="transition-box">el-collapse-transition</div>
+          <div class="transition-box">hu-collapse-transition</div>
+          <div class="transition-box">hu-collapse-transition</div>
         </div>
-      </el-collapse-transition>
+      </hu-collapse-transition>
     </div>
   </div>
 </template>

@@ -94,11 +94,11 @@ Al igual que `Dialog`, `Drawer` puede hacer muchas interacciones diversas.
   :visible.sync="table"
   direction="rtl"
   size="50%">
-   <el-table :data="gridData">
-      <el-table-column property="date" label="Date" width="150"></el-table-column>
-      <el-table-column property="name" label="Name" width="200"></el-table-column>
-      <el-table-column property="address" label="Address"></el-table-column>
-    </el-table>
+   <hu-table :data="gridData">
+      <hu-table-column property="date" label="Date" width="150"></hu-table-column>
+      <hu-table-column property="name" label="Name" width="200"></hu-table-column>
+      <hu-table-column property="address" label="Address"></hu-table-column>
+    </hu-table>
 </el-drawer>
 
 <el-drawer

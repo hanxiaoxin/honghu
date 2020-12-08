@@ -324,50 +324,50 @@
 
           <!-- 版本选择器 -->
           <li class="nav-item nav-versions" v-show="isComponentPage">
-            <el-dropdown
+            <hu-dropdown
               trigger="click"
               class="nav-dropdown"
               :class="{ 'is-active': verDropdownVisible }">
               <span>
                 {{ version }}
-                <i class="el-icon-arrow-down el-icon--right"></i>
+                <i class="hu-icon-arrow-down hu-icon--right"></i>
               </span>
-              <el-dropdown-menu
+              <hu-dropdown-menu
                 slot="dropdown"
                 class="nav-dropdown-list"
                 @input="handleVerDropdownToggle">
-                <el-dropdown-item
+                <hu-dropdown-item
                   v-for="item in Object.keys(versions)"
                   :key="item"
                   @click.native="switchVersion(item)">
                   {{ item }}
-                </el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
+                </hu-dropdown-item>
+              </hu-dropdown-menu>
+            </hu-dropdown>
           </li>
 
           <!-- 语言选择器 -->
           <li class="nav-item lang-item">
-            <el-dropdown
+            <hu-dropdown
               trigger="click"
               class="nav-dropdown nav-lang"
               :class="{ 'is-active': langDropdownVisible }">
               <span>
                 {{ displayedLang }}
-                <i class="el-icon-arrow-down el-icon--right"></i>
+                <i class="hu-icon-arrow-down hu-icon--right"></i>
               </span>
-              <el-dropdown-menu
+              <hu-dropdown-menu
                 slot="dropdown"
                 class="nav-dropdown-list"
                 @input="handleLangDropdownToggle">
-                <el-dropdown-item
+                <hu-dropdown-item
                   v-for="(value, key) in langs"
                   :key="key"
                   @click.native="switchLang(key)">
                   {{ value }}
-                </el-dropdown-item>
-              </el-dropdown-menu>
-            </el-dropdown>
+                </hu-dropdown-item>
+              </hu-dropdown-menu>
+            </hu-dropdown>
           </li>
         </ul>
       </div>

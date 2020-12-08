@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Loading from './loading.vue';
-import { addClass, removeClass, getStyle } from 'element-ui/src/utils/dom';
-import { PopupManager } from 'element-ui/src/utils/popup';
-import afterLeave from 'element-ui/src/utils/after-leave';
+import { addClass, removeClass, getStyle } from 'honghu-ui/src/utils/dom';
+import { PopupManager } from 'honghu-ui/src/utils/popup';
+import afterLeave from 'honghu-ui/src/utils/after-leave';
 const Mask = Vue.extend(Loading);
 
 const loadingDirective = {};
@@ -50,8 +50,8 @@ loadingDirective.install = Vue => {
         const target = binding.modifiers.fullscreen || binding.modifiers.body
           ? document.body
           : el;
-        removeClass(target, 'el-loading-parent--relative');
-        removeClass(target, 'el-loading-parent--hidden');
+        removeClass(target, 'hu-loading-parent--relative');
+        removeClass(target, 'hu-loading-parent--hidden');
         el.instance.hiding = false;
       }, 300, true);
       el.instance.visible = false;
@@ -65,10 +65,10 @@ loadingDirective.install = Vue => {
       });
 
       if (el.originalPosition !== 'absolute' && el.originalPosition !== 'fixed') {
-        addClass(parent, 'el-loading-parent--relative');
+        addClass(parent, 'hu-loading-parent--relative');
       }
       if (binding.modifiers.fullscreen && binding.modifiers.lock) {
-        addClass(parent, 'el-loading-parent--hidden');
+        addClass(parent, 'hu-loading-parent--hidden');
       }
       el.domVisible = true;
 

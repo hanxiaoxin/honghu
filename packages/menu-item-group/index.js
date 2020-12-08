@@ -1,8 +1,8 @@
-import ElMenuItemGroup from '../menu/src/menu-item-group';
+import HuMenuItemGroup from '../menu/src/menu-item-group';
 
 /* istanbul ignore next */
-ElMenuItemGroup.install = function(Vue) {
-  Vue.component(ElMenuItemGroup.name, ElMenuItemGroup);
+HuMenuItemGroup.install = function(Vue) {
+  Vue.component(HuMenuItemGroup.name, HuMenuItemGroup);
 };
 
-export default ElMenuItemGroup;
+export default HuMenuItemGroup;

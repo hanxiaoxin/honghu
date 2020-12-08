@@ -1,8 +1,8 @@
 <script>
-  import ElCollapseTransition from 'element-ui/src/transitions/collapse-transition';
+  import HuCollapseTransition from 'element-ui/src/transitions/collapse-transition';
   import menuMixin from './menu-mixin';
-  import Emitter from 'element-ui/src/mixins/emitter';
-  import Popper from 'element-ui/src/utils/vue-popper';
+  import Emitter from 'honghu-ui/src/mixins/emitter';
+  import Popper from 'honghu-ui/src/utils/vue-popper';
 
   const poperMixins = {
     props: {
@@ -21,13 +21,13 @@
   };
 
   export default {
-    name: 'ElSubmenu',
+    name: 'HuSubmenu',
 
-    componentName: 'ElSubmenu',
+    componentName: 'HuSubmenu',
 
     mixins: [menuMixin, Emitter, poperMixins],
 
-    components: { ElCollapseTransition },
+    components: { HuCollapseTransition },
 
     props: {
       index: {
@@ -137,7 +137,7 @@
         let isFirstLevel = true;
         let parent = this.$parent;
         while (parent && parent !== this.rootMenu) {
-          if (['ElSubmenu', 'ElMenuItemGroup'].indexOf(parent.$options.componentName) > -1) {
+          if (['HuSubmenu', 'HuMenuItemGroup'].indexOf(parent.$options.componentName) > -1) {
             isFirstLevel = false;
             break;
           } else {
@@ -176,7 +176,7 @@
         ) {
           return;
         }
-        this.dispatch('ElMenu', 'submenu-click', this);
+        this.dispatch('HuMenu', 'submenu-click', this);
       },
       handleMouseenter(event, showTimeout = this.showTimeout) {
 
@@ -191,7 +191,7 @@
         ) {
           return;
         }
-        this.dispatch('ElSubmenu', 'mouse-enter-child');
+        this.dispatch('HuSubmenu', 'mouse-enter-child');
         clearTimeout(this.timeout);
         this.timeout = setTimeout(() => {
           this.rootMenu.openMenu(this.index, this.indexPath);
@@ -209,14 +209,14 @@
         ) {
           return;
         }
-        this.dispatch('ElSubmenu', 'mouse-leave-child');
+        this.dispatch('HuSubmenu', 'mouse-leave-child');
         clearTimeout(this.timeout);
         this.timeout = setTimeout(() => {
           !this.mouseInChild && this.rootMenu.closeMenu(this.index);
         }, this.hideTimeout);
 
         if (this.appendToBody && deepDispatch) {
-          if (this.$parent.$options.name === 'ElSubmenu') {
+          if (this.$parent.$options.name === 'HuSubmenu') {
             this.$parent.handleMouseleave(true);
           }
         }
@@ -284,13 +284,13 @@
           <div
             ref="menu"
             v-show={opened}
-            class={[`el-menu--${mode}`, popperClass]}
+            class={[`hu-menu--${mode}`, popperClass]}
             on-mouseenter={($event) => this.handleMouseenter($event, 100)}
             on-mouseleave={() => this.handleMouseleave(true)}
             on-focus={($event) => this.handleMouseenter($event, 100)}>
             <ul
               role="menu"
-              class={['el-menu el-menu--popup', `el-menu--popup-${currentPlacement}`]}
+              class={['hu-menu hu-menu--popup', `hu-menu--popup-${currentPlacement}`]}
               style={{ backgroundColor: rootMenu.backgroundColor || '' }}>
               {$slots.default}
             </ul>
@@ -299,26 +299,26 @@
       );
 
       const inlineMenu = (
-        <el-collapse-transition>
+        <hu-collapse-transition>
           <ul
             role="menu"
-            class="el-menu el-menu--inline"
+            class="hu-menu hu-menu--inline"
             v-show={opened}
             style={{ backgroundColor: rootMenu.backgroundColor || '' }}>
             {$slots.default}
           </ul>
-        </el-collapse-transition>
+        </hu-collapse-transition>
       );
 
       const submenuTitleIcon = (
         rootMenu.mode === 'horizontal' && isFirstLevel ||
         rootMenu.mode === 'vertical' && !rootMenu.collapse
-      ) ? 'el-icon-arrow-down' : 'el-icon-arrow-right';
+      ) ? 'hu-icon-arrow-down' : 'hu-icon-arrow-right';
 
       return (
         <li
           class={{
-            'el-submenu': true,
+            'hu-submenu': true,
             'is-active': active,
             'is-opened': opened,
             'is-disabled': disabled
@@ -331,7 +331,7 @@
           on-focus={this.handleMouseenter}
         >
           <div
-            class="el-submenu__title"
+            class="hu-submenu__title"
             ref="submenu-title"
             on-click={this.handleClick}
             on-mouseenter={this.handleTitleMouseenter}
@@ -339,7 +339,7 @@
             style={[paddingStyle, titleStyle, { backgroundColor }]}
           >
             {$slots.title}
-            <i class={[ 'el-submenu__icon-arrow', submenuTitleIcon ]}></i>
+            <i class={[ 'hu-submenu__icon-arrow', submenuTitleIcon ]}></i>
           </div>
           {this.isMenuPopup ? popupMenu : inlineMenu}
         </li>

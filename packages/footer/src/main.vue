@@ -1,14 +1,14 @@
 <template>
-  <footer class="el-footer" :style="{ height }">
+  <footer class="hu-footer" :style="{ height }">
     <slot></slot>
   </footer>
 </template>
 
 <script>
   export default {
-    name: 'ElFooter',
+    name: 'HuFooter',
 
-    componentName: 'ElFooter',
+    componentName: 'HuFooter',
 
     props: {
       height: {

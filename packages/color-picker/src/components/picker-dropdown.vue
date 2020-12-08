@@ -1,16 +1,16 @@
 <template>
   <transition name="el-zoom-in-top" @after-leave="doDestroy">
     <div
-      class="el-color-dropdown"
+      class="hu-color-dropdown"
       v-show="showPopper">
-      <div class="el-color-dropdown__main-wrapper">
+      <div class="hu-color-dropdown__main-wrapper">
         <hue-slider ref="hue" :color="color" vertical style="float: right;"></hue-slider>
         <sv-panel ref="sl" :color="color"></sv-panel>
       </div>
       <alpha-slider v-if="showAlpha" ref="alpha" :color="color"></alpha-slider>
       <predefine v-if="predefine" :color="color" :colors="predefine"></predefine>
-      <div class="el-color-dropdown__btns">
-        <span class="el-color-dropdown__value">
+      <div class="hu-color-dropdown__btns">
+        <span class="hu-color-dropdown__value">
           <el-input
             v-model="customInput"
             @keyup.native.enter="handleConfirm"
@@ -22,14 +22,14 @@
         <hu-button
           size="mini"
           type="text"
-          class="el-color-dropdown__link-btn"
+          class="hu-color-dropdown__link-btn"
           @click="$emit('clear')">
           {{ t('el.colorpicker.clear') }}
         </hu-button>
         <hu-button
           plain
           size="mini"
-          class="el-color-dropdown__btn"
+          class="hu-color-dropdown__btn"
           @click="confirmValue">
           {{ t('el.colorpicker.confirm') }}
         </hu-button>
@@ -49,7 +49,7 @@
   import HuButton from 'element-ui/packages/button';
 
   export default {
-    name: 'el-color-picker-dropdown',
+    name: 'hu-color-picker-dropdown',
 
     mixins: [Popper, Locale],
 

@@ -1,6 +1,6 @@
 <template>
-  <div class="el-color-predefine color-list-container">
-    <div class="el-color-predefine__colors color-list">
+  <div class="hu-color-predefine color-list-container">
+    <div class="hu-color-predefine__colors color-list">
       <div class="color-list-item"
            :class="{selected: item.selected, 'is-alpha': item._alpha < 100}"
            v-for="(item, index) in rgbaColors"
@@ -9,9 +9,9 @@
         <span class="color-list-item-ball" :style="{'background-color': item.value}">
         </span>
         <div class="color-list-item-label">
-          {{item.info.label}} 
+          {{item.info.label}}
           <div class="color-list-item-value">
-            {{item.info.value}} 
+            {{item.info.value}}
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@
     width: 85%;
     overflow: hidden;
   }
-  .color-list-item-value { 
+  .color-list-item-value {
     float: right;
   }
 </style>

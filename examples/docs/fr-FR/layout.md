@@ -8,41 +8,41 @@ Créez une grille de mise en page basique grâce aux colonnes.
 
 :::demo Grâce à `row` et `col`, vous pouvez arranger la mise en page en utilisant l'attribut `span`.
 ```html
-<el-row>
-  <el-col :span="24"><div class="grid-content bg-purple-dark"></div></el-col>
-</el-row>
-<el-row>
-  <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
-</el-row>
-<el-row>
-  <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="8"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-</el-row>
-<el-row>
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple-light"></div></el-col>
-</el-row>
+<hu-row>
+  <hu-col :span="24"><div class="grid-content bg-purple-dark"></div></hu-col>
+</hu-row>
+<hu-row>
+  <hu-col :span="12"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="12"><div class="grid-content bg-purple-light"></div></hu-col>
+</hu-row>
+<hu-row>
+  <hu-col :span="8"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="8"><div class="grid-content bg-purple-light"></div></hu-col>
+  <hu-col :span="8"><div class="grid-content bg-purple"></div></hu-col>
+</hu-row>
+<hu-row>
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple-light"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple-light"></div></hu-col>
+</hu-row>
+<hu-row>
+  <hu-col :span="4"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="4"><div class="grid-content bg-purple-light"></div></hu-col>
+  <hu-col :span="4"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="4"><div class="grid-content bg-purple-light"></div></hu-col>
+  <hu-col :span="4"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="4"><div class="grid-content bg-purple-light"></div></hu-col>
+</hu-row>
 
 <style>
-  .el-row {
+  .hu-row {
     margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;
     }
   }
-  .el-col {
+  .hu-col {
     border-radius: 4px;
   }
   .bg-purple-dark {
@@ -70,23 +70,23 @@ Créez une grille de mise en page basique grâce aux colonnes.
 
 L'espacement entre colonnes est configurable.
 
-:::demo Utilisez l'attribut `gutter` dans el-row pour spécifier l'espacement entre colonnes. La valeur par défaut est 0.
+:::demo Utilisez l'attribut `gutter` dans hu-row pour spécifier l'espacement entre colonnes. La valeur par défaut est 0.
 ```html
-<el-row :gutter="20">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
+<hu-row :gutter="20">
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+</hu-row>
 
 <style>
-  .el-row {
+  .hu-row {
     margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;
     }
   }
-  .el-col {
+  .hu-col {
     border-radius: 4px;
   }
   .bg-purple-dark {
@@ -116,30 +116,30 @@ Vous pouvez former une mise en page complexe en combinant les systèmes de colon
 
 :::demo
 ```html
-<el-row :gutter="20">
-  <el-col :span="16"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row :gutter="20">
-  <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="8"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row :gutter="20">
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="16"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="4"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
+<hu-row :gutter="20">
+  <hu-col :span="16"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="8"><div class="grid-content bg-purple"></div></hu-col>
+</hu-row>
+<hu-row :gutter="20">
+  <hu-col :span="8"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="8"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="4"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="4"><div class="grid-content bg-purple"></div></hu-col>
+</hu-row>
+<hu-row :gutter="20">
+  <hu-col :span="4"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="16"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="4"><div class="grid-content bg-purple"></div></hu-col>
+</hu-row>
 
 <style>
-  .el-row {
+  .hu-row {
     margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;
     }
   }
-  .el-col {
+  .hu-col {
     border-radius: 4px;
   }
   .bg-purple-dark {
@@ -170,26 +170,26 @@ Vous pouvez spécifier un décalage pour les colonnes.
 :::demo Utiliser l'attribut `offset` pour régler le décalage.
 
 ```html
-<el-row :gutter="20">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row :gutter="20">
-  <el-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row :gutter="20">
-  <el-col :span="12" :offset="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
+<hu-row :gutter="20">
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></hu-col>
+</hu-row>
+<hu-row :gutter="20">
+  <hu-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="6" :offset="6"><div class="grid-content bg-purple"></div></hu-col>
+</hu-row>
+<hu-row :gutter="20">
+  <hu-col :span="12" :offset="6"><div class="grid-content bg-purple"></div></hu-col>
+</hu-row>
 
 <style>
-  .el-row {
+  .hu-row {
     margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;
     }
   }
-  .el-col {
+  .hu-col {
     border-radius: 4px;
   }
   .bg-purple-dark {
@@ -219,40 +219,40 @@ Utilisez la mise en page flex pour rendre l'alignement des colonnes flexible.
 
 :::demo Vous pouvez activer la mise en page flex en réglant l'attribut `type` à 'flex', puis en configurant la disposition des éléments enfants avec l'attribut `justify` définit à 'start', 'center', 'end', 'space-between' ou 'space-around'.
 ```html
-<el-row type="flex" class="row-bg">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row type="flex" class="row-bg" justify="center">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row type="flex" class="row-bg" justify="end">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row type="flex" class="row-bg" justify="space-between">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
-<el-row type="flex" class="row-bg" justify="space-around">
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
+<hu-row type="flex" class="row-bg">
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple-light"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+</hu-row>
+<hu-row type="flex" class="row-bg" justify="center">
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple-light"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+</hu-row>
+<hu-row type="flex" class="row-bg" justify="end">
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple-light"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+</hu-row>
+<hu-row type="flex" class="row-bg" justify="space-between">
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple-light"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+</hu-row>
+<hu-row type="flex" class="row-bg" justify="space-around">
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple-light"></div></hu-col>
+  <hu-col :span="6"><div class="grid-content bg-purple"></div></hu-col>
+</hu-row>
 
 <style>
-  .el-row {
+  .hu-row {
     margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;
     }
   }
-  .el-col {
+  .hu-col {
     border-radius: 4px;
   }
   .bg-purple-dark {
@@ -282,15 +282,15 @@ Se basant sur le design responsive de Bootstrap, il existe cinq breakpoints déj
 
 :::demo
 ```html
-<el-row :gutter="10">
-  <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple-light"></div></el-col>
-  <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple"></div></el-col>
-  <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple-light"></div></el-col>
-</el-row>
+<hu-row :gutter="10">
+  <hu-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple-light"></div></hu-col>
+  <hu-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11"><div class="grid-content bg-purple"></div></hu-col>
+  <hu-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple-light"></div></hu-col>
+</hu-row>
 
 <style>
-  .el-col {
+  .hu-col {
     border-radius: 4px;
   }
   .bg-purple-dark {

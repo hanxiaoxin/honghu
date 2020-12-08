@@ -1,5 +1,5 @@
 <template>
-  <li class="el-menu-item"
+  <li class="hu-menu-item"
     role="menuitem"
     tabindex="-1"
     :style="[paddingStyle, itemStyle, { backgroundColor }]"
@@ -34,9 +34,9 @@
   import Emitter from 'element-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElMenuItem',
+    name: 'HuMenuItem',
 
-    componentName: 'ElMenuItem',
+    componentName: 'HuMenuItem',
 
     mixins: [Menu, Emitter],
 

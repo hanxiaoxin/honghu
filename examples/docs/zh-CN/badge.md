@@ -21,21 +21,21 @@
   <el-button size="small">回复</el-button>
 </el-badge>
 
-<el-dropdown trigger="click">
-  <span class="el-dropdown-link">
+<hu-dropdown trigger="click">
+  <span class="hu-dropdown-link">
     点我查看<i class="el-icon-caret-bottom el-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item class="clearfix">
+  <hu-dropdown-menu slot="dropdown">
+    <hu-dropdown-item class="clearfix">
       评论
       <el-badge class="mark" :value="12" />
-    </el-dropdown-item>
-    <el-dropdown-item class="clearfix">
+    </hu-dropdown-item>
+    <hu-dropdown-item class="clearfix">
       回复
       <el-badge class="mark" :value="3" />
-    </el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+    </hu-dropdown-item>
+  </hu-dropdown-menu>
+</hu-dropdown>
 
 <style>
 .item {

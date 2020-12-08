@@ -1,9 +1,9 @@
 <template>
   <li
-    class="el-dropdown-menu__item"
+    class="hu-dropdown-menu__item"
     :class="{
       'is-disabled': disabled,
-      'el-dropdown-menu__item--divided': divided
+      'hu-dropdown-menu__item--divided': divided
     }"
     @click="handleClick"
     :aria-disabled="disabled"
@@ -14,10 +14,10 @@
   </li>
 </template>
 <script>
-  import Emitter from 'element-ui/src/mixins/emitter';
+  import Emitter from 'honghu-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElDropdownItem',
+    name: 'HuDropdownItem',
 
     mixins: [Emitter],
 
@@ -30,7 +30,7 @@
 
     methods: {
       handleClick(e) {
-        this.dispatch('ElDropdown', 'menu-item-click', [this.command, this]);
+        this.dispatch('HuDropdown', 'menu-item-click', [this.command, this]);
       }
     }
   };

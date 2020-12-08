@@ -98,7 +98,7 @@ Element 内应用在部分组件的过渡动画，你也可以直接使用。在
 
 ### collapse 展开折叠
 
-使用 `el-collapse-transition` 组件实现折叠展开效果。
+使用 `hu-collapse-transition` 组件实现折叠展开效果。
 
 :::demo
 ```html
@@ -107,12 +107,12 @@ Element 内应用在部分组件的过渡动画，你也可以直接使用。在
     <el-button @click="show3 = !show3">Click Me</el-button>
 
     <div style="margin-top: 20px; height: 200px;">
-      <el-collapse-transition>
+      <hu-collapse-transition>
         <div v-show="show3">
-          <div class="transition-box">el-collapse-transition</div>
-          <div class="transition-box">el-collapse-transition</div>
+          <div class="transition-box">hu-collapse-transition</div>
+          <div class="transition-box">hu-collapse-transition</div>
         </div>
-      </el-collapse-transition>
+      </hu-collapse-transition>
     </div>
   </div>
 </template>

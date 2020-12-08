@@ -57,11 +57,11 @@ Dialog 组件的内容可以是任意的，甚至可以是表格或表单，下�
 <hu-button type="text" @click="dialogTableVisible = true">打开嵌套表格的 Dialog</hu-button>
 
 <hu-dialog title="收货地址" :visible.sync="dialogTableVisible">
-  <el-table :data="gridData">
-    <el-table-column property="date" label="日期" width="150"></el-table-column>
-    <el-table-column property="name" label="姓名" width="200"></el-table-column>
-    <el-table-column property="address" label="地址"></el-table-column>
-  </el-table>
+  <hu-table :data="gridData">
+    <hu-table-column property="date" label="日期" width="150"></hu-table-column>
+    <hu-table-column property="name" label="姓名" width="200"></hu-table-column>
+    <hu-table-column property="address" label="地址"></hu-table-column>
+  </hu-table>
 </hu-dialog>
 
 <!-- Form -->

@@ -7,21 +7,21 @@ Passez sur le menu avec la souris pour dérouler son contenu.
 :::demo L'élément déclencheur est généré par le `slot` par défaut, et le menu déroulant est généré par le `slot` appelé `dropdown`. Par défaut le menu apparaît simplement en passant la souris sur l'élément déclencheur, sans avoir à cliquer.
 
 ```html
-<el-dropdown>
-  <span class="el-dropdown-link">
+<hu-dropdown>
+  <span class="hu-dropdown-link">
     Menu déroulant<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item disabled>Action 4</el-dropdown-item>
-    <el-dropdown-item divided>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <hu-dropdown-menu slot="dropdown">
+    <hu-dropdown-item>Action 1</hu-dropdown-item>
+    <hu-dropdown-item>Action 2</hu-dropdown-item>
+    <hu-dropdown-item>Action 3</hu-dropdown-item>
+    <hu-dropdown-item disabled>Action 4</hu-dropdown-item>
+    <hu-dropdown-item divided>Action 5</hu-dropdown-item>
+  </hu-dropdown-menu>
+</hu-dropdown>
 
 <style>
-  .el-dropdown-link {
+  .hu-dropdown-link {
     cursor: pointer;
     color: #409EFF;
   }
@@ -40,34 +40,34 @@ Utilisez le bouton pour ouvrir le menu déroulant.
 
 :::demo Utilisez `split-button` pour séparer le déclencheur du reste du bouton, ce dernier devenant la partie gauche et le déclencheur la partie droite.
 ```html
-<el-dropdown>
+<hu-dropdown>
   <el-button type="primary">
     Liste déroulante<i class="el-icon-arrow-down el-icon--right"></i>
   </el-button>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-    <el-dropdown-item>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
-<el-dropdown split-button type="primary" @click="handleClick">
+  <hu-dropdown-menu slot="dropdown">
+    <hu-dropdown-item>Action 1</hu-dropdown-item>
+    <hu-dropdown-item>Action 2</hu-dropdown-item>
+    <hu-dropdown-item>Action 3</hu-dropdown-item>
+    <hu-dropdown-item>Action 4</hu-dropdown-item>
+    <hu-dropdown-item>Action 5</hu-dropdown-item>
+  </hu-dropdown-menu>
+</hu-dropdown>
+<hu-dropdown split-button type="primary" @click="handleClick">
   Liste déroulante
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-    <el-dropdown-item>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <hu-dropdown-menu slot="dropdown">
+    <hu-dropdown-item>Action 1</hu-dropdown-item>
+    <hu-dropdown-item>Action 2</hu-dropdown-item>
+    <hu-dropdown-item>Action 3</hu-dropdown-item>
+    <hu-dropdown-item>Action 4</hu-dropdown-item>
+    <hu-dropdown-item>Action 5</hu-dropdown-item>
+  </hu-dropdown-menu>
+</hu-dropdown>
 
 <style>
-  .el-dropdown {
+  .hu-dropdown {
     vertical-align: top;
   }
-  .el-dropdown + .el-dropdown {
+  .hu-dropdown + .hu-dropdown {
     margin-left: 15px;
   }
   .el-icon-arrow-down {
@@ -94,41 +94,41 @@ Vous pouvez choisir de déclencher le menu au moment du clic, ou en passant la s
 :::demo Utilisez l'attribut `trigger`. Par défaut, il est à `hover`.
 
 ```html
-<el-row class="block-col-2">
-  <el-col :span="12">
+<hu-row class="block-col-2">
+  <hu-col :span="12">
     <span class="demonstration">En passant la souris</span>
-    <el-dropdown>
-      <span class="el-dropdown-link">
+    <hu-dropdown>
+      <span class="hu-dropdown-link">
         Liste déroulante<i class="el-icon-arrow-down el-icon--right"></i>
       </span>
-      <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item icon="el-icon-plus">Action 1</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus">Action 2</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus-outline">Action 3</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-check">Action 4</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-check">Action 5</el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
-  </el-col>
-  <el-col :span="12">
+      <hu-dropdown-menu slot="dropdown">
+        <hu-dropdown-item icon="el-icon-plus">Action 1</hu-dropdown-item>
+        <hu-dropdown-item icon="el-icon-circle-plus">Action 2</hu-dropdown-item>
+        <hu-dropdown-item icon="el-icon-circle-plus-outline">Action 3</hu-dropdown-item>
+        <hu-dropdown-item icon="el-icon-check">Action 4</hu-dropdown-item>
+        <hu-dropdown-item icon="el-icon-circle-check">Action 5</hu-dropdown-item>
+      </hu-dropdown-menu>
+    </hu-dropdown>
+  </hu-col>
+  <hu-col :span="12">
     <span class="demonstration">En cliquant</span>
-    <el-dropdown trigger="click">
-      <span class="el-dropdown-link">
+    <hu-dropdown trigger="click">
+      <span class="hu-dropdown-link">
         Liste déroulante<i class="el-icon-arrow-down el-icon--right"></i>
       </span>
-      <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item icon="el-icon-plus">Action 1</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus">Action 2</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-plus-outline">Action 3</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-check">Action 4</el-dropdown-item>
-        <el-dropdown-item icon="el-icon-circle-check">Action 5</el-dropdown-item>
-      </el-dropdown-menu>
-    </el-dropdown>
-  </el-col>
-</el-row>
+      <hu-dropdown-menu slot="dropdown">
+        <hu-dropdown-item icon="el-icon-plus">Action 1</hu-dropdown-item>
+        <hu-dropdown-item icon="el-icon-circle-plus">Action 2</hu-dropdown-item>
+        <hu-dropdown-item icon="el-icon-circle-plus-outline">Action 3</hu-dropdown-item>
+        <hu-dropdown-item icon="el-icon-check">Action 4</hu-dropdown-item>
+        <hu-dropdown-item icon="el-icon-circle-check">Action 5</hu-dropdown-item>
+      </hu-dropdown-menu>
+    </hu-dropdown>
+  </hu-col>
+</hu-row>
 
 <style>
-  .el-dropdown-link {
+  .hu-dropdown-link {
     cursor: pointer;
     color: #409EFF;
   }
@@ -151,21 +151,21 @@ Utilisez l'attribut `hide-on-click` pour déterminer si le menu se ferme après 
 
 :::demo Par défaut le menu se ferme après avoir cliqué dans la liste. Vous pouvez changer cette option en mettant `hide-on-click` à `false`.
 ```html
-<el-dropdown :hide-on-click="false">
-  <span class="el-dropdown-link">
+<hu-dropdown :hide-on-click="false">
+  <span class="hu-dropdown-link">
     Liste déroulante<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item disabled>Action 4</el-dropdown-item>
-    <el-dropdown-item divided>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <hu-dropdown-menu slot="dropdown">
+    <hu-dropdown-item>Action 1</hu-dropdown-item>
+    <hu-dropdown-item>Action 2</hu-dropdown-item>
+    <hu-dropdown-item>Action 3</hu-dropdown-item>
+    <hu-dropdown-item disabled>Action 4</hu-dropdown-item>
+    <hu-dropdown-item divided>Action 5</hu-dropdown-item>
+  </hu-dropdown-menu>
+</hu-dropdown>
 
 <style>
-  .el-dropdown-link {
+  .hu-dropdown-link {
     cursor: pointer;
     color: #409EFF;
   }
@@ -183,21 +183,21 @@ Le paramètre de cet évènement peut être assigné à chaque élément de la l
 
 :::demo
 ```html
-<el-dropdown @command="handleCommand">
-  <span class="el-dropdown-link">
+<hu-dropdown @command="handleCommand">
+  <span class="hu-dropdown-link">
     Liste déroulante<i class="el-icon-arrow-down el-icon--right"></i>
   </span>
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item command="a">Action 1</el-dropdown-item>
-    <el-dropdown-item command="b">Action 2</el-dropdown-item>
-    <el-dropdown-item command="c">Action 3</el-dropdown-item>
-    <el-dropdown-item command="d" disabled>Action 4</el-dropdown-item>
-    <el-dropdown-item command="e" divided>Action 5</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <hu-dropdown-menu slot="dropdown">
+    <hu-dropdown-item command="a">Action 1</hu-dropdown-item>
+    <hu-dropdown-item command="b">Action 2</hu-dropdown-item>
+    <hu-dropdown-item command="c">Action 3</hu-dropdown-item>
+    <hu-dropdown-item command="d" disabled>Action 4</hu-dropdown-item>
+    <hu-dropdown-item command="e" divided>Action 5</hu-dropdown-item>
+  </hu-dropdown-menu>
+</hu-dropdown>
 
 <style>
-  .el-dropdown-link {
+  .hu-dropdown-link {
     cursor: pointer;
     color: #409EFF;
   }
@@ -225,45 +225,45 @@ En plus de la taille par défaut, le composant Dropdown propose trois autres tai
 :::demo Utilisez `size` pour déterminer une autre taille parmi `medium`, `small` ou `mini`.
 
 ```html
-<el-dropdown split-button type="primary">
+<hu-dropdown split-button type="primary">
   Défaut
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <hu-dropdown-menu slot="dropdown">
+    <hu-dropdown-item>Action 1</hu-dropdown-item>
+    <hu-dropdown-item>Action 2</hu-dropdown-item>
+    <hu-dropdown-item>Action 3</hu-dropdown-item>
+    <hu-dropdown-item>Action 4</hu-dropdown-item>
+  </hu-dropdown-menu>
+</hu-dropdown>
 
-<el-dropdown size="medium" split-button type="primary">
+<hu-dropdown size="medium" split-button type="primary">
   Medium
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <hu-dropdown-menu slot="dropdown">
+    <hu-dropdown-item>Action 1</hu-dropdown-item>
+    <hu-dropdown-item>Action 2</hu-dropdown-item>
+    <hu-dropdown-item>Action 3</hu-dropdown-item>
+    <hu-dropdown-item>Action 4</hu-dropdown-item>
+  </hu-dropdown-menu>
+</hu-dropdown>
 
-<el-dropdown size="small" split-button type="primary">
+<hu-dropdown size="small" split-button type="primary">
   Small
-  <el-dropdown-menu slot="dropdown">
-   <el-dropdown-item>Action 1</el-dropdown-item>
-   <el-dropdown-item>Action 2</el-dropdown-item>
-   <el-dropdown-item>Action 3</el-dropdown-item>
-   <el-dropdown-item>Action 4</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <hu-dropdown-menu slot="dropdown">
+   <hu-dropdown-item>Action 1</hu-dropdown-item>
+   <hu-dropdown-item>Action 2</hu-dropdown-item>
+   <hu-dropdown-item>Action 3</hu-dropdown-item>
+   <hu-dropdown-item>Action 4</hu-dropdown-item>
+  </hu-dropdown-menu>
+</hu-dropdown>
 
-<el-dropdown size="mini" split-button type="primary">
+<hu-dropdown size="mini" split-button type="primary">
   Mini
-  <el-dropdown-menu slot="dropdown">
-    <el-dropdown-item>Action 1</el-dropdown-item>
-    <el-dropdown-item>Action 2</el-dropdown-item>
-    <el-dropdown-item>Action 3</el-dropdown-item>
-    <el-dropdown-item>Action 4</el-dropdown-item>
-  </el-dropdown-menu>
-</el-dropdown>
+  <hu-dropdown-menu slot="dropdown">
+    <hu-dropdown-item>Action 1</hu-dropdown-item>
+    <hu-dropdown-item>Action 2</hu-dropdown-item>
+    <hu-dropdown-item>Action 3</hu-dropdown-item>
+    <hu-dropdown-item>Action 4</hu-dropdown-item>
+  </hu-dropdown-menu>
+</hu-dropdown>
 ```
 :::
 
@@ -287,7 +287,7 @@ En plus de la taille par défaut, le composant Dropdown propose trois autres tai
 | Nom | Description |
 |------|--------|
 | — | Contenu du Dropdown. Note: doit être un élément du DOM valide (ex. `<span>, <button> etc.`) ou `el-component`, pour y attacher un évènement.  |
-| dropdown | Contenu du menu du Dropdown, en général un élément `<el-dropdown-menu>`. |
+| dropdown | Contenu du menu du Dropdown, en général un élément `<hu-dropdown-menu>`. |
 
 ### Évènements du Dropdown
 

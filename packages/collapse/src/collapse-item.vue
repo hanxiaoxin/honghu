@@ -1,17 +1,17 @@
 <template>
-  <div class="el-collapse-item"
+  <div class="hu-collapse-item"
     :class="{'is-active': isActive, 'is-disabled': disabled }">
     <div
       role="tab"
       :aria-expanded="isActive"
-      :aria-controls="`el-collapse-content-${id}`"
-      :aria-describedby ="`el-collapse-content-${id}`"
+      :aria-controls="`hu-collapse-content-${id}`"
+      :aria-describedby ="`hu-collapse-content-${id}`"
     >
       <div
-        class="el-collapse-item__header"
+        class="hu-collapse-item__header"
         @click="handleHeaderClick"
         role="button"
-        :id="`el-collapse-head-${id}`"
+        :id="`hu-collapse-head-${id}`"
         :tabindex="disabled ? undefined : 0"
         @keyup.space.enter.stop="handleEnterClick"
         :class="{
@@ -23,29 +23,29 @@
       >
         <slot name="title">{{title}}</slot>
         <i
-          class="el-collapse-item__arrow el-icon-arrow-right"
+          class="hu-collapse-item__arrow el-icon-arrow-right"
           :class="{'is-active': isActive}">
         </i>
       </div>
     </div>
-    <el-collapse-transition>
+    <hu-collapse-transition>
       <div
-        class="el-collapse-item__wrap"
+        class="hu-collapse-item__wrap"
         v-show="isActive"
         role="tabpanel"
         :aria-hidden="!isActive"
-        :aria-labelledby="`el-collapse-head-${id}`"
-        :id="`el-collapse-content-${id}`"
+        :aria-labelledby="`hu-collapse-head-${id}`"
+        :id="`hu-collapse-content-${id}`"
       >
-        <div class="el-collapse-item__content">
+        <div class="hu-collapse-item__content">
           <slot></slot>
         </div>
       </div>
-    </el-collapse-transition>
+    </hu-collapse-transition>
   </div>
 </template>
 <script>
-  import ElCollapseTransition from 'element-ui/src/transitions/collapse-transition';
+  import HuCollapseTransition from 'element-ui/src/transitions/collapse-transition';
   import Emitter from 'element-ui/src/mixins/emitter';
   import { generateId } from 'element-ui/src/utils/util';
 
@@ -56,7 +56,7 @@
 
     mixins: [Emitter],
 
-    components: { ElCollapseTransition },
+    components: { HuCollapseTransition },
 
     data() {
       return {

@@ -1,15 +1,15 @@
 <script>
-  import Clickoutside from 'element-ui/src/utils/clickoutside';
-  import Emitter from 'element-ui/src/mixins/emitter';
-  import Migrating from 'element-ui/src/mixins/migrating';
-  import HuButton from 'element-ui/packages/button';
-  import ElButtonGroup from 'element-ui/packages/button-group';
-  import { generateId } from 'element-ui/src/utils/util';
+  import Clickoutside from 'honghu-ui/src/utils/clickoutside';
+  import Emitter from 'honghu-ui/src/mixins/emitter';
+  import Migrating from 'honghu-ui/src/mixins/migrating';
+  import HuButton from 'honghu-ui/packages/button';
+  import HuButtonGroup from 'honghu-ui/packages/button-group';
+  import { generateId } from 'honghu-ui/src/utils/util';
 
   export default {
-    name: 'ElDropdown',
+    name: 'HuDropdown',
 
-    componentName: 'ElDropdown',
+    componentName: 'HuDropdown',
 
     mixins: [Emitter, Migrating],
 
@@ -17,7 +17,7 @@
 
     components: {
       HuButton,
-      ElButtonGroup
+      HuButtonGroup
     },
 
     provide() {
@@ -87,11 +87,11 @@
 
     watch: {
       visible(val) {
-        this.broadcast('ElDropdownMenu', 'visible', val);
+        this.broadcast('HuDropdownMenu', 'visible', val);
         this.$emit('visible-change', val);
       },
       focusing(val) {
-        const selfDefine = this.$el.querySelector('.el-dropdown-selfdefine');
+        const selfDefine = this.$el.querySelector('.hu-dropdown-selfdefine');
         if (selfDefine) { // 自定义
           if (val) {
             selfDefine.className += ' focusing';
@@ -196,7 +196,7 @@
         if (!this.splitButton) { // 自定义
           this.triggerElm.setAttribute('role', 'button');
           this.triggerElm.setAttribute('tabindex', this.tabindex);
-          this.triggerElm.setAttribute('class', (this.triggerElm.getAttribute('class') || '') + ' el-dropdown-selfdefine'); // 控制
+          this.triggerElm.setAttribute('class', (this.triggerElm.getAttribute('class') || '') + ' hu-dropdown-selfdefine'); // 控制
         }
       },
       initEvent() {
@@ -263,13 +263,13 @@
           <hu-button type={type} size={dropdownSize} nativeOn-click={handleMainButtonClick}>
             {this.$slots.default}
           </hu-button>
-          <hu-button ref="trigger" type={type} size={dropdownSize} class="el-dropdown__caret-button">
-            <i class="el-dropdown__icon el-icon-arrow-down"></i>
+          <hu-button ref="trigger" type={type} size={dropdownSize} class="hu-dropdown__caret-button">
+            <i class="hu-dropdown__icon hu-icon-arrow-down"></i>
           </hu-button>
         </hu-button-group>);
 
       return (
-        <div class="el-dropdown" v-clickoutside={hide}>
+        <div class="hu-dropdown" v-clickoutside={hide}>
           {triggerElm}
           {this.$slots.dropdown}
         </div>

@@ -1,25 +1,25 @@
 <template>
   <div
     :class="[
-      'el-color-picker',
+      'hu-color-picker',
       colorDisabled ? 'is-disabled' : '',
-      colorSize ? `el-color-picker--${ colorSize }` : ''
+      colorSize ? `hu-color-picker--${ colorSize }` : ''
     ]"
     v-clickoutside="hide">
-    <div class="el-color-picker__mask" v-if="colorDisabled"></div>
-    <div class="el-color-picker__trigger" @click="handleTrigger">
-      <span class="el-color-picker__color" :class="{ 'is-alpha': showAlpha }">
-        <span class="el-color-picker__color-inner"
+    <div class="hu-color-picker__mask" v-if="colorDisabled"></div>
+    <div class="hu-color-picker__trigger" @click="handleTrigger">
+      <span class="hu-color-picker__color" :class="{ 'is-alpha': showAlpha }">
+        <span class="hu-color-picker__color-inner"
           :style="{
             backgroundColor: displayedColor
           }"></span>
-        <span class="el-color-picker__empty el-icon-close" v-if="!value && !showPanelColor"></span>
+        <span class="hu-color-picker__empty el-icon-close" v-if="!value && !showPanelColor"></span>
       </span>
-      <span class="el-color-picker__icon el-icon-arrow-down" v-show="value || showPanelColor"></span>
+      <span class="hu-color-picker__icon el-icon-arrow-down" v-show="value || showPanelColor"></span>
     </div>
     <picker-dropdown
        ref="dropdown"
-       :class="['el-color-picker__panel', popperClass || '']"
+       :class="['hu-color-picker__panel', popperClass || '']"
        v-model="showPicker"
        @pick="confirmValue"
        @clear="clearValue"

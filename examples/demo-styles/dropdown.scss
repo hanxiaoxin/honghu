@@ -1,12 +1,12 @@
 .demo-block {
-  .el-dropdown {
+  .hu-dropdown {
     vertical-align: top;
 
-    & + .el-dropdown {
+    & + .hu-dropdown {
       margin-left: 15px;
     }
   }
-  .el-dropdown-link {
+  .hu-dropdown-link {
     cursor: pointer;
     color: #409eff;
   }
@@ -18,7 +18,7 @@
 .block-col-2 {
   margin: -24px;
 
-  .el-col {
+  .hu-col {
     padding: 30px 0;
     text-align: center;
     border-right: 1px solid #eff2f6;

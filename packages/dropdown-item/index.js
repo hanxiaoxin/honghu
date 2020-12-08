@@ -1,8 +1,8 @@
-import ElDropdownItem from '../dropdown/src/dropdown-item';
+import HuDropdownItem from '../dropdown/src/dropdown-item';
 
 /* istanbul ignore next */
-ElDropdownItem.install = function(Vue) {
-  Vue.component(ElDropdownItem.name, ElDropdownItem);
+HuDropdownItem.install = function(Vue) {
+  Vue.component(HuDropdownItem.name, HuDropdownItem);
 };
 
-export default ElDropdownItem;
+export default HuDropdownItem;
