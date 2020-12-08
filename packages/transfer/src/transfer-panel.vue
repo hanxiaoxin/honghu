@@ -9,7 +9,7 @@
         <span>{{ checkedSummary }}</span>
       </el-checkbox>
     </p>
-    
+
     <div :class="['el-transfer-panel__body', hasFooter ? 'is-with-footer' : '']">
       <el-input
         class="el-transfer-panel__filter"
@@ -20,7 +20,7 @@
         @mouseleave.native="inputHover = false"
         v-if="filterable">
         <i slot="prefix"
-          :class="['el-input__icon', 'el-icon-' + inputIcon]"
+          :class="['el-input__icon', 'hu-icon-' + inputIcon]"
           @click="clearQuery"
         ></i>
       </el-input>

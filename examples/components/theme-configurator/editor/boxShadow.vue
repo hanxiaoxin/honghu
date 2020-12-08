@@ -8,7 +8,7 @@
         class="plus-button"
         size="mini"
         round
-        icon="el-icon-plus"
+        icon="hu-icon-plus"
         @click.stop="onAddShadow"
       >
       </hu-button>
@@ -64,7 +64,7 @@
         <hu-button
           size="mini"
           round
-          icon="el-icon-minus"
+          icon="hu-icon-minus"
           @click.stop="val => onMinusShadow(key)"
         ></hu-button>
       </div>

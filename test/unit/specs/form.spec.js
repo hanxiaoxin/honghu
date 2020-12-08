@@ -699,10 +699,10 @@ describe('Form', () => {
         template: `
           <el-form :model="form" :rules="rules" ref="form">
             <el-form-item label="活动名称" prop="type" ref="field">
-              <el-radio-group v-model="form.type">
-                <el-radio label="线上品牌商赞助"></el-radio>
-                <el-radio label="线下场地免费"></el-radio>
-              </el-radio-group>
+              <hu-radio-group v-model="form.type">
+                <hu-radio label="线上品牌商赞助"></hu-radio>
+                <hu-radio label="线下场地免费"></hu-radio>
+              </hu-radio-group>
             </el-form-item>
           </el-form>
         `,

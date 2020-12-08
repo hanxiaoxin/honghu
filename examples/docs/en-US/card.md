@@ -10,7 +10,7 @@ Card includes title, content and operations.
 <hu-card class="box-card">
   <div slot="header" class="clearfix">
     <span>Card name</span>
-    <el-button style="float: right; padding: 3px 0" type="text">Operation button</el-button>
+    <hu-button style="float: right; padding: 3px 0" type="text">Operation button</hu-button>
   </div>
   <div v-for="o in 4" :key="o" class="text item">
     {{'List item ' + o }}
@@ -84,7 +84,7 @@ Display richer content by adding some configs.
         <span>Yummy hamburger</span>
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
-          <el-button type="text" class="button">Operating</el-button>
+          <hu-button type="text" class="button">Operating</hu-button>
         </div>
       </div>
     </hu-card>

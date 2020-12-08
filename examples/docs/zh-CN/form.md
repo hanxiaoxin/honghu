@@ -39,17 +39,17 @@
     </el-checkbox-group>
   </el-form-item>
   <el-form-item label="特殊资源">
-    <el-radio-group v-model="form.resource">
-      <el-radio label="线上品牌商赞助"></el-radio>
-      <el-radio label="线下场地免费"></el-radio>
-    </el-radio-group>
+    <hu-radio-group v-model="form.resource">
+      <hu-radio label="线上品牌商赞助"></hu-radio>
+      <hu-radio label="线下场地免费"></hu-radio>
+    </hu-radio-group>
   </el-form-item>
   <el-form-item label="活动形式">
     <el-input type="textarea" v-model="form.desc"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="onSubmit">立即创建</el-button>
-    <el-button>取消</el-button>
+    <hu-button type="primary" @click="onSubmit">立即创建</hu-button>
+    <hu-button>取消</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -102,7 +102,7 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     </el-select>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="onSubmit">查询</el-button>
+    <hu-button type="primary" @click="onSubmit">查询</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -131,11 +131,11 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
 
 :::demo 通过设置 `label-position` 属性可以改变表单域标签的位置，可选值为 `top`、`left`，当设为 `top` 时标签会置于表单域的顶部
 ```html
-<el-radio-group v-model="labelPosition" size="small">
-  <el-radio-button label="left">左对齐</el-radio-button>
-  <el-radio-button label="right">右对齐</el-radio-button>
-  <el-radio-button label="top">顶部对齐</el-radio-button>
-</el-radio-group>
+<hu-radio-group v-model="labelPosition" size="small">
+  <hu-radio-button label="left">左对齐</hu-radio-button>
+  <hu-radio-button label="right">右对齐</hu-radio-button>
+  <hu-radio-button label="top">顶部对齐</hu-radio-button>
+</hu-radio-group>
 <div style="margin: 20px;"></div>
 <el-form :label-position="labelPosition" label-width="80px" :model="formLabelAlign">
   <el-form-item label="名称">
@@ -206,17 +206,17 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     </el-checkbox-group>
   </el-form-item>
   <el-form-item label="特殊资源" prop="resource">
-    <el-radio-group v-model="ruleForm.resource">
-      <el-radio label="线上品牌商赞助"></el-radio>
-      <el-radio label="线下场地免费"></el-radio>
-    </el-radio-group>
+    <hu-radio-group v-model="ruleForm.resource">
+      <hu-radio label="线上品牌商赞助"></hu-radio>
+      <hu-radio label="线下场地免费"></hu-radio>
+    </hu-radio-group>
   </el-form-item>
   <el-form-item label="活动形式" prop="desc">
     <el-input type="textarea" v-model="ruleForm.desc"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('ruleForm')">立即创建</el-button>
-    <el-button @click="resetForm('ruleForm')">重置</el-button>
+    <hu-button type="primary" @click="submitForm('ruleForm')">立即创建</hu-button>
+    <hu-button @click="resetForm('ruleForm')">重置</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -296,8 +296,8 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     <el-input v-model.number="ruleForm.age"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
-    <el-button @click="resetForm('ruleForm')">重置</el-button>
+    <hu-button type="primary" @click="submitForm('ruleForm')">提交</hu-button>
+    <hu-button @click="resetForm('ruleForm')">重置</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -405,12 +405,12 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
       required: true, message: '域名不能为空', trigger: 'blur'
     }"
   >
-    <el-input v-model="domain.value"></el-input><el-button @click.prevent="removeDomain(domain)">删除</el-button>
+    <el-input v-model="domain.value"></el-input><hu-button @click.prevent="removeDomain(domain)">删除</hu-button>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('dynamicValidateForm')">提交</el-button>
-    <el-button @click="addDomain">新增域名</el-button>
-    <el-button @click="resetForm('dynamicValidateForm')">重置</el-button>
+    <hu-button type="primary" @click="submitForm('dynamicValidateForm')">提交</hu-button>
+    <hu-button @click="addDomain">新增域名</hu-button>
+    <hu-button @click="resetForm('dynamicValidateForm')">重置</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -473,8 +473,8 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     <el-input type="age" v-model.number="numberValidateForm.age" autocomplete="off"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('numberValidateForm')">提交</el-button>
-    <el-button @click="resetForm('numberValidateForm')">重置</el-button>
+    <hu-button type="primary" @click="submitForm('numberValidateForm')">提交</hu-button>
+    <hu-button @click="resetForm('numberValidateForm')">重置</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -543,14 +543,14 @@ W3C 标准中有如下[规定](https://www.w3.org/MarkUp/html-spec/html-spec_8.h
     </el-checkbox-group>
   </el-form-item>
   <el-form-item label="特殊资源">
-    <el-radio-group v-model="sizeForm.resource" size="medium">
-      <el-radio border label="线上品牌商赞助"></el-radio>
-      <el-radio border label="线下场地免费"></el-radio>
-    </el-radio-group>
+    <hu-radio-group v-model="sizeForm.resource" size="medium">
+      <hu-radio border label="线上品牌商赞助"></hu-radio>
+      <hu-radio border label="线下场地免费"></hu-radio>
+    </hu-radio-group>
   </el-form-item>
   <el-form-item size="large">
-    <el-button type="primary" @click="onSubmit">立即创建</el-button>
-    <el-button>取消</el-button>
+    <hu-button type="primary" @click="onSubmit">立即创建</hu-button>
+    <hu-button>取消</hu-button>
   </el-form-item>
 </el-form>
 

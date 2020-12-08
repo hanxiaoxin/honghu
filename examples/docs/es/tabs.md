@@ -91,12 +91,12 @@ Es posible usar el atributo `tab-position` para establecer la posición de la ta
 
 ```html
 <template>
-  <el-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
-    <el-radio-button label="top">top</el-radio-button>
-    <el-radio-button label="right">right</el-radio-button>
-    <el-radio-button label="bottom">bottom</el-radio-button>
-    <el-radio-button label="left">left</el-radio-button>
-  </el-radio-group>
+  <hu-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
+    <hu-radio-button label="top">top</hu-radio-button>
+    <hu-radio-button label="right">right</hu-radio-button>
+    <hu-radio-button label="bottom">bottom</hu-radio-button>
+    <hu-radio-button label="left">left</hu-radio-button>
+  </hu-radio-group>
 
   <el-tabs :tab-position="tabPosition" style="height: 200px;">
     <el-tab-pane label="User">User</el-tab-pane>
@@ -125,7 +125,7 @@ Es posible usar slots con nombre para personalizar el contenido de la etiqueta d
 ```html
 <el-tabs type="border-card">
   <el-tab-pane>
-    <span slot="label"><i class="el-icon-date"></i> Route</span>
+    <span slot="label"><i class="hu-icon-date"></i> Route</span>
     Route
   </el-tab-pane>
   <el-tab-pane label="Config">Config</el-tab-pane>
@@ -208,12 +208,12 @@ Solo las pestañas de tipo tarjeta soportan adición y cierre.
 :::demo
 ```html
 <div style="margin-bottom: 20px;">
-  <el-button
+  <hu-button
     size="small"
     @click="addTab(editableTabsValue)"
   >
     add tab
-  </el-button>
+  </hu-button>
 </div>
 <el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
   <el-tab-pane

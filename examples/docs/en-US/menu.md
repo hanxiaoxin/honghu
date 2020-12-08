@@ -85,7 +85,7 @@ Vertical NavMenu with sub-menus.
       @close="handleClose">
       <hu-submenu index="1">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="hu-icon-location"></i>
           <span>Navigator One</span>
         </template>
         <hu-menu-item-group title="Group One">
@@ -101,15 +101,15 @@ Vertical NavMenu with sub-menus.
         </hu-submenu>
       </hu-submenu>
       <hu-menu-item index="2">
-        <i class="el-icon-menu"></i>
+        <i class="hu-icon-menu"></i>
         <span>Navigator Two</span>
       </hu-menu-item>
       <hu-menu-item index="3" disabled>
-        <i class="el-icon-document"></i>
+        <i class="hu-icon-document"></i>
         <span>Navigator Three</span>
       </hu-menu-item>
       <hu-menu-item index="4">
-        <i class="el-icon-setting"></i>
+        <i class="hu-icon-setting"></i>
         <span>Navigator Four</span>
       </hu-menu-item>
     </hu-menu>
@@ -126,7 +126,7 @@ Vertical NavMenu with sub-menus.
       active-text-color="#ffd04b">
       <hu-submenu index="1">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="hu-icon-location"></i>
           <span>Navigator One</span>
         </template>
         <hu-menu-item-group title="Group One">
@@ -142,15 +142,15 @@ Vertical NavMenu with sub-menus.
         </hu-submenu>
       </hu-submenu>
       <hu-menu-item index="2">
-        <i class="el-icon-menu"></i>
+        <i class="hu-icon-menu"></i>
         <span>Navigator Two</span>
       </hu-menu-item>
       <hu-menu-item index="3" disabled>
-        <i class="el-icon-document"></i>
+        <i class="hu-icon-document"></i>
         <span>Navigator Three</span>
       </hu-menu-item>
       <hu-menu-item index="4">
-        <i class="el-icon-setting"></i>
+        <i class="hu-icon-setting"></i>
         <span>Navigator Four</span>
       </hu-menu-item>
     </hu-menu>
@@ -178,14 +178,14 @@ Vertical NavMenu could be collapsed.
 
 :::demo
 ```html
-<el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-  <el-radio-button :label="false">expand</el-radio-button>
-  <el-radio-button :label="true">collapse</el-radio-button>
-</el-radio-group>
+<hu-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
+  <hu-radio-button :label="false">expand</hu-radio-button>
+  <hu-radio-button :label="true">collapse</hu-radio-button>
+</hu-radio-group>
 <hu-menu default-active="2" class="hu-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
   <hu-submenu index="1">
     <template slot="title">
-      <i class="el-icon-location"></i>
+      <i class="hu-icon-location"></i>
       <span slot="title">Navigator One</span>
     </template>
     <hu-menu-item-group>
@@ -202,15 +202,15 @@ Vertical NavMenu could be collapsed.
     </hu-submenu>
   </hu-submenu>
   <hu-menu-item index="2">
-    <i class="el-icon-menu"></i>
+    <i class="hu-icon-menu"></i>
     <span slot="title">Navigator Two</span>
   </hu-menu-item>
   <hu-menu-item index="3" disabled>
-    <i class="el-icon-document"></i>
+    <i class="hu-icon-document"></i>
     <span slot="title">Navigator Three</span>
   </hu-menu-item>
   <hu-menu-item index="4">
-    <i class="el-icon-setting"></i>
+    <i class="hu-icon-setting"></i>
     <span slot="title">Navigator Four</span>
   </hu-menu-item>
 </hu-menu>

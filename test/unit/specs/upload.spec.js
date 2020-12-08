@@ -124,7 +124,7 @@ describe('Upload', () => {
         render(h) {
           return (
             <el-upload {...props} ref="upload">
-              <el-button size="small" type="primary">点击上传</el-button>
+              <hu-button size="small" type="primary">点击上传</hu-button>
             </el-upload>
           );
         }
@@ -208,7 +208,7 @@ describe('Upload', () => {
       const files = [file];
 
       handlers.onSuccess = (res, file, fileList) => {
-        uploader.$el.querySelector('.el-upload-list .el-icon-close').click();
+        uploader.$el.querySelector('.el-upload-list .hu-icon-close').click();
         uploader.$nextTick(_ => {
           expect(uploader.fileList.length).to.equal(0);
           done();
@@ -278,7 +278,7 @@ describe('Upload', () => {
       const files = [file];
 
       handlers.onSuccess = (res, file, fileList) => {
-        uploader.$el.querySelector('.el-upload-list .el-icon-close').click();
+        uploader.$el.querySelector('.el-upload-list .hu-icon-close').click();
         setTimeout(() => {
           expect(spy.calledOnce).to.equal(true);
           expect(uploader.uploadFiles.length).to.equal(1);

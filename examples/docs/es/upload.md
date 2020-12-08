@@ -15,7 +15,7 @@ Carga archivos haciendo clic o arrastrándolos.
   :limit="3"
   :on-exceed="handleExceed"
   :file-list="fileList">
-  <el-button size="small" type="primary">Clic para subir archivo</el-button>
+  <hu-button size="small" type="primary">Clic para subir archivo</hu-button>
   <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
 </el-upload>
 <script>
@@ -54,7 +54,7 @@ Utilice el _hook_ `before-upload` para limitar el formato de archivo y su tamañ
   :on-success="handleAvatarSuccess"
   :before-upload="beforeAvatarUpload">
   <img v-if="imageUrl" :src="imageUrl" class="avatar">
-  <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+  <i v-else class="hu-icon-plus avatar-uploader-icon"></i>
 </el-upload>
 
 <style>
@@ -123,7 +123,7 @@ Utilice la propiedad `list-type` para cambiar el estilo a un listado de archivos
   list-type="picture-card"
   :on-preview="handlePictureCardPreview"
   :on-remove="handleRemove">
-  <i class="el-icon-plus"></i>
+  <i class="hu-icon-plus"></i>
 </el-upload>
 <el-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
@@ -160,7 +160,7 @@ Use `scoped-slot` to change default thumbnail template.
   action="#"
   list-type="picture-card"
   :auto-upload="false">
-    <i slot="default" class="el-icon-plus"></i>
+    <i slot="default" class="hu-icon-plus"></i>
     <div slot="file" slot-scope="{file}">
       <img
         class="el-upload-list__item-thumbnail"
@@ -171,21 +171,21 @@ Use `scoped-slot` to change default thumbnail template.
           class="el-upload-list__item-preview"
           @click="handlePictureCardPreview(file)"
         >
-          <i class="el-icon-zoom-in"></i>
+          <i class="hu-icon-zoom-in"></i>
         </span>
         <span
           v-if="!disabled"
           class="el-upload-list__item-delete"
           @click="handleDownload(file)"
         >
-          <i class="el-icon-download"></i>
+          <i class="hu-icon-download"></i>
         </span>
         <span
           v-if="!disabled"
           class="el-upload-list__item-delete"
           @click="handleRemove(file)"
         >
-          <i class="el-icon-delete"></i>
+          <i class="hu-icon-delete"></i>
         </span>
       </span>
     </div>
@@ -230,7 +230,7 @@ Use `scoped-slot` to change default thumbnail template.
   :on-remove="handleRemove"
   :file-list="fileList"
   list-type="picture">
-  <el-button size="small" type="primary">Clic para subir archivo</el-button>
+  <hu-button size="small" type="primary">Clic para subir archivo</hu-button>
   <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
 </el-upload>
 <script>
@@ -264,7 +264,7 @@ Utilice el _hook_ `on-change` para controlar la funcionalidad de la lista de arc
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-change="handleChange"
   :file-list="fileList">
-  <el-button size="small" type="primary">Clic para subir archivo</el-button>
+  <hu-button size="small" type="primary">Clic para subir archivo</hu-button>
   <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
 </el-upload>
 <script>
@@ -304,7 +304,7 @@ Puede arrastrar el archivo dentro de un área en especifico para cargar el archi
   :on-remove="handleRemove"
   :file-list="fileList"
   multiple>
-  <i class="el-icon-upload"></i>
+  <i class="hu-icon-upload"></i>
   <div class="el-upload__text">Suelta tu archivo aquí o <em>haz clic para cargar</em></div>
   <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
 </el-upload>
@@ -320,8 +320,8 @@ Puede arrastrar el archivo dentro de un área en especifico para cargar el archi
   ref="upload"
   action="https://jsonplaceholder.typicode.com/posts/"
   :auto-upload="false">
-  <el-button slot="trigger" size="small" type="primary">Selecciona un archivo</el-button>
-  <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">Cargar al servidor</el-button>
+  <hu-button slot="trigger" size="small" type="primary">Selecciona un archivo</hu-button>
+  <hu-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">Cargar al servidor</hu-button>
   <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
 </el-upload>
 <script>

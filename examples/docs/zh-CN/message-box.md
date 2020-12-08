@@ -43,7 +43,7 @@
 
 ```html
 <template>
-  <el-button type="text" @click="open">点击打开 Message Box</el-button>
+  <hu-button type="text" @click="open">点击打开 Message Box</hu-button>
 </template>
 
 <script>

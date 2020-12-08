@@ -16,10 +16,10 @@ describe('Link', () => {
   });
   it('icon', () => {
     vm = createTest(Link, {
-      icon: 'el-icon-search'
+      icon: 'hu-icon-search'
     }, true);
     let linkElm = vm.$el;
-    expect(linkElm.querySelector('.el-icon-search')).to.be.ok;
+    expect(linkElm.querySelector('.hu-icon-search')).to.be.ok;
   });
   it('href', () => {
     vm = createTest(Link, {

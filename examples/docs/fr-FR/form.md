@@ -40,17 +40,17 @@ Il peut contenir toutes sortes de champs tels que `input`, `select`, `radio` et 
     </el-checkbox-group>
   </el-form-item>
   <el-form-item label="Resources">
-    <el-radio-group v-model="form.resource">
-      <el-radio label="Sponsor"></el-radio>
-      <el-radio label="Venue"></el-radio>
-    </el-radio-group>
+    <hu-radio-group v-model="form.resource">
+      <hu-radio label="Sponsor"></hu-radio>
+      <hu-radio label="Venue"></hu-radio>
+    </hu-radio-group>
   </el-form-item>
   <el-form-item label="Activity form">
     <el-input type="textarea" v-model="form.desc"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="onSubmit">Créer</el-button>
-    <el-button>Annuler</el-button>
+    <hu-button type="primary" @click="onSubmit">Créer</hu-button>
+    <hu-button>Annuler</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -104,7 +104,7 @@ Lorsque l'espace vertical est limité et que le formulaire est relativement simp
     </el-select>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="onSubmit">Query</el-button>
+    <hu-button type="primary" @click="onSubmit">Query</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -134,11 +134,11 @@ Suivant votre design, il y a différents moyens d'aligner vos labels.
 :::demo L'attribut `label-position` permet de régler l'alignement, il peut être à `top` ou `left`. Quand il est à `top`, les labels sont placés au-dessus des champs.
 
 ```html
-<el-radio-group v-model="labelPosition" size="small">
-  <el-radio-button label="left">Left</el-radio-button>
-  <el-radio-button label="right">Right</el-radio-button>
-  <el-radio-button label="top">Top</el-radio-button>
-</el-radio-group>
+<hu-radio-group v-model="labelPosition" size="small">
+  <hu-radio-button label="left">Left</hu-radio-button>
+  <hu-radio-button label="right">Right</hu-radio-button>
+  <hu-radio-button label="top">Top</hu-radio-button>
+</hu-radio-group>
 <div style="margin: 20px;"></div>
 <el-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign">
   <el-form-item label="Name">
@@ -210,17 +210,17 @@ Le composant Form vous permet d'effectuer des vérifications, afin de détecter 
     </el-checkbox-group>
   </el-form-item>
   <el-form-item label="Resources" prop="resource">
-    <el-radio-group v-model="ruleForm.resource">
-      <el-radio label="Sponsorship"></el-radio>
-      <el-radio label="Venue"></el-radio>
-    </el-radio-group>
+    <hu-radio-group v-model="ruleForm.resource">
+      <hu-radio label="Sponsorship"></hu-radio>
+      <hu-radio label="Venue"></hu-radio>
+    </hu-radio-group>
   </el-form-item>
   <el-form-item label="Activity form" prop="desc">
     <el-input type="textarea" v-model="ruleForm.desc"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('ruleForm')">Créer</el-button>
-    <el-button @click="resetForm('ruleForm')">Réinitialiser</el-button>
+    <hu-button type="primary" @click="submitForm('ruleForm')">Créer</hu-button>
+    <hu-button @click="resetForm('ruleForm')">Réinitialiser</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -300,8 +300,8 @@ Cet exemple montre comment vous pouvez personnaliser vos règles de validation p
     <el-input v-model.number="ruleForm.age"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('ruleForm')">Submit</el-button>
-    <el-button @click="resetForm('ruleForm')">Réinitialiser</el-button>
+    <hu-button type="primary" @click="submitForm('ruleForm')">Submit</hu-button>
+    <hu-button @click="resetForm('ruleForm')">Réinitialiser</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -409,12 +409,12 @@ Les callback de validations personnalisées doivent être appelées. Un usage pl
       required: true, message: 'domain ne peut pas être null', trigger: 'blur'
     }"
   >
-    <el-input v-model="domain.value"></el-input><el-button @click.prevent="removeDomain(domain)">Supprimer</el-button>
+    <el-input v-model="domain.value"></el-input><hu-button @click.prevent="removeDomain(domain)">Supprimer</hu-button>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('dynamicValidateForm')">Soumettre</el-button>
-    <el-button @click="addDomain">Nouveau domaine</el-button>
-    <el-button @click="resetForm('dynamicValidateForm')">Réinitialiser</el-button>
+    <hu-button type="primary" @click="submitForm('dynamicValidateForm')">Soumettre</hu-button>
+    <hu-button @click="addDomain">Nouveau domaine</hu-button>
+    <hu-button @click="resetForm('dynamicValidateForm')">Réinitialiser</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -478,8 +478,8 @@ Les callback de validations personnalisées doivent être appelées. Un usage pl
     <el-input type="age" v-model.number="numberValidateForm.age" autocomplete="off"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('numberValidateForm')">Soumettre</el-button>
-    <el-button @click="resetForm('numberValidateForm')">Réinitialiser</el-button>
+    <hu-button type="primary" @click="submitForm('numberValidateForm')">Soumettre</hu-button>
+    <hu-button @click="resetForm('numberValidateForm')">Réinitialiser</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -547,14 +547,14 @@ Tout les composants d'un formulaire héritent leur attribut `size` de ce formula
     </el-checkbox-group>
   </el-form-item>
   <el-form-item label="Resources">
-    <el-radio-group v-model="sizeForm.resource" size="medium">
-      <el-radio border label="Sponsor"></el-radio>
-      <el-radio border label="Venue"></el-radio>
-    </el-radio-group>
+    <hu-radio-group v-model="sizeForm.resource" size="medium">
+      <hu-radio border label="Sponsor"></hu-radio>
+      <hu-radio border label="Venue"></hu-radio>
+    </hu-radio-group>
   </el-form-item>
   <el-form-item size="large">
-    <el-button type="primary" @click="onSubmit">Créer</el-button>
-    <el-button>Annuler</el-button>
+    <hu-button type="primary" @click="onSubmit">Créer</hu-button>
+    <hu-button>Annuler</hu-button>
   </el-form-item>
 </el-form>
 

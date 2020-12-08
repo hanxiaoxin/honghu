@@ -9,7 +9,7 @@ Pase el ratón por el menú desplegable para desplegarlo y obtener más acciones
 ```html
 <hu-dropdown>
   <span class="hu-dropdown-link">
-    Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+    Dropdown List<i class="hu-icon-arrow-down hu-icon--right"></i>
   </span>
   <hu-dropdown-menu slot="dropdown">
     <hu-dropdown-item>Action 1</hu-dropdown-item>
@@ -25,7 +25,7 @@ Pase el ratón por el menú desplegable para desplegarlo y obtener más acciones
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .hu-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -42,9 +42,9 @@ Utilizando un botón para activar la lista desplegable.
 
 ```html
 <hu-dropdown>
-  <el-button type="primary">
-    Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
-  </el-button>
+  <hu-button type="primary">
+    Dropdown List<i class="hu-icon-arrow-down hu-icon--right"></i>
+  </hu-button>
   <hu-dropdown-menu slot="dropdown">
     <hu-dropdown-item>Action 1</hu-dropdown-item>
     <hu-dropdown-item>Action 2</hu-dropdown-item>
@@ -71,7 +71,7 @@ Utilizando un botón para activar la lista desplegable.
   .hu-dropdown + .hu-dropdown {
     margin-left: 15px;
   }
-  .el-icon-arrow-down {
+  .hu-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -100,14 +100,14 @@ Haga clic en el elemento detonante o sobre él.
     <span class="demonstration">hover to trigger</span>
     <hu-dropdown>
       <span class="hu-dropdown-link">
-        Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+        Dropdown List<i class="hu-icon-arrow-down hu-icon--right"></i>
       </span>
       <hu-dropdown-menu slot="dropdown">
-        <hu-dropdown-item icon="el-icon-plus">Action 1</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-circle-plus">Action 2</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-circle-plus-outline">Action 3</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-check">Action 4</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-circle-check">Action 5</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-plus">Action 1</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-circle-plus">Action 2</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-circle-plus-outline">Action 3</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-check">Action 4</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-circle-check">Action 5</hu-dropdown-item>
       </hu-dropdown-menu>
     </hu-dropdown>
   </hu-col>
@@ -115,14 +115,14 @@ Haga clic en el elemento detonante o sobre él.
     <span class="demonstration">click to trigger</span>
     <hu-dropdown trigger="click">
       <span class="hu-dropdown-link">
-        Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+        Dropdown List<i class="hu-icon-arrow-down hu-icon--right"></i>
       </span>
       <hu-dropdown-menu slot="dropdown">
-        <hu-dropdown-item icon="el-icon-plus">Action 1</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-circle-plus">Action 2</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-circle-plus-outline">Action 3</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-check">Action 4</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-circle-check">Action 5</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-plus">Action 1</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-circle-plus">Action 2</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-circle-plus-outline">Action 3</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-check">Action 4</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-circle-check">Action 5</hu-dropdown-item>
       </hu-dropdown-menu>
     </hu-dropdown>
   </hu-col>
@@ -133,7 +133,7 @@ Haga clic en el elemento detonante o sobre él.
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .hu-icon-arrow-down {
     font-size: 12px;
   }
   .demonstration {
@@ -155,7 +155,7 @@ Use `hide-on-click` para definir si el menú se cierra al hacer clic.
 ```html
 <hu-dropdown :hide-on-click="false">
   <span class="hu-dropdown-link">
-    Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+    Dropdown List<i class="hu-icon-arrow-down hu-icon--right"></i>
   </span>
   <hu-dropdown-menu slot="dropdown">
     <hu-dropdown-item>Action 1</hu-dropdown-item>
@@ -171,7 +171,7 @@ Use `hide-on-click` para definir si el menú se cierra al hacer clic.
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .hu-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -186,7 +186,7 @@ Al hacer clic en cada elemento desplegable se detona un evento cuyo parámetro e
 ```html
 <hu-dropdown @command="handleCommand">
   <span class="hu-dropdown-link">
-    Dropdown List<i class="el-icon-arrow-down el-icon--right"></i>
+    Dropdown List<i class="hu-icon-arrow-down hu-icon--right"></i>
   </span>
   <hu-dropdown-menu slot="dropdown">
     <hu-dropdown-item command="a">Action 1</hu-dropdown-item>
@@ -202,7 +202,7 @@ Al hacer clic en cada elemento desplegable se detona un evento cuyo parámetro e
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .hu-icon-arrow-down {
     font-size: 12px;
   }
 </style>

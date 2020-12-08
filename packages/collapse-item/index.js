@@ -1,8 +1,8 @@
-import ElCollapseItem from '../collapse/src/collapse-item.vue';
+import HuCollapseItem from '../collapse/src/collapse-item.vue';
 
 /* istanbul ignore next */
-ElCollapseItem.install = function(Vue) {
-  Vue.component(ElCollapseItem.name, ElCollapseItem);
+HuCollapseItem.install = function(Vue) {
+  Vue.component(HuCollapseItem.name, HuCollapseItem);
 };
 
-export default ElCollapseItem;
+export default HuCollapseItem;

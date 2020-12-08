@@ -11,10 +11,10 @@ La timeline peut être divisée en plusieurs activités en ordre ascendant ou de
 <div class="block">
   <div class="radio">
     Order:
-    <el-radio-group v-model="reverse">
-      <el-radio :label="true">Descendant</el-radio>
-      <el-radio :label="false">Ascendant</el-radio>
-    </el-radio-group>
+    <hu-radio-group v-model="reverse">
+      <hu-radio :label="true">Descendant</hu-radio>
+      <hu-radio :label="false">Ascendant</hu-radio>
+    </hu-radio-group>
   </div>
 
   <el-timeline :reverse="reverse">
@@ -79,7 +79,7 @@ Vous pouvez personnaliser la taille, la couleur et les icônes de chaque Noeud.
           timestamp: '2018-04-12 20:46',
           size: 'large',
           type: 'primary',
-          icon: 'el-icon-more'
+          icon: 'hu-icon-more'
         }, {
           content: 'Couleur',
           timestamp: '2018-04-03 20:46',

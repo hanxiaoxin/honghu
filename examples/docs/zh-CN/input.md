@@ -263,25 +263,25 @@ export default {
 <div class="demo-input-size">
   <hu-input
     placeholder="请输入内容"
-    suffix-icon="el-icon-date"
+    suffix-icon="hu-icon-date"
     v-model="input1">
   </hu-input>
   <hu-input
     size="medium"
     placeholder="请输入内容"
-    suffix-icon="el-icon-date"
+    suffix-icon="hu-icon-date"
     v-model="input2">
   </hu-input>
   <hu-input
     size="small"
     placeholder="请输入内容"
-    suffix-icon="el-icon-date"
+    suffix-icon="hu-icon-date"
     v-model="input3">
   </hu-input>
   <hu-input
     size="mini"
     placeholder="请输入内容"
-    suffix-icon="el-icon-date"
+    suffix-icon="hu-icon-date"
     v-model="input4">
   </hu-input>
 </div>
@@ -428,7 +428,7 @@ export default {
   placeholder="请输入内容"
   @select="handleSelect">
   <i
-    class="el-icon-edit el-input__icon"
+    class="hu-icon-edit el-input__icon"
     slot="suffix"
     @click="handleIconClick">
   </i>

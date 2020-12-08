@@ -220,7 +220,7 @@
             <span class="right" v-if="isOfficial">by {{config.author}}</span>
             <span class="right more" v-else>
               <hu-dropdown @command="actionClick">
-                <i class="el-icon-more"></i>
+                <i class="hu-icon-more"></i>
                 <hu-dropdown-menu slot="dropdown">
                   <hu-dropdown-item command="rename">{{getActionDisplayName('rename-theme')}}</hu-dropdown-item>
                   <hu-dropdown-item command="copy">{{getActionDisplayName('copy-theme')}}</hu-dropdown-item>

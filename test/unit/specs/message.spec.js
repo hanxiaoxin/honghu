@@ -44,11 +44,11 @@ describe('Message', () => {
   it('custom icon', done => {
     Message({
       message: '夏天',
-      iconClass: 'el-icon-close'
+      iconClass: 'hu-icon-close'
     });
     setTimeout(() => {
       const icon = document.querySelector('.el-message i');
-      expect(icon.classList.contains('el-icon-close')).to.true;
+      expect(icon.classList.contains('hu-icon-close')).to.true;
       done();
     }, 500);
   });

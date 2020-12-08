@@ -6,15 +6,15 @@
       margin-bottom: 0;
     }
   }
-  .el-button + .el-button {
+  .hu-button + .hu-button {
     margin-left: 10px;
   }
-  .el-button-group {
-    .el-button + .el-button {
+  .hu-button-group {
+    .hu-button + .hu-button {
       margin-left: 0;
     }
 
-    & + .el-button-group {
+    & + .hu-button-group {
       margin-left: 10px;
     }
   }

@@ -90,16 +90,16 @@
       iconClasses: {
         type: [Array, Object],
         default() {
-          return ['el-icon-star-on', 'el-icon-star-on', 'el-icon-star-on'];
+          return ['hu-icon-star-on', 'hu-icon-star-on', 'hu-icon-star-on'];
         }
       },
       voidIconClass: {
         type: String,
-        default: 'el-icon-star-off'
+        default: 'hu-icon-star-off'
       },
       disabledVoidIconClass: {
         type: String,
-        default: 'el-icon-star-on'
+        default: 'hu-icon-star-on'
       },
       disabled: {
         type: Boolean,

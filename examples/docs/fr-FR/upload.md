@@ -16,7 +16,7 @@ Permet d'uploader des fichiers en cliquant ou en les déplaçant sur le composan
   :limit="3"
   :on-exceed="handleExceed"
   :file-list="fileList">
-  <el-button size="small" type="primary">Cliquer pour envoyer</el-button>
+  <hu-button size="small" type="primary">Cliquer pour envoyer</hu-button>
   <div slot="tip" class="el-upload__tip">Fichiers jpg/png avec une taille inférieure à 500kb</div>
 </el-upload>
 <script>
@@ -58,7 +58,7 @@ Utilisez `before-upload` pour restreindre le format et la taille du fichier à e
   :on-success="handleAvatarSuccess"
   :before-upload="beforeAvatarUpload">
   <img v-if="imageUrl" :src="imageUrl" class="avatar">
-  <i v-else class="el-icon-plus avatar-uploader-icon"></i>
+  <i v-else class="hu-icon-plus avatar-uploader-icon"></i>
 </el-upload>
 
 <style>
@@ -127,7 +127,7 @@ Utilisez `list-type` pour changer le style de la liste de fichiers.
   list-type="picture-card"
   :on-preview="handlePictureCardPreview"
   :on-remove="handleRemove">
-  <i class="el-icon-plus"></i>
+  <i class="hu-icon-plus"></i>
 </el-upload>
 <el-dialog :visible.sync="dialogVisible">
   <img width="100%" :src="dialogImageUrl" alt="">
@@ -164,7 +164,7 @@ Use `scoped-slot` to change default thumbnail template.
   action="#"
   list-type="picture-card"
   :auto-upload="false">
-    <i slot="default" class="el-icon-plus"></i>
+    <i slot="default" class="hu-icon-plus"></i>
     <div slot="file" slot-scope="{file}">
       <img
         class="el-upload-list__item-thumbnail"
@@ -175,21 +175,21 @@ Use `scoped-slot` to change default thumbnail template.
           class="el-upload-list__item-preview"
           @click="handlePictureCardPreview(file)"
         >
-          <i class="el-icon-zoom-in"></i>
+          <i class="hu-icon-zoom-in"></i>
         </span>
         <span
           v-if="!disabled"
           class="el-upload-list__item-delete"
           @click="handleDownload(file)"
         >
-          <i class="el-icon-download"></i>
+          <i class="hu-icon-download"></i>
         </span>
         <span
           v-if="!disabled"
           class="el-upload-list__item-delete"
           @click="handleRemove(file)"
         >
-          <i class="el-icon-delete"></i>
+          <i class="hu-icon-delete"></i>
         </span>
       </span>
     </div>
@@ -234,7 +234,7 @@ Use `scoped-slot` to change default thumbnail template.
   :on-remove="handleRemove"
   :file-list="fileList"
   list-type="picture">
-  <el-button size="small" type="primary">Cliquer pour envoyer</el-button>
+  <hu-button size="small" type="primary">Cliquer pour envoyer</hu-button>
   <div slot="tip" class="el-upload__tip">Fichiers jpg/png avec une taille inférieure à 500kb</div>
 </el-upload>
 <script>
@@ -268,7 +268,7 @@ Utilisez `on-change` pour contrôler le comportement de la liste de fichiers.
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-change="handleChange"
   :file-list="fileList">
-  <el-button size="small" type="primary">Cliquer pour envoyer</el-button>
+  <hu-button size="small" type="primary">Cliquer pour envoyer</hu-button>
   <div slot="tip" class="el-upload__tip">Fichiers jpg/png avec une taille inférieure à 500kb</div>
 </el-upload>
 <script>
@@ -308,7 +308,7 @@ Vous pouvez déposer les fichiers par drag'n drop sur l'espace dédié.
   :on-remove="handleRemove"
   :file-list="fileList"
   multiple>
-  <i class="el-icon-upload"></i>
+  <i class="hu-icon-upload"></i>
   <div class="el-upload__text">Déposer les fichiers ici ou<em>cliquez pour envoyer</em></div>
   <div class="el-upload__tip" slot="tip">Fichiers jpg/png avec une taille inférieure à 500kb</div>
 </el-upload>
@@ -324,8 +324,8 @@ Vous pouvez déposer les fichiers par drag'n drop sur l'espace dédié.
   ref="upload"
   action="https://jsonplaceholder.typicode.com/posts/"
   :auto-upload="false">
-  <el-button slot="trigger" size="small" type="primary">Choisir un fichier</el-button>
-  <el-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">Envoyer au serveur</el-button>
+  <hu-button slot="trigger" size="small" type="primary">Choisir un fichier</hu-button>
+  <hu-button style="margin-left: 10px;" size="small" type="success" @click="submitUpload">Envoyer au serveur</hu-button>
   <div class="el-upload__tip" slot="tip">Fichiers jpg/png avec une taille inférieure à 500kb</div>
 </el-upload>
 <script>

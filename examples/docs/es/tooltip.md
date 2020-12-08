@@ -11,47 +11,47 @@ Tooltip tiene 9 colocaciones.
 <div class="box">
   <div class="top">
     <el-tooltip class="item" effect="dark" content="Top Left prompts info" placement="top-start">
-      <el-button>top-start</el-button>
+      <hu-button>top-start</hu-button>
     </el-tooltip>
     <el-tooltip class="item" effect="dark" content="Top Center prompts info" placement="top">
-      <el-button>top</el-button>
+      <hu-button>top</hu-button>
     </el-tooltip>
     <el-tooltip class="item" effect="dark" content="Top Right prompts info" placement="top-end">
-      <el-button>top-end</el-button>
+      <hu-button>top-end</hu-button>
     </el-tooltip>
   </div>
   <div class="left">
     <el-tooltip class="item" effect="dark" content="Left Top prompts info" placement="left-start">
-      <el-button>left-start</el-button>
+      <hu-button>left-start</hu-button>
     </el-tooltip>
     <el-tooltip class="item" effect="dark" content="Left Center prompts info" placement="left">
-      <el-button>left</el-button>
+      <hu-button>left</hu-button>
     </el-tooltip>
     <el-tooltip class="item" effect="dark" content="Left Bottom prompts info" placement="left-end">
-      <el-button>left-end</el-button>
+      <hu-button>left-end</hu-button>
     </el-tooltip>
   </div>
 
   <div class="right">
     <el-tooltip class="item" effect="dark" content="Right Top prompts info" placement="right-start">
-      <el-button>right-start</el-button>
+      <hu-button>right-start</hu-button>
     </el-tooltip>
     <el-tooltip class="item" effect="dark" content="Right Center prompts info" placement="right">
-      <el-button>right</el-button>
+      <hu-button>right</hu-button>
     </el-tooltip>
     <el-tooltip class="item" effect="dark" content="Right Bottom prompts info" placement="right-end">
-      <el-button>right-end</el-button>
+      <hu-button>right-end</hu-button>
     </el-tooltip>
   </div>
   <div class="bottom">
     <el-tooltip class="item" effect="dark" content="Bottom Left prompts info" placement="bottom-start">
-      <el-button>bottom-start</el-button>
+      <hu-button>bottom-start</hu-button>
     </el-tooltip>
     <el-tooltip class="item" effect="dark" content="Bottom Center prompts info" placement="bottom">
-      <el-button>bottom</el-button>
+      <hu-button>bottom</hu-button>
     </el-tooltip>
     <el-tooltip class="item" effect="dark" content="Bottom Right prompts info" placement="bottom-end">
-      <el-button>bottom-end</el-button>
+      <hu-button>bottom-end</hu-button>
     </el-tooltip>
   </div>
 </div>
@@ -88,7 +88,7 @@ Tooltip tiene 9 colocaciones.
       padding: 8px 10px;
     }
 
-    .el-button {
+    .hu-button {
       width: 110px;
     }
   }
@@ -104,10 +104,10 @@ Tooltip tiene dos temas: `dark` y `light`.
 :::demo Establecer `effect` para modificar el tema, el valor por defecto es `dark`.
 ```html
 <el-tooltip content="Top center" placement="top">
-  <el-button>Dark</el-button>
+  <hu-button>Dark</hu-button>
 </el-tooltip>
 <el-tooltip content="Bottom center" placement="bottom" effect="light">
-  <el-button>Light</el-button>
+  <hu-button>Light</hu-button>
 </el-tooltip>
 ```
 :::
@@ -120,7 +120,7 @@ Despliegue múltiples líneas de texto y establezca su formato.
 ```html
 <el-tooltip placement="top">
   <div slot="content">multiple lines<br/>second line</div>
-  <el-button>Top center</el-button>
+  <hu-button>Top center</hu-button>
 </el-tooltip>
 ```
 :::
@@ -139,7 +139,7 @@ De hecho, Tooltip es una extensión basada en [Vue-popper](https://github.com/el
 ```html
 <template>
   <el-tooltip :disabled="disabled" content="click to close tooltip function" placement="bottom" effect="light">
-    <el-button @click="disabled = !disabled">click to {{disabled ? 'active' : 'close'}} tooltip function</el-button>
+    <hu-button @click="disabled = !disabled">click to {{disabled ? 'active' : 'close'}} tooltip function</hu-button>
   </el-tooltip>
 </template>
 

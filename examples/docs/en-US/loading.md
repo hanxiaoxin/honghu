@@ -72,7 +72,7 @@ You can customize loading text, loading spinner and background color.
   <hu-table
     v-loading="loading"
     element-loading-text="Loading..."
-    element-loading-spinner="el-icon-loading"
+    element-loading-spinner="hu-icon-loading"
     element-loading-background="rgba(0, 0, 0, 0.8)"
     :data="tableData"
     style="width: 100%">
@@ -126,17 +126,17 @@ Show a full screen animation while loading data.
 
 ```html
 <template>
-  <el-button
+  <hu-button
     type="primary"
     @click="openFullScreen1"
     v-loading.fullscreen.lock="fullscreenLoading">
     As a directive
-  </el-button>
-  <el-button
+  </hu-button>
+  <hu-button
     type="primary"
     @click="openFullScreen2">
     As a service
-  </el-button>
+  </hu-button>
 </template>
 
 <script>
@@ -157,7 +157,7 @@ Show a full screen animation while loading data.
         const loading = this.$loading({
           lock: true,
           text: 'Loading',
-          spinner: 'el-icon-loading',
+          spinner: 'hu-icon-loading',
           background: 'rgba(0, 0, 0, 0.7)'
         });
         setTimeout(() => {

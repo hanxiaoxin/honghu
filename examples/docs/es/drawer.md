@@ -9,16 +9,16 @@ Llamada de un drawer temporal, desde varias direcciones
 :::demo Debe establecer `visible` para `Drawer` como lo hace `Dialog` para controlar la visibilidad. `visible` es del tipo `boolean`. `Drawer` tiene partes: `title` & `body`, el `title` es un slot con nombre, también puede establecer el título a través de un atributo llamado `title`, por defecto a una cadena vacía, la parte `body` es el área principal de `Drawer`, que contiene contenido definido por el usuario. Al abrir, `Drawer` se expande desde la **esquina derecha a la izquierda** cuyo tamaño es **30%** de la ventana del navegador por defecto. Puede cambiar ese comportamiento predeterminado estableciendo los atributos `direction` y `size`. Este caso de demostración también muestra cómo utilizar la API `before-close`, consulte la sección Atributos para obtener más detalles.
 
 ```html
-<el-radio-group v-model="direction">
-  <el-radio label="ltr">left to right</el-radio>
-  <el-radio label="rtl">right to left</el-radio>
-  <el-radio label="ttb">top to bottom</el-radio>
-  <el-radio label="btt">bottom to top</el-radio>
-</el-radio-group>
+<hu-radio-group v-model="direction">
+  <hu-radio label="ltr">left to right</hu-radio>
+  <hu-radio label="rtl">right to left</hu-radio>
+  <hu-radio label="ttb">top to bottom</hu-radio>
+  <hu-radio label="btt">bottom to top</hu-radio>
+</hu-radio-group>
 
-<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<hu-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   open
-</el-button>
+</hu-button>
 
 <el-drawer
   title="I am the title"
@@ -57,9 +57,9 @@ When you no longer need a title, you can remove title from drawer.
 :::demo Set the `withHeader` attribute to **false**, you can remove the title from drawer, thus your drawer can have more space on screen. If you want to be accessible, make sure to set the `title` attribute.
 
 ```html
-<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<hu-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   open
-</el-button>
+</hu-button>
 
 <el-drawer
   title="I am the title"
@@ -87,8 +87,8 @@ Al igual que `Dialog`, `Drawer` puede hacer muchas interacciones diversas.
 :::demo
 
 ```html
-<el-button type="text" @click="table = true">Open Drawer with nested table</el-button>
-<el-button type="text" @click="dialog = true">Open Drawer with nested form</el-button>
+<hu-button type="text" @click="table = true">Open Drawer with nested table</hu-button>
+<hu-button type="text" @click="dialog = true">Open Drawer with nested form</hu-button>
 <el-drawer
   title="I have a nested table inside!"
   :visible.sync="table"
@@ -122,8 +122,8 @@ Al igual que `Dialog`, `Drawer` puede hacer muchas interacciones diversas.
       </el-form-item>
     </el-form>
     <div class="demo-drawer__footer">
-      <el-button @click="cancelForm">Cancel</el-button>
-      <el-button type="primary" @click="$refs.drawer.closeDrawer()" :loading="loading">{{ loading ? 'Submitting ...' : 'Submit' }}</el-button>
+      <hu-button @click="cancelForm">Cancel</hu-button>
+      <hu-button type="primary" @click="$refs.drawer.closeDrawer()" :loading="loading">{{ loading ? 'Submitting ...' : 'Submit' }}</hu-button>
     </div>
   </div>
 </el-drawer>
@@ -202,16 +202,16 @@ También puede tener varias capas de `Drawer` al igual que con `Dialog`.
 
 ```html
 
-<el-button @click="drawer = true" type="primary" style="margin-left: 16px;">
+<hu-button @click="drawer = true" type="primary" style="margin-left: 16px;">
   open
-</el-button>
+</hu-button>
 
 <el-drawer
   title="I'm outer Drawer"
   :visible.sync="drawer"
   size="50%">
   <div>
-   <el-button @click="innerDrawer = true">Click me!</el-button>
+   <hu-button @click="innerDrawer = true">Click me!</hu-button>
    <el-drawer
      title="I'm inner Drawer"
      :append-to-body="true"

@@ -11,10 +11,10 @@ El Timeline puede ser dividido en múltiples actividades en forma ascendente o d
 <div class="block">
   <div class="radio">
     Order: 
-    <el-radio-group v-model="reverse">
-      <el-radio :label="true">descending</el-radio>
-      <el-radio :label="false">ascending</el-radio>
-    </el-radio-group>
+    <hu-radio-group v-model="reverse">
+      <hu-radio :label="true">descending</hu-radio>
+      <hu-radio :label="false">ascending</hu-radio>
+    </hu-radio-group>
   </div>
 
   <el-timeline :reverse="reverse">
@@ -79,7 +79,7 @@ El tamaño, el color y los iconos se pueden personalizar en el nodo.
           timestamp: '2018-04-12 20:46',
           size: 'large',
           type: 'primary',
-          icon: 'el-icon-more'
+          icon: 'hu-icon-more'
         }, {
           content: 'Custom color',
           timestamp: '2018-04-03 20:46',

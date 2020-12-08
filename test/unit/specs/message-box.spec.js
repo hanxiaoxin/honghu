@@ -53,12 +53,12 @@ describe('MessageBox', () => {
   it('custom icon', done => {
     MessageBox({
       type: 'warning',
-      iconClass: 'el-icon-question',
+      iconClass: 'hu-icon-question',
       message: '这是一段内容'
     });
     setTimeout(() => {
       const icon = document.querySelector('.el-message-box__status');
-      expect(icon.classList.contains('el-icon-question')).to.true;
+      expect(icon.classList.contains('hu-icon-question')).to.true;
       done();
     }, 300);
   });
@@ -116,7 +116,7 @@ describe('MessageBox', () => {
     });
     setTimeout(() => {
       document.querySelector('.el-message-box__wrapper')
-        .querySelector('.el-button--primary').click();
+        .querySelector('.hu-button--primary').click();
       expect(document.querySelector('.el-message-box__wrapper')
         .__vue__.$parent.visible).to.false;
       done();
@@ -229,7 +229,7 @@ describe('MessageBox', () => {
       msgAction = action;
     });
     setTimeout(() => {
-      document.querySelector('.el-message-box__wrapper .el-button--primary').click();
+      document.querySelector('.el-message-box__wrapper .hu-button--primary').click();
       setTimeout(() => {
         expect(msgAction).to.equal('confirm');
         done();
@@ -245,7 +245,7 @@ describe('MessageBox', () => {
           done();
         });
       setTimeout(() => {
-        document.querySelector('.el-message-box__wrapper .el-button--primary').click();
+        document.querySelector('.el-message-box__wrapper .hu-button--primary').click();
       }, 50);
     });
 
@@ -256,7 +256,7 @@ describe('MessageBox', () => {
           done();
         });
       setTimeout(() => {
-        document.querySelector('.el-message-box__wrapper .el-button').click();
+        document.querySelector('.el-message-box__wrapper .hu-button').click();
       }, 50);
     });
   });

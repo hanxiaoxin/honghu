@@ -91,11 +91,11 @@
 :::demo 设置`icon`属性即可，icon 的列表可以参考 Element 的 icon 组件，也可以设置在文字右边的 icon ，只要使用`i`标签即可，可以使用自定义图标。
 
 ```html
-<hu-button type="primary" icon="el-icon-edit"></hu-button>
-<hu-button type="primary" icon="el-icon-share"></hu-button>
-<hu-button type="primary" icon="el-icon-delete"></hu-button>
-<hu-button type="primary" icon="el-icon-search">搜索</hu-button>
-<hu-button type="primary">上传<i class="el-icon-upload el-icon--right"></i></hu-button>
+<hu-button type="primary" icon="hu-icon-edit"></hu-button>
+<hu-button type="primary" icon="hu-icon-share"></hu-button>
+<hu-button type="primary" icon="hu-icon-delete"></hu-button>
+<hu-button type="primary" icon="hu-icon-search">搜索</hu-button>
+<hu-button type="primary">上传<i class="hu-icon-upload hu-icon--right"></i></hu-button>
 ```
 :::
 
@@ -107,8 +107,8 @@
 
 ```html
 <hu-button-group>
-  <hu-button type="primary" icon="el-icon-arrow-left">上一页</hu-button>
-  <hu-button type="primary">下一页<i class="el-icon-arrow-right el-icon--right"></i></hu-button>
+  <hu-button type="primary" icon="hu-icon-arrow-left">上一页</hu-button>
+  <hu-button type="primary">下一页<i class="hu-icon-arrow-right hu-icon--right"></i></hu-button>
 </hu-button-group>
 <hu-button-group>
   <hu-button type="primary" icon="hu-icon-edit"></hu-button>

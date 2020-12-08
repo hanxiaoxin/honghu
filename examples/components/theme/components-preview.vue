@@ -64,12 +64,12 @@
       <hu-button type="danger" round>Danger</hu-button>
     </hu-row>
     <hu-row class="demo-line">
-      <hu-button icon="el-icon-search" circle></hu-button>
-      <hu-button type="primary" icon="el-icon-edit" circle></hu-button>
-      <hu-button type="success" icon="el-icon-check" circle></hu-button>
-      <hu-button type="info" icon="el-icon-message" circle></hu-button>
-      <hu-button type="warning" icon="el-icon-star-off" circle></hu-button>
-      <hu-button type="danger" icon="el-icon-delete" circle></hu-button>
+      <hu-button icon="hu-icon-search" circle></hu-button>
+      <hu-button type="primary" icon="hu-icon-edit" circle></hu-button>
+      <hu-button type="success" icon="hu-icon-check" circle></hu-button>
+      <hu-button type="info" icon="hu-icon-message" circle></hu-button>
+      <hu-button type="warning" icon="hu-icon-star-off" circle></hu-button>
+      <hu-button type="danger" icon="hu-icon-delete" circle></hu-button>
     </hu-row>
     <hu-row class="demo-line">
       <hu-button>Default</hu-button>
@@ -79,20 +79,20 @@
     </hu-row>
     <h4>Radio</h4>
     <hu-row class="demo-line">
-      <el-radio v-model="radio" label="1">Option A</el-radio>
-      <el-radio v-model="radio" label="2">Option B</el-radio>
+      <hu-radio v-model="radio" label="1">Option A</hu-radio>
+      <hu-radio v-model="radio" label="2">Option B</hu-radio>
     </hu-row>
     <hu-row class="demo-line">
-      <el-radio-group v-model="radio1">
-        <el-radio-button label="New York"></el-radio-button>
-        <el-radio-button label="Washington"></el-radio-button>
-        <el-radio-button label="Los Angeles"></el-radio-button>
-        <el-radio-button label="Chicago"></el-radio-button>
-      </el-radio-group>
+      <hu-radio-group v-model="radio1">
+        <hu-radio-button label="New York"></hu-radio-button>
+        <hu-radio-button label="Washington"></hu-radio-button>
+        <hu-radio-button label="Los Angeles"></hu-radio-button>
+        <hu-radio-button label="Chicago"></hu-radio-button>
+      </hu-radio-group>
     </hu-row>
     <hu-row class="demo-line">
-      <el-radio v-model="radio2" label="1" border>Option A</el-radio>
-      <el-radio v-model="radio2" label="2" border>Option B</el-radio>
+      <hu-radio v-model="radio2" label="1" border>Option A</hu-radio>
+      <hu-radio v-model="radio2" label="2" border>Option B</hu-radio>
     </hu-row>
     <h4>Checkbox</h4>
     <hu-row class="demo-line">
@@ -233,14 +233,14 @@
     </hu-row>
     <h4>Message</h4>
     <hu-row>
-      <div role="alert" class="demo-item el-message el-message--success el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon el-icon-success"></i><p class="el-message__content">Congrats, this is a success message.</p><!----></div>
-      <div role="alert" class="demo-item el-message el-message--warning el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon el-icon-warning"></i><p class="el-message__content">Warning, this is a warning message.</p><!----></div>
-      <div role="alert" class="demo-item el-message el-message--info el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon el-icon-info"></i><p class="el-message__content">This is a message.</p><!----></div>
-      <div role="alert" class="demo-item el-message el-message--error is-closable el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon el-icon-error"></i><p class="el-message__content">Oops, this is a error message.</p><i class="el-message__closeBtn el-icon-close"></i></div>
+      <div role="alert" class="demo-item el-message el-message--success el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon hu-icon-success"></i><p class="el-message__content">Congrats, this is a success message.</p><!----></div>
+      <div role="alert" class="demo-item el-message el-message--warning el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon hu-icon-warning"></i><p class="el-message__content">Warning, this is a warning message.</p><!----></div>
+      <div role="alert" class="demo-item el-message el-message--info el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon hu-icon-info"></i><p class="el-message__content">This is a message.</p><!----></div>
+      <div role="alert" class="demo-item el-message el-message--error is-closable el-message-fade-leave-active el-message-fade-leave-to" style="top: 0;left: 0;width: 100px; opacity: 1; position: relative;transform: none;"><i class="el-message__icon hu-icon-error"></i><p class="el-message__content">Oops, this is a error message.</p><i class="el-message__closeBtn hu-icon-close"></i></div>
     </hu-row>
     <h4>MessageBox</h4>
     <hu-row>
-      <div class="el-message-box"><div class="el-message-box__header"><div class="el-message-box__title"><!----><span>Warning</span></div><button type="button" aria-label="Close" class="el-message-box__headerbtn"><i class="el-message-box__close el-icon-close"></i></button></div><div class="el-message-box__content"><div class="el-message-box__status el-icon-warning"></div><div class="el-message-box__message"><p>This will permanently delete the file. Continue?</p></div><div class="el-message-box__input" style="display: none;"><div class="el-input"><!----><input type="text" autocomplete="off" placeholder="" class="el-input__inner"><!----><!----><!----></div><div class="el-message-box__errormsg" style="visibility: hidden;"></div></div></div><div class="el-message-box__btns"><button type="button" class="hu-button hu-button--default hu-button--small"><!----><!----><span>
+      <div class="el-message-box"><div class="el-message-box__header"><div class="el-message-box__title"><!----><span>Warning</span></div><button type="button" aria-label="Close" class="el-message-box__headerbtn"><i class="el-message-box__close hu-icon-close"></i></button></div><div class="el-message-box__content"><div class="el-message-box__status hu-icon-warning"></div><div class="el-message-box__message"><p>This will permanently delete the file. Continue?</p></div><div class="el-message-box__input" style="display: none;"><div class="el-input"><!----><input type="text" autocomplete="off" placeholder="" class="el-input__inner"><!----><!----><!----></div><div class="el-message-box__errormsg" style="visibility: hidden;"></div></div></div><div class="el-message-box__btns"><button type="button" class="hu-button hu-button--default hu-button--small"><!----><!----><span>
           Cancel
         </span></button><button type="button" class="hu-button hu-button--default hu-button--small hu-button--primary "><!----><!----><span>
           OK
@@ -248,7 +248,7 @@
     </hu-row>
     <h4>Notification</h4>
     <hu-row>
-      <div role="alert" class="el-notification right" style="position: relative; left: 0;"><!----><div class="el-notification__group"><span class="el-notification__title">Notification</span><div class="el-notification__content"><div>This is a message </div></div><div class="el-notification__closeBtn el-icon-close"></div></div></div>
+      <div role="alert" class="el-notification right" style="position: relative; left: 0;"><!----><div class="el-notification__group"><span class="el-notification__title">Notification</span><div class="el-notification__content"><div>This is a message </div></div><div class="el-notification__closeBtn hu-icon-close"></div></div></div>
     </hu-row>
     <h4>Menu</h4>
     <hu-row>
@@ -277,7 +277,7 @@
       >
         <hu-submenu index="1">
           <template slot="title">
-            <i class="el-icon-location"></i>
+            <i class="hu-icon-location"></i>
             <span>Navigator One</span>
           </template>
           <hu-menu-item-group title="Group One">
@@ -293,15 +293,15 @@
           </hu-submenu>
         </hu-submenu>
         <hu-menu-item index="2">
-          <i class="el-icon-menu"></i>
+          <i class="hu-icon-menu"></i>
           <span>Navigator Two</span>
         </hu-menu-item>
         <hu-menu-item index="3" disabled>
-          <i class="el-icon-document"></i>
+          <i class="hu-icon-document"></i>
           <span>Navigator Three</span>
         </hu-menu-item>
         <hu-menu-item index="4">
-          <i class="el-icon-setting"></i>
+          <i class="hu-icon-setting"></i>
           <span>Navigator Four</span>
         </hu-menu-item>
       </hu-menu>
@@ -323,7 +323,7 @@
     </hu-row>
     <h4>Dialog</h4>
     <hu-row>
-      <div role="dialog" aria-modal="true" aria-label="Tips" class="el-dialog" style="margin: 0"><div class="el-dialog__header"><span class="el-dialog__title">Tips</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close el-icon el-icon-close"></i></button></div><div class="el-dialog__body"><span>This is a message</span> </div><div class="el-dialog__footer"><span class="dialog-footer"><button type="button" class="hu-button hu-button--default"><!----><!----><span>Cancel</span></button> <button type="button" class="hu-button hu-button--primary"><!----><!----><span>Confirm</span></button></span></div></div>
+      <div role="dialog" aria-modal="true" aria-label="Tips" class="el-dialog" style="margin: 0"><div class="el-dialog__header"><span class="el-dialog__title">Tips</span><button type="button" aria-label="Close" class="el-dialog__headerbtn"><i class="el-dialog__close hu-icon hu-icon-close"></i></button></div><div class="el-dialog__body"><span>This is a message</span> </div><div class="el-dialog__footer"><span class="dialog-footer"><button type="button" class="hu-button hu-button--default"><!----><!----><span>Cancel</span></button> <button type="button" class="hu-button hu-button--primary"><!----><!----><span>Confirm</span></button></span></div></div>
     </hu-row>
     <h4>Tooltip</h4>
     <hu-row>
@@ -365,7 +365,7 @@
     </hu-row>
     <h4>Avatar</h4>
     <hu-row class="demo-line avatar-demo">
-      <el-avatar icon="el-icon-user-solid"/>
+      <el-avatar icon="hu-icon-user-solid"/>
       <el-avatar> avatar </el-avatar>
       <el-avatar shape="square" fit="contain" :src="avatarData.url"></el-avatar>
       <el-avatar size="large"> large </el-avatar>

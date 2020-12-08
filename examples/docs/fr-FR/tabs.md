@@ -91,12 +91,12 @@ Vous pouvez utiliser `tab-position` pour régler la position des onglets.
 
 ```html
 <template>
-  <el-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
-    <el-radio-button label="top">En haut</el-radio-button>
-    <el-radio-button label="right">À droite</el-radio-button>
-    <el-radio-button label="bottom">En bas</el-radio-button>
-    <el-radio-button label="left">À gauche</el-radio-button>
-  </el-radio-group>
+  <hu-radio-group v-model="tabPosition" style="margin-bottom: 30px;">
+    <hu-radio-button label="top">En haut</hu-radio-button>
+    <hu-radio-button label="right">À droite</hu-radio-button>
+    <hu-radio-button label="bottom">En bas</hu-radio-button>
+    <hu-radio-button label="left">À gauche</hu-radio-button>
+  </hu-radio-group>
 
   <el-tabs :tab-position="tabPosition" style="height: 200px;">
     <el-tab-pane label="User">Utilisateur</el-tab-pane>
@@ -125,7 +125,7 @@ Vous pouvez utiliser un slot pour customiser le label d'un onglet.
 ```html
 <el-tabs type="border-card">
   <el-tab-pane>
-    <span slot="label"><i class="el-icon-date"></i> Route</span>
+    <span slot="label"><i class="hu-icon-date"></i> Route</span>
     Route
   </el-tab-pane>
   <el-tab-pane label="Config">Config</el-tab-pane>
@@ -208,12 +208,12 @@ Seuls les onglets de type carte supportent l'ajout et la suppression.
 :::demo
 ```html
 <div style="margin-bottom: 20px;">
-  <el-button
+  <hu-button
     size="small"
     @click="addTab(editableTabsValue)"
   >
     Ajouter un onglet
-  </el-button>
+  </hu-button>
 </div>
 <el-tabs v-model="editableTabsValue" type="card" closable @tab-remove="removeTab">
   <el-tab-pane

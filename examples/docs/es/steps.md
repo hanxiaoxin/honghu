@@ -15,7 +15,7 @@ Barra de pasos simple.
   <el-step title="Step 3"></el-step>
 </el-steps>
 
-<el-button style="margin-top: 12px;" @click="next">Next step</el-button>
+<hu-button style="margin-top: 12px;" @click="next">Next step</hu-button>
 
 <script>
   export default {
@@ -87,9 +87,9 @@ En la barra de pasos se pueden utilizar diversos iconos personalizados.
 
 ```html
 <el-steps :active="1">
-  <el-step title="Step 1" icon="el-icon-edit"></el-step>
-  <el-step title="Step 2" icon="el-icon-upload"></el-step>
-  <el-step title="Step 3" icon="el-icon-picture"></el-step>
+  <el-step title="Step 1" icon="hu-icon-edit"></el-step>
+  <el-step title="Step 2" icon="hu-icon-upload"></el-step>
+  <el-step title="Step 3" icon="hu-icon-picture"></el-step>
 </el-steps>
 ```
 :::
@@ -118,9 +118,9 @@ Step bar simple, donde se ignorará `align-center`, `description`, `direction` y
 ```html
 
 <el-steps :space="200" :active="1" simple>
-  <el-step title="Step 1" icon="el-icon-edit"></el-step>
-  <el-step title="Step 2" icon="el-icon-upload"></el-step>
-  <el-step title="Step 3" icon="el-icon-picture"></el-step>
+  <el-step title="Step 1" icon="hu-icon-edit"></el-step>
+  <el-step title="Step 2" icon="hu-icon-upload"></el-step>
+  <el-step title="Step 3" icon="hu-icon-picture"></el-step>
 </el-steps>
 
 <el-steps :active="1" finish-status="success" simple style="margin-top: 20px">

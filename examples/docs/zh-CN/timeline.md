@@ -11,10 +11,10 @@ Timeline 可拆分成多个按照时间戳正序或倒序排列的 activity，�
 <div class="block">
   <div class="radio">
     排序：
-    <el-radio-group v-model="reverse">
-      <el-radio :label="true">倒序</el-radio>
-      <el-radio :label="false">正序</el-radio>
-    </el-radio-group>
+    <hu-radio-group v-model="reverse">
+      <hu-radio :label="true">倒序</hu-radio>
+      <hu-radio :label="false">正序</hu-radio>
+    </hu-radio-group>
   </div>
 
   <el-timeline :reverse="reverse">
@@ -79,7 +79,7 @@ Timeline 可拆分成多个按照时间戳正序或倒序排列的 activity，�
           timestamp: '2018-04-12 20:46',
           size: 'large',
           type: 'primary',
-          icon: 'el-icon-more'
+          icon: 'hu-icon-more'
         }, {
           content: '支持自定义颜色',
           timestamp: '2018-04-03 20:46',

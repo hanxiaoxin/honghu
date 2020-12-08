@@ -11,7 +11,7 @@ describe('Dropdown', () => {
       template: `
         <hu-dropdown ref="dropdown">
           <span class="hu-dropdown-link">
-            下拉菜单<i class="el-icon-caret-bottom el-icon-right"></i>
+            下拉菜单<i class="hu-icon-caret-bottom hu-icon-right"></i>
           </span>
           <hu-dropdown-menu slot="dropdown" class="dropdown-test-creat">
             <hu-dropdown-item>黄金糕</hu-dropdown-item>
@@ -44,7 +44,7 @@ describe('Dropdown', () => {
       template: `
         <hu-dropdown ref="dropdown">
           <span class="hu-dropdown-link">
-            下拉菜单<i class="el-icon-caret-bottom el-icon-right"></i>
+            下拉菜单<i class="hu-icon-caret-bottom hu-icon-right"></i>
           </span>
           <hu-dropdown-menu slot="dropdown">
             <hu-dropdown-item command="a">黄金糕</hu-dropdown-item>
@@ -83,7 +83,7 @@ describe('Dropdown', () => {
       template: `
         <hu-dropdown trigger="click" ref="dropdown">
           <span class="hu-dropdown-link">
-            下拉菜单trigger click<i class="el-icon-caret-bottom el-icon-right"></i>
+            下拉菜单trigger click<i class="hu-icon-caret-bottom hu-icon-right"></i>
           </span>
           <hu-dropdown-menu slot="dropdown">
             <hu-dropdown-item>黄金糕</hu-dropdown-item>
@@ -131,7 +131,7 @@ describe('Dropdown', () => {
     var callback = sinon.spy();
 
     dropdown.$on('click', callback);
-    dropdownElm.querySelector('.el-button').click();
+    dropdownElm.querySelector('.hu-button').click();
 
     setTimeout(_ => {
       expect(callback.called).to.be.true;
@@ -153,7 +153,7 @@ describe('Dropdown', () => {
       template: `
         <hu-dropdown ref="dropdown" :hide-on-click="false">
           <span class="hu-dropdown-link">
-            下拉菜单<i class="el-icon-caret-bottom el-icon-right"></i>
+            下拉菜单<i class="hu-icon-caret-bottom hu-icon-right"></i>
           </span>
           <hu-dropdown-menu slot="dropdown">
             <hu-dropdown-item command="a">黄金糕</hu-dropdown-item>
@@ -187,7 +187,7 @@ describe('Dropdown', () => {
       template: `
         <hu-dropdown ref="dropdown">
           <span class="hu-dropdown-link">
-            下拉菜单<i class="el-icon-caret-bottom el-icon-right"></i>
+            下拉菜单<i class="hu-icon-caret-bottom hu-icon-right"></i>
           </span>
           <hu-dropdown-menu slot="dropdown" class="dropdown-test-creat">
             <hu-dropdown-item>黄金糕</hu-dropdown-item>
@@ -217,7 +217,7 @@ describe('Dropdown', () => {
       template: `
         <hu-dropdown ref="dropdown">
           <span class="hu-dropdown-link">
-            下拉菜单<i class="el-icon-caret-bottom el-icon-right"></i>
+            下拉菜单<i class="hu-icon-caret-bottom hu-icon-right"></i>
           </span>
           <hu-dropdown-menu slot="dropdown" class="dropdown-test-creat">
             <hu-dropdown-item command="a">黄金糕</hu-dropdown-item>
@@ -253,7 +253,7 @@ describe('Dropdown', () => {
       template: `
         <hu-dropdown ref="dropdown">
           <span class="hu-dropdown-link">
-            下拉菜单<i class="el-icon-caret-bottom el-icon-right"></i>
+            下拉菜单<i class="hu-icon-caret-bottom hu-icon-right"></i>
           </span>
           <hu-dropdown-menu slot="dropdown" class="dropdown-test-creat">
             <hu-dropdown-item>黄金糕</hu-dropdown-item>

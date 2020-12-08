@@ -359,8 +359,8 @@ Cuando se tienen demasiadas columnas, puede fijar alguna de estas.
       label="Operaciones"
       width="120">
       <template slot-scope="scope">
-        <el-button @click="handleClick" type="text" size="small">Detalle</el-button>
-        <el-button type="text" size="small">Editar</el-button>
+        <hu-button @click="handleClick" type="text" size="small">Detalle</hu-button>
+        <hu-button type="text" size="small">Editar</hu-button>
       </template>
     </hu-table-column>
   </hu-table>
@@ -568,12 +568,12 @@ Cuando los datos se modifican dinámicamente, es posible que necesite que la tab
       label="Operaciones"
       width="120">
       <template slot-scope="scope">
-        <el-button
+        <hu-button
           @click.native.prevent="deleteRow(scope.$index, tableData)"
           type="text"
           size="small">
           Eliminar
-        </el-button>
+        </hu-button>
       </template>
     </hu-table-column>
   </hu-table>
@@ -786,8 +786,8 @@ La selección de una fila esta soportada.
     </hu-table-column>
   </hu-table>
   <div style="margin-top: 20px">
-    <el-button @click="setCurrent(tableData[1])">Seleccionar segunda fila</el-button>
-    <el-button @click="setCurrent()">Limpiar selección</el-button>
+    <hu-button @click="setCurrent(tableData[1])">Seleccionar segunda fila</hu-button>
+    <hu-button @click="setCurrent()">Limpiar selección</hu-button>
   </div>
 </template>
 
@@ -862,8 +862,8 @@ También puede seleccionar múltiples filas.
     </hu-table-column>
   </hu-table>
   <div style="margin-top: 20px">
-    <el-button @click="toggleSelection([tableData[1], tableData[2]])">Cambia el estado de selección de la segunda y tercera fila.</el-button>
-    <el-button @click="toggleSelection()">Limpiar selección</el-button>
+    <hu-button @click="toggleSelection([tableData[1], tableData[2]])">Cambia el estado de selección de la segunda y tercera fila.</hu-button>
+    <hu-button @click="toggleSelection()">Limpiar selección</hu-button>
   </div>
 </template>
 
@@ -993,8 +993,8 @@ Filtra la tabla para encontrar la información que necesita.
 :::demo Establezca el atributo `filters` y `filter-method` en `hu-table-column` haciendo esta columna filtrable. `filters` es un arreglo, y `filter-method` es una función que decide que filas se muestra. Esta tiene tres parámetros: `value`, `row` y `column`.
 ```html
 <template>
-  <el-button @click="resetDateFilter">清除日期过滤器</el-button>
-  <el-button @click="clearFilter">清除所有过滤器</el-button>
+  <hu-button @click="resetDateFilter">清除日期过滤器</hu-button>
+  <hu-button @click="clearFilter">清除所有过滤器</hu-button>
   <hu-table
     ref="filterTable"
     :data="tableData"
@@ -1099,7 +1099,7 @@ Personalice la columna de la tabla para que pueda integrarse con otros component
       label="Fecha"
       width="180">
       <template slot-scope="scope">
-        <i class="el-icon-time"></i>
+        <i class="hu-icon-time"></i>
         <span style="margin-left: 10px">{{ scope.row.date }}</span>
       </template>
     </hu-table-column>
@@ -1119,13 +1119,13 @@ Personalice la columna de la tabla para que pueda integrarse con otros component
     <hu-table-column
       label="Operaciones">
       <template slot-scope="scope">
-        <el-button
+        <hu-button
           size="mini"
-          @click="handleEdit(scope.$index, scope.row)">Editar</el-button>
-        <el-button
+          @click="handleEdit(scope.$index, scope.row)">Editar</hu-button>
+        <hu-button
           size="mini"
           type="danger"
-          @click="handleDelete(scope.$index, scope.row)">Eliminar</el-button>
+          @click="handleDelete(scope.$index, scope.row)">Eliminar</hu-button>
       </template>
     </hu-table-column>
   </hu-table>
@@ -1193,13 +1193,13 @@ Se puede personalizar el encabezado de la tabla para que se pueda adaptar aún m
           placeholder="Type to search"/>
       </template>
       <template slot-scope="scope">
-        <el-button
+        <hu-button
           size="mini"
-          @click="handleEdit(scope.$index, scope.row)">Edit</el-button>
-        <el-button
+          @click="handleEdit(scope.$index, scope.row)">Edit</hu-button>
+        <hu-button
           size="mini"
           type="danger"
-          @click="handleDelete(scope.$index, scope.row)">Delete</el-button>
+          @click="handleDelete(scope.$index, scope.row)">Delete</hu-button>
       </template>
     </hu-table-column>
   </hu-table>

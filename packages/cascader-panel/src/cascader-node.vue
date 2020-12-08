@@ -148,7 +148,7 @@
         }
 
         return (
-          <el-radio
+          <hu-radio
             value={ checkedValue }
             label={ value }
             disabled={ isDisabled }
@@ -156,25 +156,25 @@
             nativeOnClick={ stopPropagation }>
             {/* add an empty element to avoid render label */}
             <span></span>
-          </el-radio>
+          </hu-radio>
         );
       },
 
       renderCheckIcon(h) {
         return (
-          <i class="el-icon-check el-cascader-node__prefix"></i>
+          <i class="hu-icon-check el-cascader-node__prefix"></i>
         );
       },
 
       renderLoadingIcon(h) {
         return (
-          <i class="el-icon-loading el-cascader-node__postfix"></i>
+          <i class="hu-icon-loading el-cascader-node__postfix"></i>
         );
       },
 
       renderExpandIcon(h) {
         return (
-          <i class="el-icon-arrow-right el-cascader-node__postfix"></i>
+          <i class="hu-icon-arrow-right el-cascader-node__postfix"></i>
         );
       },
 

@@ -86,7 +86,7 @@
       @close="handleClose">
       <hu-submenu index="1">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="hu-icon-location"></i>
           <span>导航一</span>
         </template>
         <hu-menu-item-group>
@@ -103,15 +103,15 @@
         </hu-submenu>
       </hu-submenu>
       <hu-menu-item index="2">
-        <i class="el-icon-menu"></i>
+        <i class="hu-icon-menu"></i>
         <span slot="title">导航二</span>
       </hu-menu-item>
       <hu-menu-item index="3" disabled>
-        <i class="el-icon-document"></i>
+        <i class="hu-icon-document"></i>
         <span slot="title">导航三</span>
       </hu-menu-item>
       <hu-menu-item index="4">
-        <i class="el-icon-setting"></i>
+        <i class="hu-icon-setting"></i>
         <span slot="title">导航四</span>
       </hu-menu-item>
     </hu-menu>
@@ -128,7 +128,7 @@
       active-text-color="#ffd04b">
       <hu-submenu index="1">
         <template slot="title">
-          <i class="el-icon-location"></i>
+          <i class="hu-icon-location"></i>
           <span>导航一</span>
         </template>
         <hu-menu-item-group>
@@ -145,15 +145,15 @@
         </hu-submenu>
       </hu-submenu>
       <hu-menu-item index="2">
-        <i class="el-icon-menu"></i>
+        <i class="hu-icon-menu"></i>
         <span slot="title">导航二</span>
       </hu-menu-item>
       <hu-menu-item index="3" disabled>
-        <i class="el-icon-document"></i>
+        <i class="hu-icon-document"></i>
         <span slot="title">导航三</span>
       </hu-menu-item>
       <hu-menu-item index="4">
-        <i class="el-icon-setting"></i>
+        <i class="hu-icon-setting"></i>
         <span slot="title">导航四</span>
       </hu-menu-item>
     </hu-menu>
@@ -179,14 +179,14 @@
 
 :::demo
 ```html
-<el-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
-  <el-radio-button :label="false">展开</el-radio-button>
-  <el-radio-button :label="true">收起</el-radio-button>
-</el-radio-group>
+<hu-radio-group v-model="isCollapse" style="margin-bottom: 20px;">
+  <hu-radio-button :label="false">展开</hu-radio-button>
+  <hu-radio-button :label="true">收起</hu-radio-button>
+</hu-radio-group>
 <hu-menu default-active="1-4-1" class="hu-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse">
   <hu-submenu index="1">
     <template slot="title">
-      <i class="el-icon-location"></i>
+      <i class="hu-icon-location"></i>
       <span slot="title">导航一</span>
     </template>
     <hu-menu-item-group>
@@ -203,15 +203,15 @@
     </hu-submenu>
   </hu-submenu>
   <hu-menu-item index="2">
-    <i class="el-icon-menu"></i>
+    <i class="hu-icon-menu"></i>
     <span slot="title">导航二</span>
   </hu-menu-item>
   <hu-menu-item index="3" disabled>
-    <i class="el-icon-document"></i>
+    <i class="hu-icon-document"></i>
     <span slot="title">导航三</span>
   </hu-menu-item>
   <hu-menu-item index="4">
-    <i class="el-icon-setting"></i>
+    <i class="hu-icon-setting"></i>
     <span slot="title">导航四</span>
   </hu-menu-item>
 </hu-menu>

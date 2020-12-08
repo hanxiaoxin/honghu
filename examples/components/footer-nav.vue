@@ -4,7 +4,7 @@
       v-if="leftNav"
       class="footer-nav-link footer-nav-left"
       @click="handleNavClick('prev')">
-      <i class="el-icon-arrow-left"></i>
+      <i class="hu-icon-arrow-left"></i>
       {{ leftNav.title || leftNav.name }}
     </span>
     <span
@@ -12,7 +12,7 @@
       class="footer-nav-link footer-nav-right"
       @click="handleNavClick('next')">
       {{ rightNav.title || rightNav.name }}
-      <i class="el-icon-arrow-right"></i>
+      <i class="hu-icon-arrow-right"></i>
     </span>
   </div>
 </template>
@@ -22,38 +22,38 @@
     padding: 40px 0;
     color: #333;
     font-size: 14px;
-    
+
     &::after {
       content: '';
       display: block;
       clear: both;
     }
-     
+
     & i {
       transition: .3s;
       color: #999;
       vertical-align: baseline;
     }
   }
-  
+
   .footer-nav-link {
     cursor: pointer;
     transition: .3s;
-    
+
     &:hover {
       color: #409EFF;
-     
+
       & i {
         color: #409EFF;
       }
     }
   }
-  
+
   .footer-nav-left {
     float: left;
     margin-left: -4px;
   }
-  
+
   .footer-nav-right {
     float: right;
     margin-right: -4px;

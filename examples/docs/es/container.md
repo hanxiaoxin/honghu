@@ -118,7 +118,7 @@ Estos componentes utilizan flex para el diseño, así que asegúrese que el nave
   <hu-aside width="200px" style="background-color: rgb(238, 241, 246)">
     <hu-menu :default-openeds="['1', '3']">
       <hu-submenu index="1">
-        <template slot="title"><i class="el-icon-message"></i>Navigator One</template>
+        <template slot="title"><i class="hu-icon-message"></i>Navigator One</template>
         <hu-menu-item-group>
           <template slot="title">Group 1</template>
           <hu-menu-item index="1-1">Option 1</hu-menu-item>
@@ -133,7 +133,7 @@ Estos componentes utilizan flex para el diseño, así que asegúrese que el nave
         </hu-submenu>
       </hu-submenu>
       <hu-submenu index="2">
-        <template slot="title"><i class="el-icon-menu"></i>Navigator Two</template>
+        <template slot="title"><i class="hu-icon-menu"></i>Navigator Two</template>
         <hu-menu-item-group>
           <template slot="title">Group 1</template>
           <hu-menu-item index="2-1">Option 1</hu-menu-item>
@@ -148,7 +148,7 @@ Estos componentes utilizan flex para el diseño, así que asegúrese que el nave
         </hu-submenu>
       </hu-submenu>
       <hu-submenu index="3">
-        <template slot="title"><i class="el-icon-setting"></i>Navigator Three</template>
+        <template slot="title"><i class="hu-icon-setting"></i>Navigator Three</template>
         <hu-menu-item-group>
           <template slot="title">Group 1</template>
           <hu-menu-item index="3-1">Option 1</hu-menu-item>
@@ -168,7 +168,7 @@ Estos componentes utilizan flex para el diseño, así que asegúrese que el nave
   <hu-container>
     <hu-header style="text-align: right; font-size: 12px">
       <hu-dropdown>
-        <i class="el-icon-setting" style="margin-right: 15px"></i>
+        <i class="hu-icon-setting" style="margin-right: 15px"></i>
         <hu-dropdown-menu slot="dropdown">
           <hu-dropdown-item>View</hu-dropdown-item>
           <hu-dropdown-item>Add</hu-dropdown-item>

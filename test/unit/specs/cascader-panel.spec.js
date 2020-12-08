@@ -185,7 +185,7 @@ describe('CascaderPanel', () => {
     expect(getMenus(el).length).to.equal(3);
     expect(getOptions(el, 0)[0].className).to.includes('in-active-path');
     expect(getOptions(el, 2)[0].className).to.includes('is-active');
-    expect(getOptions(el, 2)[0].querySelector('.el-icon-check')).to.exist;
+    expect(getOptions(el, 2)[0].querySelector('.hu-icon-check')).to.exist;
   });
 
   it('disabled options', async() => {
@@ -273,7 +273,7 @@ describe('CascaderPanel', () => {
 
     await waitImmediate();
     expect(getMenus(el).length).to.equal(3);
-    expect(getOptions(el, 2)[0].querySelector('.el-icon-check')).to.exist;
+    expect(getOptions(el, 2)[0].querySelector('.hu-icon-check')).to.exist;
 
     getOptions(el, 1)[1].click();
     await waitImmediate();
@@ -370,7 +370,7 @@ describe('CascaderPanel', () => {
     }, true);
 
     const el = vm.$el;
-    const radio = getOptions(el, 0)[0].querySelector('.el-radio');
+    const radio = getOptions(el, 0)[0].querySelector('.hu-radio');
 
     await waitImmediate();
     expect(radio).to.exist;
@@ -381,7 +381,7 @@ describe('CascaderPanel', () => {
     getOptions(el, 1)[0].querySelector('input').click();
     await waitImmediate();
     expect(vm.value).to.deep.equal(['zhejiang', 'hangzhou']);
-    expect(getOptions(el, 0)[1].querySelector('.el-radio').className).to.includes('is-disabled');
+    expect(getOptions(el, 0)[1].querySelector('.hu-radio').className).to.includes('is-disabled');
   });
 
   it('check strictly in multiple mode', async() => {
@@ -539,9 +539,9 @@ describe('CascaderPanel', () => {
     const firstOption = getOptions(el, 0)[0];
     firstOption.click();
     await waitImmediate();
-    expect(firstOption.querySelector('i').className).to.includes('el-icon-loading');
+    expect(firstOption.querySelector('i').className).to.includes('hu-icon-loading');
     await wait(1000);
-    expect(firstOption.querySelector('i').className).to.includes('el-icon-arrow-right');
+    expect(firstOption.querySelector('i').className).to.includes('hu-icon-arrow-right');
     expect(getMenus(el).length).to.equal(2);
     getOptions(el, 1)[0].click();
     await wait(1000);

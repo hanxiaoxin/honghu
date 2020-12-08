@@ -72,7 +72,7 @@ Puede personalizar el texto de carga, spinner de carga y color de fondo.
   <hu-table
     v-loading="loading"
     element-loading-text="Loading..."
-    element-loading-spinner="el-icon-loading"
+    element-loading-spinner="hu-icon-loading"
     element-loading-background="rgba(0, 0, 0, 0.8)"
     :data="tableData"
     style="width: 100%">
@@ -126,17 +126,17 @@ Muestra una animación de pantalla completa mientras se cargan los datos
 
 ```html
 <template>
-  <el-button
+  <hu-button
     type="primary"
     @click="openFullScreen1"
     v-loading.fullscreen.lock="fullscreenLoading">
     Como directiva
-  </el-button>
-  <el-button
+  </hu-button>
+  <hu-button
     type="primary"
     @click="openFullScreen2">
     Como servicio
-  </el-button>
+  </hu-button>
 </template>
 
 <script>
@@ -157,7 +157,7 @@ Muestra una animación de pantalla completa mientras se cargan los datos
         const loading = this.$loading({
           lock: true,
           text: 'Loading',
-          spinner: 'el-icon-loading',
+          spinner: 'hu-icon-loading',
           background: 'rgba(0, 0, 0, 0.7)'
         });
         setTimeout(() => {

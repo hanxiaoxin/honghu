@@ -25,17 +25,17 @@
           :src="file.url" alt=""
         >
         <a class="el-upload-list__item-name" @click="handleClick(file)">
-          <i class="el-icon-document"></i>{{file.name}}
+          <i class="hu-icon-document"></i>{{file.name}}
         </a>
         <label class="el-upload-list__item-status-label">
           <i :class="{
-            'el-icon-upload-success': true,
-            'el-icon-circle-check': listType === 'text',
-            'el-icon-check': ['picture-card', 'picture'].indexOf(listType) > -1
+            'hu-icon-upload-success': true,
+            'hu-icon-circle-check': listType === 'text',
+            'hu-icon-check': ['picture-card', 'picture'].indexOf(listType) > -1
           }"></i>
         </label>
-        <i class="el-icon-close" v-if="!disabled" @click="$emit('remove', file)"></i>
-        <i class="el-icon-close-tip" v-if="!disabled">{{ t('el.upload.deleteTip') }}</i> <!--因为close按钮只在li:focus的时候 display, li blur后就不存在了，所以键盘导航时永远无法 focus到 close按钮上-->
+        <i class="hu-icon-close" v-if="!disabled" @click="$emit('remove', file)"></i>
+        <i class="hu-icon-close-tip" v-if="!disabled">{{ t('el.upload.deleteTip') }}</i> <!--因为close按钮只在li:focus的时候 display, li blur后就不存在了，所以键盘导航时永远无法 focus到 close按钮上-->
         <el-progress
           v-if="file.status === 'uploading'"
           :type="listType === 'picture-card' ? 'circle' : 'line'"
@@ -48,14 +48,14 @@
             v-if="handlePreview && listType === 'picture-card'"
             @click="handlePreview(file)"
           >
-            <i class="el-icon-zoom-in"></i>
+            <i class="hu-icon-zoom-in"></i>
           </span>
           <span
             v-if="!disabled"
             class="el-upload-list__item-delete"
             @click="$emit('remove', file)"
           >
-            <i class="el-icon-delete"></i>
+            <i class="hu-icon-delete"></i>
           </span>
         </span>
       </slot>

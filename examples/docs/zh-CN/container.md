@@ -117,7 +117,7 @@
   <hu-aside width="200px" style="background-color: rgb(238, 241, 246)">
     <hu-menu :default-openeds="['1', '3']">
       <hu-submenu index="1">
-        <template slot="title"><i class="el-icon-message"></i>导航一</template>
+        <template slot="title"><i class="hu-icon-message"></i>导航一</template>
         <hu-menu-item-group>
           <template slot="title">分组一</template>
           <hu-menu-item index="1-1">选项1</hu-menu-item>
@@ -132,7 +132,7 @@
         </hu-submenu>
       </hu-submenu>
       <hu-submenu index="2">
-        <template slot="title"><i class="el-icon-menu"></i>导航二</template>
+        <template slot="title"><i class="hu-icon-menu"></i>导航二</template>
         <hu-menu-item-group>
           <template slot="title">分组一</template>
           <hu-menu-item index="2-1">选项1</hu-menu-item>
@@ -147,7 +147,7 @@
         </hu-submenu>
       </hu-submenu>
       <hu-submenu index="3">
-        <template slot="title"><i class="el-icon-setting"></i>导航三</template>
+        <template slot="title"><i class="hu-icon-setting"></i>导航三</template>
         <hu-menu-item-group>
           <template slot="title">分组一</template>
           <hu-menu-item index="3-1">选项1</hu-menu-item>
@@ -167,7 +167,7 @@
   <hu-container>
     <hu-header style="text-align: right; font-size: 12px">
       <hu-dropdown>
-        <i class="el-icon-setting" style="margin-right: 15px"></i>
+        <i class="hu-icon-setting" style="margin-right: 15px"></i>
         <hu-dropdown-menu slot="dropdown">
           <hu-dropdown-item>查看</hu-dropdown-item>
           <hu-dropdown-item>新增</hu-dropdown-item>

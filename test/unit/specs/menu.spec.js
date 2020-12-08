@@ -374,8 +374,8 @@ describe('Menu', () => {
       template: `
         <hu-menu mode="vertical" default-active="1">
           <hu-menu-item-group title="分组一" ref="group1">
-            <hu-menu-item index="1"><i class="el-icon-message"></i>导航一</hu-menu-item>
-            <hu-menu-item index="2"><i class="el-icon-message"></i>导航二</hu-menu-item>
+            <hu-menu-item index="1"><i class="hu-icon-message"></i>导航一</hu-menu-item>
+            <hu-menu-item index="2"><i class="hu-icon-message"></i>导航二</hu-menu-item>
           </hu-menu-item-group>
           <hu-submenu index="5">
             <template slot="title">导航五</template>

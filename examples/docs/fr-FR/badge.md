@@ -10,21 +10,21 @@ Affiche le nombre de nouveaux messages.
 
 ```html
 <el-badge :value="12" class="item">
-  <el-button size="small">Commentaires</el-button>
+  <hu-button size="small">Commentaires</hu-button>
 </el-badge>
 <el-badge :value="3" class="item">
-  <el-button size="small">Réponses</el-button>
+  <hu-button size="small">Réponses</hu-button>
 </el-badge>
 <el-badge :value="1" class="item" type="primary">
-  <el-button size="small">Commentaires</el-button>
+  <hu-button size="small">Commentaires</hu-button>
 </el-badge>
 <el-badge :value="2" class="item" type="warning">
-  <el-button size="small">Réponses</el-button>
+  <hu-button size="small">Réponses</hu-button>
 </el-badge>
 
 <hu-dropdown trigger="click">
   <span class="hu-dropdown-link">
-    Cliquez<i class="el-icon-caret-bottom el-icon--right"></i>
+    Cliquez<i class="hu-icon-caret-bottom hu-icon--right"></i>
   </span>
   <hu-dropdown-menu slot="dropdown">
     <hu-dropdown-item class="clearfix">
@@ -55,10 +55,10 @@ Vous pouvez configurer la valeur maximale.
 
 ```html
 <el-badge :value="200" :max="99" class="item">
-  <el-button size="small">Commentaires</el-button>
+  <hu-button size="small">Commentaires</hu-button>
 </el-badge>
 <el-badge :value="100" :max="10" class="item">
-  <el-button size="small">Réponses</el-button>
+  <hu-button size="small">Réponses</hu-button>
 </el-badge>
 
 <style>
@@ -78,10 +78,10 @@ Affiche du texte autre que des nombres.
 
 ```html
 <el-badge value="new" class="item">
-  <el-button size="small">Commentaires</el-button>
+  <hu-button size="small">Commentaires</hu-button>
 </el-badge>
 <el-badge value="hot" class="item">
-  <el-button size="small">Réponses</el-button>
+  <hu-button size="small">Réponses</hu-button>
 </el-badge>
 
 <style>
@@ -102,7 +102,7 @@ Utilisez un point rouge pour signaler du contenu devant être remarqué.
 ```html
 <el-badge is-dot class="item">Requète</el-badge>
 <el-badge is-dot class="item">
-  <el-button class="share-button" icon="el-icon-share" type="primary"></el-button>
+  <hu-button class="share-button" icon="hu-icon-share" type="primary"></hu-button>
 </el-badge>
 
 <style>

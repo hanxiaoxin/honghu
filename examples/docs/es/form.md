@@ -40,17 +40,17 @@ Incluye todo tipo de entradas, tales como `input`, `select`, `radio` y `checkbox
     </el-checkbox-group>
   </el-form-item>
   <el-form-item label="Resources">
-    <el-radio-group v-model="form.resource">
-      <el-radio label="Sponsor"></el-radio>
-      <el-radio label="Venue"></el-radio>
-    </el-radio-group>
+    <hu-radio-group v-model="form.resource">
+      <hu-radio label="Sponsor"></hu-radio>
+      <hu-radio label="Venue"></hu-radio>
+    </hu-radio-group>
   </el-form-item>
   <el-form-item label="Activity form">
     <el-input type="textarea" v-model="form.desc"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="onSubmit">Create</el-button>
-    <el-button>Cancel</el-button>
+    <hu-button type="primary" @click="onSubmit">Create</hu-button>
+    <hu-button>Cancel</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -106,7 +106,7 @@ Cuando el espacio vertical es limitado y la forma es relativamente simple, puede
     </el-select>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="onSubmit">Query</el-button>
+    <hu-button type="primary" @click="onSubmit">Query</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -137,11 +137,11 @@ Dependiendo de su diseño, hay varias maneras diferentes de alinear el elemento 
 :::demo El atributo `label-position` decide cómo se alinean las etiquetas, puede estar `top` o `left`. Cuando se establece en `top`, las etiquetas se colocarán en la parte superior del campo de formulario.
 
 ```html
-<el-radio-group v-model="labelPosition" size="small">
-  <el-radio-button label="left">Left</el-radio-button>
-  <el-radio-button label="right">Right</el-radio-button>
-  <el-radio-button label="top">Top</el-radio-button>
-</el-radio-group>
+<hu-radio-group v-model="labelPosition" size="small">
+  <hu-radio-button label="left">Left</hu-radio-button>
+  <hu-radio-button label="right">Right</hu-radio-button>
+  <hu-radio-button label="top">Top</hu-radio-button>
+</hu-radio-group>
 <div style="margin: 20px;"></div>
 <el-form :label-position="labelPosition" label-width="100px" :model="formLabelAlign">
   <el-form-item label="Name">
@@ -214,17 +214,17 @@ El componente `form` le permite verificar sus datos, ayudándole a encontrar y c
     </el-checkbox-group>
   </el-form-item>
   <el-form-item label="Resources" prop="resource">
-    <el-radio-group v-model="ruleForm.resource">
-      <el-radio label="Sponsorship"></el-radio>
-      <el-radio label="Venue"></el-radio>
-    </el-radio-group>
+    <hu-radio-group v-model="ruleForm.resource">
+      <hu-radio label="Sponsorship"></hu-radio>
+      <hu-radio label="Venue"></hu-radio>
+    </hu-radio-group>
   </el-form-item>
   <el-form-item label="Activity form" prop="desc">
     <el-input type="textarea" v-model="ruleForm.desc"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('ruleForm')">Create</el-button>
-    <el-button @click="resetForm('ruleForm')">Reset</el-button>
+    <hu-button type="primary" @click="submitForm('ruleForm')">Create</hu-button>
+    <hu-button @click="resetForm('ruleForm')">Reset</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -306,8 +306,8 @@ Este ejemplo muestra cómo personalizar sus propias reglas de validación para f
     <el-input v-model.number="ruleForm.age"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('ruleForm')">Submit</el-button>
-    <el-button @click="resetForm('ruleForm')">Reset</el-button>
+    <hu-button type="primary" @click="submitForm('ruleForm')">Submit</hu-button>
+    <hu-button @click="resetForm('ruleForm')">Reset</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -417,12 +417,12 @@ Se debe llamar a la función de validación de llamada de retorno personalizada.
       required: true, message: 'domain can not be null', trigger: 'blur'
     }"
   >
-    <el-input v-model="domain.value"></el-input><el-button @click.prevent="removeDomain(domain)">Delete</el-button>
+    <el-input v-model="domain.value"></el-input><hu-button @click.prevent="removeDomain(domain)">Delete</hu-button>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('dynamicValidateForm')">Submit</el-button>
-    <el-button @click="addDomain">New domain</el-button>
-    <el-button @click="resetForm('dynamicValidateForm')">Reset</el-button>
+    <hu-button type="primary" @click="submitForm('dynamicValidateForm')">Submit</hu-button>
+    <hu-button @click="addDomain">New domain</hu-button>
+    <hu-button @click="resetForm('dynamicValidateForm')">Reset</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -488,8 +488,8 @@ Se debe llamar a la función de validación de llamada de retorno personalizada.
     <el-input type="age" v-model.number="numberValidateForm.age" autocomplete="off"></el-input>
   </el-form-item>
   <el-form-item>
-    <el-button type="primary" @click="submitForm('numberValidateForm')">Submit</el-button>
-    <el-button @click="resetForm('numberValidateForm')">Reset</el-button>
+    <hu-button type="primary" @click="submitForm('numberValidateForm')">Submit</hu-button>
+    <hu-button @click="resetForm('numberValidateForm')">Reset</hu-button>
   </el-form-item>
 </el-form>
 <script>
@@ -561,14 +561,14 @@ Todos los componentes de un formulario heredan su atributo `size`. De manera sim
     </el-checkbox-group>
   </el-form-item>
   <el-form-item label="Resources">
-    <el-radio-group v-model="sizeForm.resource" size="medium">
-      <el-radio border label="Sponsor"></el-radio>
-      <el-radio border label="Venue"></el-radio>
-    </el-radio-group>
+    <hu-radio-group v-model="sizeForm.resource" size="medium">
+      <hu-radio border label="Sponsor"></hu-radio>
+      <hu-radio border label="Venue"></hu-radio>
+    </hu-radio-group>
   </el-form-item>
   <el-form-item size="large">
-    <el-button type="primary" @click="onSubmit">Create</el-button>
-    <el-button>Cancel</el-button>
+    <hu-button type="primary" @click="onSubmit">Create</hu-button>
+    <hu-button>Cancel</hu-button>
   </el-form-item>
 </el-form>
 

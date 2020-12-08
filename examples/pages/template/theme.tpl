@@ -39,8 +39,8 @@
       <h2><%= 1 ></h2>
       <ul>
         <li class="theme-card" v-for="item in officialTheme" :key="item.name">
-          <theme-card 
-            type="official" 
+          <theme-card
+            type="official"
             :config="item"
             @action="onAction"
           ></theme-card>
@@ -51,14 +51,14 @@
       <h2><%= 2 > ({{userThemeCount}}/{{maxUserTheme}})</h2>
       <ul>
         <li class="theme-card" v-if="showUserUpload">
-          <theme-card 
-            type="upload" 
+          <theme-card
+            type="upload"
             :config="{name: 'upload'}"
             @action="onAction"
           ></theme-card>
         </li>
         <li class="theme-card" v-for="item in displayUserTheme" :key="item.name">
-          <theme-card 
+          <theme-card
             type="user"
             :config="item"
             @action="onAction"
@@ -73,8 +73,8 @@
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="closeCopyForm">{{getActionDisplayName('cancel')}}</el-button>
-        <el-button type="primary" @click="copyToUser">{{getActionDisplayName('confirm')}}</el-button>
+        <hu-button @click="closeCopyForm">{{getActionDisplayName('cancel')}}</hu-button>
+        <hu-button type="primary" @click="copyToUser">{{getActionDisplayName('confirm')}}</hu-button>
       </div>
     </el-dialog>
   </div>

@@ -9,7 +9,7 @@ Passez sur le menu avec la souris pour dérouler son contenu.
 ```html
 <hu-dropdown>
   <span class="hu-dropdown-link">
-    Menu déroulant<i class="el-icon-arrow-down el-icon--right"></i>
+    Menu déroulant<i class="hu-icon-arrow-down hu-icon--right"></i>
   </span>
   <hu-dropdown-menu slot="dropdown">
     <hu-dropdown-item>Action 1</hu-dropdown-item>
@@ -25,7 +25,7 @@ Passez sur le menu avec la souris pour dérouler son contenu.
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .hu-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -41,9 +41,9 @@ Utilisez le bouton pour ouvrir le menu déroulant.
 :::demo Utilisez `split-button` pour séparer le déclencheur du reste du bouton, ce dernier devenant la partie gauche et le déclencheur la partie droite.
 ```html
 <hu-dropdown>
-  <el-button type="primary">
-    Liste déroulante<i class="el-icon-arrow-down el-icon--right"></i>
-  </el-button>
+  <hu-button type="primary">
+    Liste déroulante<i class="hu-icon-arrow-down hu-icon--right"></i>
+  </hu-button>
   <hu-dropdown-menu slot="dropdown">
     <hu-dropdown-item>Action 1</hu-dropdown-item>
     <hu-dropdown-item>Action 2</hu-dropdown-item>
@@ -70,7 +70,7 @@ Utilisez le bouton pour ouvrir le menu déroulant.
   .hu-dropdown + .hu-dropdown {
     margin-left: 15px;
   }
-  .el-icon-arrow-down {
+  .hu-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -99,14 +99,14 @@ Vous pouvez choisir de déclencher le menu au moment du clic, ou en passant la s
     <span class="demonstration">En passant la souris</span>
     <hu-dropdown>
       <span class="hu-dropdown-link">
-        Liste déroulante<i class="el-icon-arrow-down el-icon--right"></i>
+        Liste déroulante<i class="hu-icon-arrow-down hu-icon--right"></i>
       </span>
       <hu-dropdown-menu slot="dropdown">
-        <hu-dropdown-item icon="el-icon-plus">Action 1</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-circle-plus">Action 2</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-circle-plus-outline">Action 3</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-check">Action 4</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-circle-check">Action 5</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-plus">Action 1</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-circle-plus">Action 2</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-circle-plus-outline">Action 3</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-check">Action 4</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-circle-check">Action 5</hu-dropdown-item>
       </hu-dropdown-menu>
     </hu-dropdown>
   </hu-col>
@@ -114,14 +114,14 @@ Vous pouvez choisir de déclencher le menu au moment du clic, ou en passant la s
     <span class="demonstration">En cliquant</span>
     <hu-dropdown trigger="click">
       <span class="hu-dropdown-link">
-        Liste déroulante<i class="el-icon-arrow-down el-icon--right"></i>
+        Liste déroulante<i class="hu-icon-arrow-down hu-icon--right"></i>
       </span>
       <hu-dropdown-menu slot="dropdown">
-        <hu-dropdown-item icon="el-icon-plus">Action 1</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-circle-plus">Action 2</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-circle-plus-outline">Action 3</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-check">Action 4</hu-dropdown-item>
-        <hu-dropdown-item icon="el-icon-circle-check">Action 5</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-plus">Action 1</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-circle-plus">Action 2</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-circle-plus-outline">Action 3</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-check">Action 4</hu-dropdown-item>
+        <hu-dropdown-item icon="hu-icon-circle-check">Action 5</hu-dropdown-item>
       </hu-dropdown-menu>
     </hu-dropdown>
   </hu-col>
@@ -132,7 +132,7 @@ Vous pouvez choisir de déclencher le menu au moment du clic, ou en passant la s
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .hu-icon-arrow-down {
     font-size: 12px;
   }
   .demonstration {
@@ -153,7 +153,7 @@ Utilisez l'attribut `hide-on-click` pour déterminer si le menu se ferme après 
 ```html
 <hu-dropdown :hide-on-click="false">
   <span class="hu-dropdown-link">
-    Liste déroulante<i class="el-icon-arrow-down el-icon--right"></i>
+    Liste déroulante<i class="hu-icon-arrow-down hu-icon--right"></i>
   </span>
   <hu-dropdown-menu slot="dropdown">
     <hu-dropdown-item>Action 1</hu-dropdown-item>
@@ -169,7 +169,7 @@ Utilisez l'attribut `hide-on-click` pour déterminer si le menu se ferme après 
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .hu-icon-arrow-down {
     font-size: 12px;
   }
 </style>
@@ -185,7 +185,7 @@ Le paramètre de cet évènement peut être assigné à chaque élément de la l
 ```html
 <hu-dropdown @command="handleCommand">
   <span class="hu-dropdown-link">
-    Liste déroulante<i class="el-icon-arrow-down el-icon--right"></i>
+    Liste déroulante<i class="hu-icon-arrow-down hu-icon--right"></i>
   </span>
   <hu-dropdown-menu slot="dropdown">
     <hu-dropdown-item command="a">Action 1</hu-dropdown-item>
@@ -201,7 +201,7 @@ Le paramètre de cet évènement peut être assigné à chaque élément de la l
     cursor: pointer;
     color: #409EFF;
   }
-  .el-icon-arrow-down {
+  .hu-icon-arrow-down {
     font-size: 12px;
   }
 </style>

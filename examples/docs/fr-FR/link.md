@@ -63,8 +63,8 @@ Lien avec icône.
 
 ```html
 <div>
-  <el-link icon="el-icon-edit">Éditer</el-link>
-  <el-link>Vérifier<i class="el-icon-view el-icon--right"></i> </el-link>
+  <el-link icon="hu-icon-edit">Éditer</el-link>
+  <el-link>Vérifier<i class="hu-icon-view hu-icon--right"></i> </el-link>
 </div>
 ```
 

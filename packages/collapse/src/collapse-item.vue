@@ -23,7 +23,7 @@
       >
         <slot name="title">{{title}}</slot>
         <i
-          class="hu-collapse-item__arrow el-icon-arrow-right"
+          class="hu-collapse-item__arrow hu-icon-arrow-right"
           :class="{'is-active': isActive}">
         </i>
       </div>
@@ -45,14 +45,14 @@
   </div>
 </template>
 <script>
-  import HuCollapseTransition from 'element-ui/src/transitions/collapse-transition';
-  import Emitter from 'element-ui/src/mixins/emitter';
-  import { generateId } from 'element-ui/src/utils/util';
+  import HuCollapseTransition from 'honghu-ui/src/transitions/collapse-transition';
+  import Emitter from 'honghu-ui/src/mixins/emitter';
+  import { generateId } from 'honghu-ui/src/utils/util';
 
   export default {
-    name: 'ElCollapseItem',
+    name: 'HuCollapseItem',
 
-    componentName: 'ElCollapseItem',
+    componentName: 'HuCollapseItem',
 
     mixins: [Emitter],
 
@@ -102,12 +102,12 @@
       },
       handleHeaderClick() {
         if (this.disabled) return;
-        this.dispatch('ElCollapse', 'item-click', this);
+        this.dispatch('HuCollapse', 'item-click', this);
         this.focusing = false;
         this.isClick = true;
       },
       handleEnterClick() {
-        this.dispatch('ElCollapse', 'item-click', this);
+        this.dispatch('HuCollapse', 'item-click', this);
       }
     }
   };

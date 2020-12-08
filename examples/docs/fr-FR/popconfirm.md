@@ -12,7 +12,7 @@ Popconfirm is similar to Popover. So for some duplicated attributes, please refe
 <hu-popconfirm
   title="Are you sure to delete this?"
 >
-  <el-button slot="reference">Delete</el-button>
+  <hu-button slot="reference">Delete</hu-button>
 </hu-popconfirm>
 </template>
 ````
@@ -26,11 +26,11 @@ You can customise Popconfirm like:
 <hu-popconfirm
   confirmButtonText='OK'
   cancelButtonText='No, Thanks'
-  icon="el-icon-info"
+  icon="hu-icon-info"
   iconColor="red"
   title="Are you sure to delete this?"
 >
-  <el-button slot="reference">Delete</el-button>
+  <hu-button slot="reference">Delete</hu-button>
 </hu-popconfirm>
 </template>
 ```
@@ -44,7 +44,7 @@ You can customise Popconfirm like:
 |  cancelButtonText              | Cancel button text | String | — | — |
 |  confirmButtonType              | Confirm button type | String | — | Primary |
 |  cancelButtonType              | Cancel button type | String | — | Text |
-|  icon              | Icon | String | — | el-icon-question |
+|  icon              | Icon | String | — | hu-icon-question |
 |  iconColor              | Icon color | String | — | #f90 |
 |  hideIcon              | is hide Icon | Boolean | — | false |
 

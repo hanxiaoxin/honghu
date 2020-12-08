@@ -14,7 +14,7 @@ Similaire à Tooltip, Popover est aussi construit avec `Vue-popper`. Certains at
     width="200"
     trigger="hover"
     content="this is content, this is content, this is content">
-    <el-button slot="reference">S'active au passage du curseur</el-button>
+    <hu-button slot="reference">S'active au passage du curseur</hu-button>
   </el-popover>
 
   <el-popover
@@ -23,7 +23,7 @@ Similaire à Tooltip, Popover est aussi construit avec `Vue-popper`. Certains at
     width="200"
     trigger="click"
     content="this is content, this is content, this is content">
-    <el-button slot="reference">S'active en cliquant</el-button>
+    <hu-button slot="reference">S'active en cliquant</hu-button>
   </el-popover>
 
   <el-popover
@@ -34,7 +34,7 @@ Similaire à Tooltip, Popover est aussi construit avec `Vue-popper`. Certains at
     trigger="focus"
     content="this is content, this is content, this is content">
   </el-popover>
-  <el-button v-popover:popover>S'active au focus</el-button>
+  <hu-button v-popover:popover>S'active au focus</hu-button>
 
   <el-popover
     placement="bottom"
@@ -43,7 +43,7 @@ Similaire à Tooltip, Popover est aussi construit avec `Vue-popper`. Certains at
     trigger="manual"
     content="this is content, this is content, this is content"
     v-model="visible">
-    <el-button slot="reference" @click="visible = !visible">S'active manuellement</el-button>
+    <hu-button slot="reference" @click="visible = !visible">S'active manuellement</hu-button>
   </el-popover>
 </template>
 
@@ -75,7 +75,7 @@ D'autres composants peuvent s'imbriquer dans un popover.
     <hu-table-column width="100" property="name" label="name"></hu-table-column>
     <hu-table-column width="300" property="address" label="address"></hu-table-column>
   </hu-table>
-  <el-button slot="reference">Cliquez pour activer</el-button>
+  <hu-button slot="reference">Cliquez pour activer</hu-button>
 </el-popover>
 
 <script>
@@ -118,10 +118,10 @@ Vous pouvez aussi imbriquer des opérations. Procéder ainsi est plus léger que
   v-model="visible">
   <p>Voulez-vous vraiment supprimer ceci?</p>
   <div style="text-align: right; margin: 0">
-    <el-button size="mini" type="text" @click="visible = false">Annuler</el-button>
-    <el-button type="primary" size="mini" @click="visible = false">Confirmer</el-button>
+    <hu-button size="mini" type="text" @click="visible = false">Annuler</hu-button>
+    <hu-button type="primary" size="mini" @click="visible = false">Confirmer</hu-button>
   </div>
-  <el-button slot="reference">Supprimer</el-button>
+  <hu-button slot="reference">Supprimer</hu-button>
 </el-popover>
 
 <script>

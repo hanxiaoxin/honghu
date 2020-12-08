@@ -315,11 +315,11 @@ Tree nodes can be initially expanded or checked
 </el-tree>
 
 <div class="buttons">
-  <el-button @click="getCheckedNodes">get by node</el-button>
-  <el-button @click="getCheckedKeys">get by key</el-button>
-  <el-button @click="setCheckedNodes">set by node</el-button>
-  <el-button @click="setCheckedKeys">set by key</el-button>
-  <el-button @click="resetChecked">reset</el-button>
+  <hu-button @click="getCheckedNodes">get by node</hu-button>
+  <hu-button @click="getCheckedKeys">get by key</hu-button>
+  <hu-button @click="setCheckedNodes">set by node</hu-button>
+  <hu-button @click="setCheckedKeys">set by key</hu-button>
+  <hu-button @click="resetChecked">reset</hu-button>
 </div>
 
 <script>
@@ -424,18 +424,18 @@ The content of tree nodes can be customized, so you can add icons or buttons as 
       <span class="custom-tree-node" slot-scope="{ node, data }">
         <span>{{ node.label }}</span>
         <span>
-          <el-button
+          <hu-button
             type="text"
             size="mini"
             @click="() => append(data)">
             Append
-          </el-button>
-          <el-button
+          </hu-button>
+          <hu-button
             type="text"
             size="mini"
             @click="() => remove(node, data)">
             Delete
-          </el-button>
+          </hu-button>
         </span>
       </span>
     </el-tree>
@@ -509,8 +509,8 @@ The content of tree nodes can be customized, so you can add icons or buttons as 
           <span class="custom-tree-node">
             <span>{node.label}</span>
             <span>
-              <el-button size="mini" type="text" on-click={ () => this.append(data) }>Append</el-button>
-              <el-button size="mini" type="text" on-click={ () => this.remove(node, data) }>Delete</el-button>
+              <hu-button size="mini" type="text" on-click={ () => this.append(data) }>Append</hu-button>
+              <hu-button size="mini" type="text" on-click={ () => this.remove(node, data) }>Delete</hu-button>
             </span>
           </span>);
       }

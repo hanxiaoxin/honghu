@@ -8,7 +8,7 @@ Vous pouvez utiliser les transitions d'Element directement. Mais avant ça, merc
 ```html
 <template>
   <div>
-    <el-button @click="show = !show">Cliquez ici</el-button>
+    <hu-button @click="show = !show">Cliquez ici</hu-button>
 
     <div style="display: flex; margin-top: 20px; height: 100px;">
       <transition name="el-fade-in-linear">
@@ -52,7 +52,7 @@ Vous pouvez utiliser les transitions d'Element directement. Mais avant ça, merc
 ```html
 <template>
   <div>
-    <el-button @click="show2 = !show2">Cliquez ici</el-button>
+    <hu-button @click="show2 = !show2">Cliquez ici</hu-button>
 
     <div style="display: flex; margin-top: 20px; height: 100px;">
       <transition name="el-zoom-in-center">
@@ -104,7 +104,7 @@ Pour l'effet collapse, utilisez le composant `hu-collapse-transition`.
 ```html
 <template>
   <div>
-    <el-button @click="show3 = !show3">Cliquez ici</el-button>
+    <hu-button @click="show3 = !show3">Cliquez ici</hu-button>
 
     <div style="margin-top: 20px; height: 200px;">
       <hu-collapse-transition>

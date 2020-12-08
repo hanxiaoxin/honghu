@@ -168,12 +168,12 @@
       },
       iconClass() {
         if (this.status === 'warning') {
-          return 'el-icon-warning';
+          return 'hu-icon-warning';
         }
         if (this.type === 'line') {
-          return this.status === 'success' ? 'el-icon-circle-check' : 'el-icon-circle-close';
+          return this.status === 'success' ? 'hu-icon-circle-check' : 'hu-icon-circle-close';
         } else {
-          return this.status === 'success' ? 'el-icon-check' : 'el-icon-close';
+          return this.status === 'success' ? 'hu-icon-check' : 'hu-icon-close';
         }
       },
       progressTextSize() {
