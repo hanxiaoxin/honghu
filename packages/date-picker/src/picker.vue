@@ -1,7 +1,7 @@
 <template>
-  <el-input
-    class="el-date-editor"
-    :class="'el-date-editor--' + type"
+  <hu-input
+    class="hu-date-editor"
+    :class="'hu-date-editor--' + type"
     :readonly="!editable || readonly || type === 'dates' || type === 'week'"
     :disabled="pickerDisabled"
     :size="pickerSize"
@@ -20,22 +20,22 @@
     :validateEvent="false"
     ref="reference">
     <i slot="prefix"
-      class="el-input__icon"
+      class="hu-input__icon"
       :class="triggerClass"
       @click="handleFocus">
     </i>
     <i slot="suffix"
-      class="el-input__icon"
+      class="hu-input__icon"
       @click="handleClickIcon"
       :class="[showClose ? '' + clearIcon : '']"
       v-if="haveTrigger">
     </i>
-  </el-input>
+  </hu-input>
   <div
-    class="el-date-editor el-range-editor el-input__inner"
+    class="hu-date-editor hu-range-editor hu-input__inner"
     :class="[
-      'el-date-editor--' + type,
-      pickerSize ? `el-range-editor--${ pickerSize }` : '',
+      'hu-date-editor--' + type,
+      pickerSize ? `hu-range-editor--${ pickerSize }` : '',
       pickerDisabled ? 'is-disabled' : '',
       pickerVisible ? 'is-active' : ''
     ]"
@@ -46,7 +46,7 @@
     ref="reference"
     v-clickoutside="handleClose"
     v-else>
-    <i :class="['el-input__icon', 'el-range__icon', triggerClass]"></i>
+    <i :class="['hu-input__icon', 'hu-range__icon', triggerClass]"></i>
     <input
       autocomplete="off"
       :placeholder="startPlaceholder"
@@ -58,9 +58,9 @@
       @input="handleStartInput"
       @change="handleStartChange"
       @focus="handleFocus"
-      class="el-range-input">
+      class="hu-range-input">
     <slot name="range-separator">
-      <span class="el-range-separator">{{ rangeSeparator }}</span>
+      <span class="hu-range-separator">{{ rangeSeparator }}</span>
     </slot>
     <input
       autocomplete="off"
@@ -73,12 +73,12 @@
       @input="handleEndInput"
       @change="handleEndChange"
       @focus="handleFocus"
-      class="el-range-input">
+      class="hu-range-input">
     <i
       @click="handleClickIcon"
       v-if="haveTrigger"
       :class="[showClose ? '' + clearIcon : '']"
-      class="el-input__icon el-range__close-icon">
+      class="hu-input__icon hu-range__close-icon">
     </i>
   </div>
 </template>
@@ -353,7 +353,7 @@ export default {
     prefixIcon: String,
     clearIcon: {
       type: String,
-      default: 'el-icon-circle-close'
+      default: 'hu-icon-circle-close'
     },
     name: {
       default: '',
@@ -477,7 +477,7 @@ export default {
     },
 
     triggerClass() {
-      return this.prefixIcon || (this.type.indexOf('time') !== -1 ? 'el-icon-time' : 'el-icon-date');
+      return this.prefixIcon || (this.type.indexOf('time') !== -1 ? 'hu-icon-time' : 'hu-icon-date');
     },
 
     selectionMode() {

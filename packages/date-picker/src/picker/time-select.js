@@ -4,9 +4,9 @@ import Panel from '../panel/time-select';
 export default {
   mixins: [Picker],
 
-  name: 'ElTimeSelect',
+  name: 'HuTimeSelect',
 
-  componentName: 'ElTimeSelect',
+  componentName: 'HuTimeSelect',
 
   props: {
     type: {

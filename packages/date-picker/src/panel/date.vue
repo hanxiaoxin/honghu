@@ -1,34 +1,34 @@
 <template>
-  <transition name="el-zoom-in-top" @after-enter="handleEnter" @after-leave="handleLeave">
+  <transition name="hu-zoom-in-top" @after-enter="handleEnter" @after-leave="handleLeave">
     <div
       v-show="visible"
-      class="el-picker-panel el-date-picker el-popper"
+      class="hu-picker-panel hu-date-picker hu-popper"
       :class="[{
         'has-sidebar': $slots.sidebar || shortcuts,
         'has-time': showTime
       }, popperClass]">
-      <div class="el-picker-panel__body-wrapper">
-        <slot name="sidebar" class="el-picker-panel__sidebar"></slot>
-        <div class="el-picker-panel__sidebar" v-if="shortcuts">
+      <div class="hu-picker-panel__body-wrapper">
+        <slot name="sidebar" class="hu-picker-panel__sidebar"></slot>
+        <div class="hu-picker-panel__sidebar" v-if="shortcuts">
           <button
             type="button"
-            class="el-picker-panel__shortcut"
+            class="hu-picker-panel__shortcut"
             v-for="(shortcut, key) in shortcuts"
             :key="key"
             @click="handleShortcutClick(shortcut)">{{ shortcut.text }}</button>
         </div>
-        <div class="el-picker-panel__body">
-          <div class="el-date-picker__time-header" v-if="showTime">
-            <span class="el-date-picker__editor-wrap">
-              <el-input
+        <div class="hu-picker-panel__body">
+          <div class="hu-date-picker__time-header" v-if="showTime">
+            <span class="hu-date-picker__editor-wrap">
+              <hu-input
                 :placeholder="t('el.datepicker.selectDate')"
                 :value="visibleDate"
                 size="small"
                 @input="val => userInputDate = val"
                 @change="handleVisibleDateChange" />
             </span>
-            <span class="el-date-picker__editor-wrap" v-clickoutside="handleTimePickClose">
-              <el-input
+            <span class="hu-date-picker__editor-wrap" v-clickoutside="handleTimePickClose">
+              <hu-input
                 ref="input"
                 @focus="timePickerVisible = true"
                 :placeholder="t('el.datepicker.selectTime')"
@@ -46,48 +46,48 @@
             </span>
           </div>
           <div
-            class="el-date-picker__header"
-            :class="{ 'el-date-picker__header--bordered': currentView === 'year' || currentView === 'month' }"
+            class="hu-date-picker__header"
+            :class="{ 'hu-date-picker__header--bordered': currentView === 'year' || currentView === 'month' }"
             v-show="currentView !== 'time'">
             <button
               type="button"
               @click="prevYear"
               :aria-label="t(`el.datepicker.prevYear`)"
-              class="el-picker-panel__icon-btn el-date-picker__prev-btn el-icon-d-arrow-left">
+              class="hu-picker-panel__icon-btn hu-date-picker__prev-btn hu-icon-d-arrow-left">
             </button>
             <button
               type="button"
               @click="prevMonth"
               v-show="currentView === 'date'"
               :aria-label="t(`el.datepicker.prevMonth`)"
-              class="el-picker-panel__icon-btn el-date-picker__prev-btn el-icon-arrow-left">
+              class="hu-picker-panel__icon-btn hu-date-picker__prev-btn hu-icon-arrow-left">
             </button>
             <span
               @click="showYearPicker"
               role="button"
-              class="el-date-picker__header-label">{{ yearLabel }}</span>
+              class="hu-date-picker__header-label">{{ yearLabel }}</span>
             <span
               @click="showMonthPicker"
               v-show="currentView === 'date'"
               role="button"
-              class="el-date-picker__header-label"
+              class="hu-date-picker__header-label"
               :class="{ active: currentView === 'month' }">{{t(`el.datepicker.month${ month + 1 }`)}}</span>
             <button
               type="button"
               @click="nextYear"
               :aria-label="t(`el.datepicker.nextYear`)"
-              class="el-picker-panel__icon-btn el-date-picker__next-btn el-icon-d-arrow-right">
+              class="hu-picker-panel__icon-btn hu-date-picker__next-btn hu-icon-d-arrow-right">
             </button>
             <button
               type="button"
               @click="nextMonth"
               v-show="currentView === 'date'"
               :aria-label="t(`el.datepicker.nextMonth`)"
-              class="el-picker-panel__icon-btn el-date-picker__next-btn el-icon-arrow-right">
+              class="hu-picker-panel__icon-btn hu-date-picker__next-btn hu-icon-arrow-right">
             </button>
           </div>
 
-          <div class="el-picker-panel__content">
+          <div class="hu-picker-panel__content">
             <date-table
               v-show="currentView === 'date'"
               @pick="handleDatePick"
@@ -120,12 +120,12 @@
       </div>
 
       <div
-        class="el-picker-panel__footer"
+        class="hu-picker-panel__footer"
         v-show="footerVisible && currentView === 'date'">
         <hu-button
           size="mini"
           type="text"
-          class="el-picker-panel__link-btn"
+          class="hu-picker-panel__link-btn"
           @click="changeToNow"
           v-show="selectionMode !== 'dates'">
           {{ t('el.datepicker.now') }}
@@ -133,7 +133,7 @@
         <hu-button
           plain
           size="mini"
-          class="el-picker-panel__link-btn"
+          class="hu-picker-panel__link-btn"
           @click="confirm">
           {{ t('el.datepicker.confirm') }}
         </hu-button>
