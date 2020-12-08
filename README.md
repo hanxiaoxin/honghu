@@ -2,7 +2,7 @@
 
 ## Install
 ```shell
-npm install
+npm install honghu-ui
 ```
 
 ## Quick Start

@@ -45,11 +45,11 @@
             },
             {
               "path": "/color",
-              "title": "Color 色彩"
+              "title": "Color 色彩(unfinished)"
             },
             {
               "path": "/typography",
-              "title": "Typography 字体"
+              "title": "Typography 字体(unfinished)"
             },
             {
               "path": "/border",
@@ -94,7 +94,7 @@
             },
             {
               "path": "/cascader",
-              "title": "Cascader 级联选择器"
+              "title": "Cascader 级联选择器(unfinished)"
             },
             {
               "path": "/switch",
@@ -102,7 +102,7 @@
             },
             {
               "path": "/slider",
-              "title": "Slider 滑块"
+              "title": "Slider 滑块(unfinished)"
             },
             {
               "path": "/time-picker",
@@ -118,23 +118,23 @@
             },
             {
               "path": "/upload",
-              "title": "Upload 上传"
+              "title": "Upload 上传(unfinished)"
             },
             {
               "path": "/rate",
-              "title": "Rate 评分"
+              "title": "Rate 评分(unfinished)"
             },
             {
               "path": "/color-picker",
-              "title": "ColorPicker 颜色选择器"
+              "title": "ColorPicker 颜色选择器(unfinished)"
             },
             {
               "path": "/transfer",
-              "title": "Transfer 穿梭框"
+              "title": "Transfer 穿梭框(unfinished)"
             },
             {
               "path": "/form",
-              "title": "Form 表单"
+              "title": "Form 表单(unfinished)"
             }
           ]
         },
@@ -151,11 +151,11 @@
             },
             {
               "path": "/progress",
-              "title": "Progress 进度条"
+              "title": "Progress 进度条(unfinished)"
             },
             {
               "path": "/tree",
-              "title": "Tree 树形控件"
+              "title": "Tree 树形控件(unfinished)"
             },
             {
               "path": "/pagination",
@@ -163,11 +163,11 @@
             },
             {
               "path": "/badge",
-              "title": "Badge 标记"
+              "title": "Badge 标记(unfinished)"
             },
             {
               "path": "/avatar",
-              "title": "Avatar 头像"
+              "title": "Avatar 头像(unfinished)"
             }
           ]
         },
@@ -209,11 +209,11 @@
             },
             {
               "path": "/breadcrumb",
-              "title": "Breadcrumb 面包屑"
+              "title": "Breadcrumb 面包屑(unfinished)"
             },
             {
               "path": "/page-header",
-              "title": "PageHeader 页头"
+              "title": "PageHeader 页头(unfinished)"
             },
             {
               "path": "/dropdown",
@@ -250,7 +250,7 @@
             },
             {
               "path": "/carousel",
-              "title": "Carousel 走马灯"
+              "title": "Carousel 走马灯(unfinished)"
             },
             {
               "path": "/collapse",
@@ -258,31 +258,31 @@
             },
             {
               "path": "/timeline",
-              "title": "Timeline 时间线"
+              "title": "Timeline 时间线(unfinished)"
             },
             {
               "path": "/divider",
-              "title": "Divider 分割线"
+              "title": "Divider 分割线(unfinished)"
             },
             {
               "path": "/calendar",
-              "title": "Calendar 日历"
+              "title": "Calendar 日历(unfinished)"
             },
             {
               "path": "/image",
-              "title": "Image 图片"
+              "title": "Image 图片(unfinished)"
             },
             {
               "path": "/backtop",
-              "title": "Backtop 回到顶部"
+              "title": "Backtop 回到顶部(unfinished)"
             },
             {
               "path": "/infiniteScroll",
-              "title": "InfiniteScroll 无限滚动"
+              "title": "InfiniteScroll 无限滚动(unfinished)"
             },
             {
               "path": "/drawer",
-              "title": "Drawer 抽屉"
+              "title": "Drawer 抽屉(unfinished)"
             }
           ]
         }
