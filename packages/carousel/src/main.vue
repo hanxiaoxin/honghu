@@ -4,7 +4,7 @@
     @mouseenter.stop="handleMouseEnter"
     @mouseleave.stop="handleMouseLeave">
     <div
-      class="el-carousel__container"
+      class="hu-carousel__container"
       :style="{ height: height }">
       <transition
         v-if="arrowDisplay"
@@ -15,20 +15,20 @@
           @mouseenter="handleButtonEnter('left')"
           @mouseleave="handleButtonLeave"
           @click.stop="throttledArrowClick(activeIndex - 1)"
-          class="el-carousel__arrow el-carousel__arrow--left">
+          class="hu-carousel__arrow hu-carousel__arrow--left">
           <i class="hu-icon-arrow-left"></i>
         </button>
       </transition>
       <transition
         v-if="arrowDisplay"
-        name="carousel-arrow-right">
+        name="caroushu-arrow-right">
         <button
           type="button"
           v-show="(arrow === 'always' || hover) && (loop || activeIndex < items.length - 1)"
           @mouseenter="handleButtonEnter('right')"
           @mouseleave="handleButtonLeave"
           @click.stop="throttledArrowClick(activeIndex + 1)"
-          class="el-carousel__arrow el-carousel__arrow--right">
+          class="hu-carousel__arrow hu-carousel__arrow--right">
           <i class="hu-icon-arrow-right"></i>
         </button>
       </transition>
@@ -41,12 +41,12 @@
         v-for="(item, index) in items"
         :key="index"
         :class="[
-          'el-carousel__indicator',
-          'el-carousel__indicator--' + direction,
+          'hu-carousel__indicator',
+          'hu-carousel__indicator--' + direction,
           { 'is-active': index === activeIndex }]"
         @mouseenter="throttledIndicatorHover(index)"
         @click.stop="handleIndicatorClick(index)">
-        <button class="el-carousel__button">
+        <button class="hu-carousel__button">
           <span v-if="hasLabel">{{ item.label }}</span>
         </button>
       </li>
@@ -59,7 +59,7 @@ import throttle from 'throttle-debounce/throttle';
 import { addResizeListener, removeResizeListener } from 'honghu-ui/src/utils/resize-event';
 
 export default {
-  name: 'ElCarousel',
+  name: 'HuCarousel',
 
   props: {
     initialIndex: {
@@ -122,20 +122,20 @@ export default {
     },
 
     carouselClasses() {
-      const classes = ['el-carousel', 'el-carousel--' + this.direction];
+      const classes = ['hu-carousel', 'hu-caroushu--' + this.direction];
       if (this.type === 'card') {
-        classes.push('el-carousel--card');
+        classes.push('hu-carousel--card');
       }
       return classes;
     },
 
     indicatorsClasses() {
-      const classes = ['el-carousel__indicators', 'el-carousel__indicators--' + this.direction];
+      const classes = ['hu-carousel__indicators', 'hu-carousel__indicators--' + this.direction];
       if (this.hasLabel) {
-        classes.push('el-carousel__indicators--labels');
+        classes.push('hu-carousel__indicators--labels');
       }
       if (this.indicatorPosition === 'outside' || this.type === 'card') {
-        classes.push('el-carousel__indicators--outside');
+        classes.push('hu-carousel__indicators--outside');
       }
       return classes;
     }

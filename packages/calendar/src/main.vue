@@ -1,11 +1,11 @@
 <template>
-  <div class="el-calendar">
-    <div class="el-calendar__header">
-      <div class="el-calendar__title">
+  <div class="hu-calendar">
+    <div class="hu-calendar__header">
+      <div class="hu-calendar__title">
         {{ i18nDate }}
       </div>
       <div
-        class="el-calendar__button-group"
+        class="hu-calendar__button-group"
         v-if="validatedRange.length === 0">
         <hu-button-group>
           <hu-button
@@ -30,7 +30,7 @@
       </div>
     </div>
     <div
-      class="el-calendar__body"
+      class="hu-calendar__body"
       v-if="validatedRange.length === 0"
       key="no-range">
       <date-table
@@ -41,7 +41,7 @@
     </div>
     <div
       v-else
-      class="el-calendar__body"
+      class="hu-calendar__body"
       key="has-range">
       <date-table
         v-for="(range, index) in validatedRange"
@@ -60,7 +60,7 @@
 import Locale from 'honghu-ui/src/mixins/locale';
 import fecha from 'honghu-ui/src/utils/date';
 import HuButton from 'honghu-ui/packages/button';
-import ElButtonGroup from 'honghu-ui/packages/button-group';
+import HuButtonGroup from 'honghu-ui/packages/button-group';
 import DateTable from './date-table';
 import { validateRangeInOneMonth } from 'honghu-ui/src/utils/date-util';
 
@@ -69,14 +69,14 @@ const weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 const oneDay = 86400000;
 
 export default {
-  name: 'ElCalendar',
+  name: 'HuCalendar',
 
   mixins: [Locale],
 
   components: {
     DateTable,
     HuButton,
-    ElButtonGroup
+    HuButtonGroup
   },
 
   props: {

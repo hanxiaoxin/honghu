@@ -7,7 +7,7 @@
         'right': styleRight,
         'bottom': styleBottom
       }"
-      class="el-backtop">
+      class="hu-backtop">
       <slot>
         <hu-icon name="caret-top"></hu-icon>
       </slot>
@@ -24,7 +24,7 @@ const easeInOutCubic = value => value < 0.5
   : 1 - cubic((1 - value) * 2) / 2;
 
 export default {
-  name: 'ElBacktop',
+  name: 'HuBacktop',
 
   props: {
     visibilityHeight: {

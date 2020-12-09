@@ -1,8 +1,8 @@
-import ElTimelineItem from '../timeline/src/item';
+import HuTimelineItem from '../timeline/src/item';
 
 /* istanbul ignore next */
-ElTimelineItem.install = function(Vue) {
-  Vue.component(ElTimelineItem.name, ElTimelineItem);
+HuTimelineItem.install = function(Vue) {
+  Vue.component(HuTimelineItem.name, HuTimelineItem);
 };
 
-export default ElTimelineItem;
+export default HuTimelineItem;

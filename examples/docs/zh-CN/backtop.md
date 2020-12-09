@@ -10,7 +10,7 @@
 ```html
 <template>
   Scroll down to see the bottom-right button.
-  <el-backtop target=".page-component__scroll .hu-scrollbar__wrap"></el-backtop>
+  <hu-backtop target=".page-component__scroll .hu-scrollbar__wrap"></hu-backtop>
 </template>
 ```
 
@@ -24,7 +24,7 @@
 ```html
 <template>
   Scroll down to see the bottom-right button.
-  <el-backtop target=".page-component__scroll .hu-scrollbar__wrap" :bottom="100">
+  <hu-backtop target=".page-component__scroll .hu-scrollbar__wrap" :bottom="100">
     <div
       style="{
         height: 100%;
@@ -38,7 +38,7 @@
     >
       UP
     </div>
-  </el-backtop>
+  </hu-backtop>
 </template>
 ```
 

@@ -28,11 +28,11 @@
 <template>
   <div>
     <span>头上一片晴天，心中一个想念</span>
-    <el-divider content-position="left">少年包青天</el-divider>
+    <hu-divider content-position="left">少年包青天</hu-divider>
     <span>饿了别叫妈, 叫饿了么</span>
-    <el-divider><i class="hu-icon-mobile-phone"></i></el-divider>
+    <hu-divider><i class="hu-icon-mobile-phone"></i></hu-divider>
     <span>为了无法计算的价值</span>
-    <el-divider content-position="right">阿里云</el-divider>
+    <hu-divider content-position="right">阿里云</hu-divider>
   </div>
 </template>
 ```
@@ -45,9 +45,9 @@
 <template>
   <div>
     <span>雨纷纷</span>
-    <el-divider direction="vertical"></el-divider>
+    <hu-divider direction="vertical"></hu-divider>
     <span>旧故里</span>
-    <el-divider direction="vertical"></el-divider>
+    <hu-divider direction="vertical"></hu-divider>
     <span>草木深</span>
   </div>
 </template>

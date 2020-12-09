@@ -1,20 +1,20 @@
 <template>
-  <div class="el-image">
+  <div class="hu-image">
     <slot v-if="loading" name="placeholder">
-      <div class="el-image__placeholder"></div>
+      <div class="hu-image__placeholder"></div>
     </slot>
     <slot v-else-if="error" name="error">
-      <div class="el-image__error">{{ t('el.image.error') }}</div>
+      <div class="hu-image__error">{{ t('el.image.error') }}</div>
     </slot>
     <img
       v-else
-      class="el-image__inner"
+      class="hu-image__inner"
       v-bind="$attrs"
       v-on="$listeners"
       @click="clickHandler"
       :src="src"
       :style="imageStyle"
-      :class="{ 'el-image__inner--center': alignCenter, 'el-image__preview': preview }">
+      :class="{ 'hu-image__inner--center': alignCenter, 'hu-image__preview': preview }">
     <template v-if="preview">
       <image-viewer :z-index="zIndex" :initial-index="imageIndex" v-if="showViewer" :on-close="closeViewer" :url-list="previewSrcList"/>
     </template>
@@ -41,7 +41,7 @@
   let prevOverflow = '';
 
   export default {
-    name: 'ElImage',
+    name: 'HuImage',
 
     mixins: [Locale],
     inheritAttrs: false,

@@ -258,23 +258,23 @@
             },
             {
               "path": "/timeline",
-              "title": "Timeline 时间线(unfinished)"
+              "title": "Timeline 时间线"
             },
             {
               "path": "/divider",
-              "title": "Divider 分割线(unfinished)"
+              "title": "Divider 分割线"
             },
             {
               "path": "/calendar",
-              "title": "Calendar 日历(unfinished)"
+              "title": "Calendar 日历"
             },
             {
               "path": "/image",
-              "title": "Image 图片(unfinished)"
+              "title": "Image 图片"
             },
             {
               "path": "/backtop",
-              "title": "Backtop 回到顶部(unfinished)"
+              "title": "Backtop 回到顶部"
             },
             {
               "path": "/infiniteScroll",
