@@ -8,18 +8,18 @@
 :::demo 定义`value`属性，它接受`Number`或者`String`。
 
 ```html
-<el-badge :value="12" class="item">
+<hu-badge :value="12" class="item">
   <hu-button size="small">评论</hu-button>
-</el-badge>
-<el-badge :value="3" class="item">
+</hu-badge>
+<hu-badge :value="3" class="item">
   <hu-button size="small">回复</hu-button>
-</el-badge>
-<el-badge :value="1" class="item" type="primary">
+</hu-badge>
+<hu-badge :value="1" class="item" type="primary">
   <hu-button size="small">评论</hu-button>
-</el-badge>
-<el-badge :value="2" class="item" type="warning">
+</hu-badge>
+<hu-badge :value="2" class="item" type="warning">
   <hu-button size="small">回复</hu-button>
-</el-badge>
+</hu-badge>
 
 <hu-dropdown trigger="click">
   <span class="hu-dropdown-link">
@@ -28,11 +28,11 @@
   <hu-dropdown-menu slot="dropdown">
     <hu-dropdown-item class="clearfix">
       评论
-      <el-badge class="mark" :value="12" />
+      <hu-badge class="mark" :value="12" />
     </hu-dropdown-item>
     <hu-dropdown-item class="clearfix">
       回复
-      <el-badge class="mark" :value="3" />
+      <hu-badge class="mark" :value="3" />
     </hu-dropdown-item>
   </hu-dropdown-menu>
 </hu-dropdown>
@@ -52,12 +52,12 @@
 :::demo 由`max`属性定义，它接受一个`Number`，需要注意的是，只有当`value`为`Number`时，它才会生效。
 
 ```html
-<el-badge :value="200" :max="99" class="item">
+<hu-badge :value="200" :max="99" class="item">
   <hu-button size="small">评论</hu-button>
-</el-badge>
-<el-badge :value="100" :max="10" class="item">
+</hu-badge>
+<hu-badge :value="100" :max="10" class="item">
   <hu-button size="small">回复</hu-button>
-</el-badge>
+</hu-badge>
 
 <style>
 .item {
@@ -74,12 +74,12 @@
 :::demo 定义`value`为`String`类型是时可以用于显示自定义文本。
 
 ```html
-<el-badge value="new" class="item">
+<hu-badge value="new" class="item">
   <hu-button size="small">评论</hu-button>
-</el-badge>
-<el-badge value="hot" class="item">
+</hu-badge>
+<hu-badge value="hot" class="item">
   <hu-button size="small">回复</hu-button>
-</el-badge>
+</hu-badge>
 
 <style>
 .item {
@@ -96,10 +96,10 @@
 :::demo 除了数字外，设置`is-dot`属性，它接受一个`Boolean`。
 
 ```html
-<el-badge is-dot class="item">数据查询</el-badge>
-<el-badge is-dot class="item">
+<hu-badge is-dot class="item">数据查询</hu-badge>
+<hu-badge is-dot class="item">
   <hu-button class="share-button" icon="hu-icon-share" type="primary"></hu-button>
-</el-badge>
+</hu-badge>
 
 <style>
 .item {

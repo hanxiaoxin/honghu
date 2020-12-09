@@ -122,7 +122,7 @@
             },
             {
               "path": "/rate",
-              "title": "Rate 评分(unfinished)"
+              "title": "Rate 评分"
             },
             {
               "path": "/color-picker",
@@ -163,7 +163,7 @@
             },
             {
               "path": "/badge",
-              "title": "Badge 标记(unfinished)"
+              "title": "Badge 标记"
             },
             {
               "path": "/avatar",
