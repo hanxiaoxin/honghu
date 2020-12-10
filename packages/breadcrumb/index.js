@@ -1,8 +1,8 @@
-import ElBreadcrumb from './src/breadcrumb';
+import HuBreadcrumb from './src/breadcrumb';
 
 /* istanbul ignore next */
-ElBreadcrumb.install = function(Vue) {
-  Vue.component(ElBreadcrumb.name, ElBreadcrumb);
+HuBreadcrumb.install = function(Vue) {
+  Vue.component(HuBreadcrumb.name, HuBreadcrumb);
 };
 
-export default ElBreadcrumb;
+export default HuBreadcrumb;

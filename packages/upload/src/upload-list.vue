@@ -2,15 +2,15 @@
   <transition-group
     tag="ul"
     :class="[
-      'el-upload-list',
-      'el-upload-list--' + listType,
+      'hu-upload-list',
+      'hu-upload-list--' + listType,
       { 'is-disabled': disabled }
     ]"
-    name="el-list"
+    name="hu-list"
   >
     <li
       v-for="file in files"
-      :class="['el-upload-list__item', 'is-' + file.status, focusing ? 'focusing' : '']"
+      :class="['hu-upload-list__item', 'is-' + file.status, focusing ? 'focusing' : '']"
       :key="file.uid"
       tabindex="0"
       @keydown.delete="!disabled && $emit('remove', file)"
@@ -20,14 +20,14 @@
     >
       <slot :file="file">
         <img
-          class="el-upload-list__item-thumbnail"
+          class="hu-upload-list__item-thumbnail"
           v-if="file.status !== 'uploading' && ['picture-card', 'picture'].indexOf(listType) > -1"
           :src="file.url" alt=""
         >
-        <a class="el-upload-list__item-name" @click="handleClick(file)">
+        <a class="hu-upload-list__item-name" @click="handleClick(file)">
           <i class="hu-icon-document"></i>{{file.name}}
         </a>
-        <label class="el-upload-list__item-status-label">
+        <label class="hu-upload-list__item-status-label">
           <i :class="{
             'hu-icon-upload-success': true,
             'hu-icon-circle-check': listType === 'text',
@@ -36,15 +36,15 @@
         </label>
         <i class="hu-icon-close" v-if="!disabled" @click="$emit('remove', file)"></i>
         <i class="hu-icon-close-tip" v-if="!disabled">{{ t('el.upload.deleteTip') }}</i> <!--因为close按钮只在li:focus的时候 display, li blur后就不存在了，所以键盘导航时永远无法 focus到 close按钮上-->
-        <el-progress
+        <hu-progress
           v-if="file.status === 'uploading'"
           :type="listType === 'picture-card' ? 'circle' : 'line'"
           :stroke-width="listType === 'picture-card' ? 6 : 2"
           :percentage="parsePercentage(file.percentage)">
-        </el-progress>
-        <span class="el-upload-list__item-actions" v-if="listType === 'picture-card'">
+        </hu-progress>
+        <span class="hu-upload-list__item-actions" v-if="listType === 'picture-card'">
           <span
-            class="el-upload-list__item-preview"
+            class="hu-upload-list__item-preview"
             v-if="handlePreview && listType === 'picture-card'"
             @click="handlePreview(file)"
           >
@@ -52,7 +52,7 @@
           </span>
           <span
             v-if="!disabled"
-            class="el-upload-list__item-delete"
+            class="hu-upload-list__item-delete"
             @click="$emit('remove', file)"
           >
             <i class="hu-icon-delete"></i>

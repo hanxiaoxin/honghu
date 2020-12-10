@@ -1,6 +1,6 @@
 <template>
   <div
-    class="el-tree-node"
+    class="hu-tree-node"
     @click.stop="handleClick"
     @contextmenu="($event) => this.handleContextMenu($event)"
     v-show="node.visible"
@@ -23,18 +23,18 @@
     @drop.stop="handleDrop"
     ref="node"
   >
-    <div class="el-tree-node__content"
+    <div class="hu-tree-node__content"
       :style="{ 'padding-left': (node.level - 1) * tree.indent + 'px' }">
       <span
         @click.stop="handleExpandIconClick"
         :class="[
           { 'is-leaf': node.isLeaf, expanded: !node.isLeaf && expanded },
-          'el-tree-node__expand-icon',
+          'hu-tree-node__expand-icon',
           tree.iconClass ? tree.iconClass : 'hu-icon-caret-right'
         ]"
       >
       </span>
-      <el-checkbox
+      <hu-checkbox
         v-if="showCheckbox"
         v-model="node.checked"
         :indeterminate="node.indeterminate"
@@ -42,22 +42,22 @@
         @click.native.stop
         @change="handleCheckChange"
       >
-      </el-checkbox>
+      </hu-checkbox>
       <span
         v-if="node.loading"
-        class="el-tree-node__loading-icon hu-icon-loading">
+        class="hu-tree-node__loading-icon hu-icon-loading">
       </span>
       <node-content :node="node"></node-content>
     </div>
     <hu-collapse-transition>
       <div
-        class="el-tree-node__children"
+        class="hu-tree-node__children"
         v-if="!renderAfterExpand || childNodeRendered"
         v-show="expanded"
         role="group"
         :aria-expanded="expanded"
       >
-        <el-tree-node
+        <hu-tree-node
           :render-content="renderContent"
           v-for="child in node.childNodes"
           :render-after-expand="renderAfterExpand"
@@ -65,7 +65,7 @@
           :key="getNodeKey(child)"
           :node="child"
           @node-expand="handleChildNodeExpand">
-        </el-tree-node>
+        </hu-tree-node>
       </div>
     </hu-collapse-transition>
   </div>
@@ -73,14 +73,14 @@
 
 <script type="text/jsx">
   import HuCollapseTransition from 'honghu-ui/src/transitions/collapse-transition';
-  import ElCheckbox from 'honghu-ui/packages/checkbox';
+  import HuCheckbox from 'honghu-ui/packages/checkbox';
   import emitter from 'honghu-ui/src/mixins/emitter';
   import { getNodeKey } from './model/util';
 
   export default {
-    name: 'ElTreeNode',
+    name: 'HuTreeNode',
 
-    componentName: 'ElTreeNode',
+    componentName: 'HuTreeNode',
 
     mixins: [emitter],
 
@@ -104,7 +104,7 @@
 
     components: {
       HuCollapseTransition,
-      ElCheckbox,
+      HuCheckbox,
       NodeContent: {
         props: {
           node: {
@@ -121,7 +121,7 @@
               ? parent.renderContent.call(parent._renderProxy, h, { _self: tree.$vnode.context, node, data, store })
               : tree.$scopedSlots.default
                 ? tree.$scopedSlots.default({ node, data })
-                : <span class="el-tree-node__label">{ node.label }</span>
+                : <span class="hu-tree-node__label">{ node.label }</span>
           );
         }
       }

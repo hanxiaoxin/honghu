@@ -1,5 +1,5 @@
 <template>
-  <div class="el-transfer">
+  <div class="hu-transfer">
     <transfer-panel
       v-bind="$props"
       ref="leftPanel"
@@ -10,10 +10,10 @@
       @checked-change="onSourceCheckedChange">
       <slot name="left-footer"></slot>
     </transfer-panel>
-    <div class="el-transfer__buttons">
+    <div class="hu-transfer__buttons">
       <hu-button
         type="primary"
-        :class="['el-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
+        :class="['hu-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
         @click.native="addToLeft"
         :disabled="rightChecked.length === 0">
         <i class="hu-icon-arrow-left"></i>
@@ -21,7 +21,7 @@
       </hu-button>
       <hu-button
         type="primary"
-        :class="['el-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
+        :class="['hu-transfer__button', hasButtonTexts ? 'is-with-texts' : '']"
         @click.native="addToRight"
         :disabled="leftChecked.length === 0">
         <span v-if="buttonTexts[1] !== undefined">{{ buttonTexts[1] }}</span>
@@ -49,7 +49,7 @@
   import Migrating from 'honghu-ui/src/mixins/migrating';
 
   export default {
-    name: 'ElTransfer',
+    name: 'HuTransfer',
 
     mixins: [Emitter, Locale, Migrating],
 

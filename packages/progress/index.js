@@ -1,8 +1,8 @@
-import ElProgress from './src/progress';
+import HuProgress from './src/progress';
 
 /* istanbul ignore next */
-ElProgress.install = function(Vue) {
-  Vue.component(ElProgress.name, ElProgress);
+HuProgress.install = function(Vue) {
+  Vue.component(HuProgress.name, HuProgress);
 };
 
-export default ElProgress;
+export default HuProgress;

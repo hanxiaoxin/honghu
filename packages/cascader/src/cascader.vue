@@ -2,8 +2,8 @@
   <div
     ref="reference"
     :class="[
-      'el-cascader',
-      realSize && `el-cascader--${realSize}`,
+      'hu-cascader',
+      realSize && `hu-cascader--${realSize}`,
       { 'is-disabled': isDisabled }
     ]"
     v-clickoutside="() => toggleDropDownVisible(false)"
@@ -12,7 +12,7 @@
     @click="() => toggleDropDownVisible(readonly ? undefined : true)"
     @keydown="handleKeyDown">
 
-    <el-input
+    <hu-input
       ref="input"
       v-model="multiple ? presentText : inputValue"
       :size="realSize"
@@ -28,22 +28,22 @@
         <i
           v-if="clearBtnVisible"
           key="clear"
-          class="el-input__icon hu-icon-circle-close"
+          class="hu-input__icon hu-icon-circle-close"
           @click.stop="handleClear"></i>
         <i
           v-else
           key="arrow-down"
           :class="[
-            'el-input__icon',
+            'hu-input__icon',
             'hu-icon-arrow-down',
             dropDownVisible && 'is-reverse'
           ]"
           @click.stop="toggleDropDownVisible()"></i>
       </template>
-    </el-input>
+    </hu-input>
 
-    <div v-if="multiple" class="el-cascader__tags">
-      <el-tag
+    <div v-if="multiple" class="hu-cascader__tags">
+      <hu-tag
         v-for="(tag, index) in presentTags"
         :key="tag.key"
         type="info"
@@ -53,12 +53,12 @@
         disable-transitions
         @close="deleteTag(index)">
         <span>{{ tag.text }}</span>
-      </el-tag>
+      </hu-tag>
       <input
         v-if="filterable && !isDisabled"
         v-model.trim="inputValue"
         type="text"
-        class="el-cascader__search-input"
+        class="hu-cascader__search-input"
         :placeholder="presentTags.length ? '' : placeholder"
         @input="e => handleInput(inputValue, e)"
         @click.stop="toggleDropDownVisible(true)"
@@ -69,8 +69,8 @@
       <div
         v-show="dropDownVisible"
         ref="popper"
-        :class="['el-popper', 'el-cascader__dropdown', popperClass]">
-        <el-cascader-panel
+        :class="['hu-popper', 'hu-cascader__dropdown', popperClass]">
+        <hu-cascader-panel
           ref="panel"
           v-show="!filtering"
           v-model="checkedValue"
@@ -79,21 +79,21 @@
           :border="false"
           :render-label="$scopedSlots.default"
           @expand-change="handleExpandChange"
-          @close="toggleDropDownVisible(false)"></el-cascader-panel>
+          @close="toggleDropDownVisible(false)"></hu-cascader-panel>
         <hu-scrollbar
           ref="suggestionPanel"
           v-if="filterable"
           v-show="filtering"
           tag="ul"
-          class="el-cascader__suggestion-panel"
-          view-class="el-cascader__suggestion-list"
+          class="hu-cascader__suggestion-panel"
+          view-class="hu-cascader__suggestion-list"
           @keydown.native="handleSuggestionKeyDown">
           <template v-if="suggestions.length">
             <li
               v-for="(item, index) in suggestions"
               :key="item.uid"
               :class="[
-                'el-cascader__suggestion-item',
+                'hu-cascader__suggestion-item',
                 item.checked && 'is-checked'
               ]"
               :tabindex="-1"
@@ -103,7 +103,7 @@
             </li>
           </template>
           <slot v-else name="empty">
-            <li class="el-cascader__empty-text">{{ t('el.cascader.noMatch') }}</li>
+            <li class="hu-cascader__empty-text">{{ t('el.cascader.noMatch') }}</li>
           </slot>
         </hu-scrollbar>
       </div>
@@ -173,7 +173,7 @@ const InputSizeMap = {
 };
 
 export default {
-  name: 'ElCascader',
+  name: 'HuCascader',
 
   directives: { Clickoutside },
 
@@ -462,10 +462,10 @@ export default {
         let firstNode = null;
 
         if (filtering && suggestionPanel) {
-          firstNode = suggestionPanel.$el.querySelector('.el-cascader__suggestion-item');
+          firstNode = suggestionPanel.$el.querySelector('.hu-cascader__suggestion-item');
         } else {
-          const firstMenu = popper.querySelector('.el-cascader-menu');
-          firstNode = firstMenu.querySelector('.el-cascader-node[tabindex="-1"]');
+          const firstMenu = popper.querySelector('.hu-cascader-menu');
+          firstNode = firstMenu.querySelector('.hu-cascader-node[tabindex="-1"]');
         }
 
         if (firstNode) {
@@ -618,15 +618,15 @@ export default {
       if (this.$isServer || !$el) return;
 
       const { suggestionPanel } = this.$refs;
-      const inputInner = $el.querySelector('.el-input__inner');
+      const inputInner = $el.querySelector('.hu-input__inner');
 
       if (!inputInner) return;
 
-      const tags = $el.querySelector('.el-cascader__tags');
+      const tags = $el.querySelector('.hu-cascader__tags');
       let suggestionPanelEl = null;
 
       if (suggestionPanel && (suggestionPanelEl = suggestionPanel.$el)) {
-        const suggestionList = suggestionPanelEl.querySelector('.el-cascader__suggestion-list');
+        const suggestionList = suggestionPanelEl.querySelector('.hu-cascader__suggestion-list');
         suggestionList.style.minWidth = inputInner.offsetWidth + 'px';
       }
 

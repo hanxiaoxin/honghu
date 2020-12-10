@@ -16,6 +16,11 @@ export declare class ElInputNumber extends ElementUIComponent {
   /** Incremental step */
   step: number
 
+  /**
+   * extra unit text
+   */
+  subtext: string
+
   /** Size of the component */
   size: InputNumberSize
 

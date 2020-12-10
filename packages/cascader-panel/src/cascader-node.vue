@@ -1,6 +1,6 @@
 <script>
-  import ElCheckbox from 'honghu-ui/packages/checkbox';
-  import ElRadio from 'honghu-ui/packages/radio';
+  import HuCheckbox from 'honghu-ui/packages/checkbox';
+  import HuRadio from 'honghu-ui/packages/radio';
   import { isEqual } from 'honghu-ui/src/utils/util';
 
   const stopPropagation = e => e.stopPropagation();
@@ -9,8 +9,8 @@
     inject: ['panel'],
 
     components: {
-      ElCheckbox,
-      ElRadio
+      HuCheckbox,
+      HuRadio
     },
 
     props: {
@@ -130,12 +130,12 @@
         }
 
         return (
-          <el-checkbox
+          <hu-checkbox
             value={ node.checked }
             indeterminate={ node.indeterminate }
             disabled={ isDisabled }
             { ...events }
-          ></el-checkbox>
+          ></hu-checkbox>
         );
       },
 
@@ -162,19 +162,19 @@
 
       renderCheckIcon(h) {
         return (
-          <i class="hu-icon-check el-cascader-node__prefix"></i>
+          <i class="hu-icon-check hu-cascader-node__prefix"></i>
         );
       },
 
       renderLoadingIcon(h) {
         return (
-          <i class="hu-icon-loading el-cascader-node__postfix"></i>
+          <i class="hu-icon-loading hu-cascader-node__postfix"></i>
         );
       },
 
       renderExpandIcon(h) {
         return (
-          <i class="hu-icon-arrow-right el-cascader-node__postfix"></i>
+          <i class="hu-icon-arrow-right hu-cascader-node__postfix"></i>
         );
       },
 
@@ -186,7 +186,7 @@
           : null;
 
         return (
-          <span class="el-cascader-node__label">{ vnode || node.label }</span>
+          <span class="hu-cascader-node__label">{ vnode || node.label }</span>
         );
       }
     },
@@ -228,7 +228,7 @@
           aria-expanded={ inActivePath }
           tabindex={ disabled ? null : -1 }
           class={{
-            'el-cascader-node': true,
+            'hu-cascader-node': true,
             'is-selectable': checkStrictly,
             'in-active-path': inActivePath,
             'in-checked-path': inCheckedPath,

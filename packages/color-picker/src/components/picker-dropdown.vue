@@ -1,5 +1,5 @@
 <template>
-  <transition name="el-zoom-in-top" @after-leave="doDestroy">
+  <transition name="hu-zoom-in-top" @after-leave="doDestroy">
     <div
       class="hu-color-dropdown"
       v-show="showPopper">
@@ -11,13 +11,13 @@
       <predefine v-if="predefine" :color="color" :colors="predefine"></predefine>
       <div class="hu-color-dropdown__btns">
         <span class="hu-color-dropdown__value">
-          <el-input
+          <hu-input
             v-model="customInput"
             @keyup.native.enter="handleConfirm"
             @blur="handleConfirm"
             :validate-event="false"
             size="mini">
-          </el-input>
+          </hu-input>
         </span>
         <hu-button
           size="mini"
@@ -45,7 +45,7 @@
   import Predefine from './predefine';
   import Popper from 'honghu-ui/src/utils/vue-popper';
   import Locale from 'honghu-ui/src/mixins/locale';
-  import ElInput from 'honghu-ui/packages/input';
+  import HuInput from 'honghu-ui/packages/input';
   import HuButton from 'honghu-ui/packages/button';
 
   export default {
@@ -57,7 +57,7 @@
       SvPanel,
       HueSlider,
       AlphaSlider,
-      ElInput,
+      HuInput,
       HuButton,
       Predefine
     },

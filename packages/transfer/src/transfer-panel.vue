@@ -1,18 +1,18 @@
 <template>
-  <div class="el-transfer-panel">
-    <p class="el-transfer-panel__header">
-      <el-checkbox
+  <div class="hu-transfer-panel">
+    <p class="hu-transfer-panel__header">
+      <hu-checkbox
         v-model="allChecked"
         @change="handleAllCheckedChange"
         :indeterminate="isIndeterminate">
         {{ title }}
         <span>{{ checkedSummary }}</span>
-      </el-checkbox>
+      </hu-checkbox>
     </p>
 
-    <div :class="['el-transfer-panel__body', hasFooter ? 'is-with-footer' : '']">
-      <el-input
-        class="el-transfer-panel__filter"
+    <div :class="['hu-transfer-panel__body', hasFooter ? 'is-with-footer' : '']">
+      <hu-input
+        class="hu-transfer-panel__filter"
         v-model="query"
         size="small"
         :placeholder="placeholder"
@@ -20,61 +20,61 @@
         @mouseleave.native="inputHover = false"
         v-if="filterable">
         <i slot="prefix"
-          :class="['el-input__icon', 'hu-icon-' + inputIcon]"
+          :class="['hu-input__icon', 'hu-icon-' + inputIcon]"
           @click="clearQuery"
         ></i>
-      </el-input>
-      <el-checkbox-group
+      </hu-input>
+      <hu-checkbox-group
         v-model="checked"
         v-show="!hasNoMatch && data.length > 0"
         :class="{ 'is-filterable': filterable }"
-        class="el-transfer-panel__list">
-        <el-checkbox
-          class="el-transfer-panel__item"
+        class="hu-transfer-panel__list">
+        <hu-checkbox
+          class="hu-transfer-panel__item"
           :label="item[keyProp]"
           :disabled="item[disabledProp]"
           :key="item[keyProp]"
           v-for="item in filteredData">
           <option-content :option="item"></option-content>
-        </el-checkbox>
-      </el-checkbox-group>
+        </hu-checkbox>
+      </hu-checkbox-group>
       <p
-        class="el-transfer-panel__empty"
+        class="hu-transfer-panel__empty"
         v-show="hasNoMatch">{{ t('el.transfer.noMatch') }}</p>
       <p
-        class="el-transfer-panel__empty"
+        class="hu-transfer-panel__empty"
         v-show="data.length === 0 && !hasNoMatch">{{ t('el.transfer.noData') }}</p>
     </div>
-    <p class="el-transfer-panel__footer" v-if="hasFooter">
+    <p class="hu-transfer-panel__footer" v-if="hasFooter">
       <slot></slot>
     </p>
   </div>
 </template>
 
 <script>
-  import ElCheckboxGroup from 'honghu-ui/packages/checkbox-group';
-  import ElCheckbox from 'honghu-ui/packages/checkbox';
-  import ElInput from 'honghu-ui/packages/input';
+  import HuCheckboxGroup from 'honghu-ui/packages/checkbox-group';
+  import HuCheckbox from 'honghu-ui/packages/checkbox';
+  import HuInput from 'honghu-ui/packages/input';
   import Locale from 'honghu-ui/src/mixins/locale';
 
   export default {
     mixins: [Locale],
 
-    name: 'ElTransferPanel',
+    name: 'HuTransferPanel',
 
-    componentName: 'ElTransferPanel',
+    componentName: 'HuTransferPanel',
 
     components: {
-      ElCheckboxGroup,
-      ElCheckbox,
-      ElInput,
+      HuCheckboxGroup,
+      HuCheckbox,
+      HuInput,
       OptionContent: {
         props: {
           option: Object
         },
         render(h) {
           const getParent = vm => {
-            if (vm.$options.componentName === 'ElTransferPanel') {
+            if (vm.$options.componentName === 'HuTransferPanel') {
               return vm;
             } else if (vm.$parent) {
               return getParent(vm.$parent);

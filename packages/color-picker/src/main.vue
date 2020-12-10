@@ -37,7 +37,7 @@
   import Emitter from 'honghu-ui/src/mixins/emitter';
 
   export default {
-    name: 'ElColorPicker',
+    name: 'HuColorPicker',
 
     mixins: [Emitter],
 

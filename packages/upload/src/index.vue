@@ -1,18 +1,18 @@
 <script>
 import UploadList from './upload-list';
 import Upload from './upload';
-import ElProgress from 'honghu-ui/packages/progress';
+import HuProgress from 'honghu-ui/packages/progress';
 import Migrating from 'honghu-ui/src/mixins/migrating';
 
 function noop() {}
 
 export default {
-  name: 'ElUpload',
+  name: 'HuUpload',
 
   mixins: [Migrating],
 
   components: {
-    ElProgress,
+    HuProgress,
     UploadList,
     Upload
   },

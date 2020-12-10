@@ -5,7 +5,7 @@ import Locale from 'honghu-ui/src/mixins/locale';
 import { generateId } from 'honghu-ui/src/utils/util';
 
 export default {
-  name: 'ElCascaderMenu',
+  name: 'HuCascaderMenu',
 
   mixins: [Locale],
 
@@ -76,7 +76,7 @@ export default {
 
     renderEmptyText(h) {
       return (
-        <div class="el-cascader-menu__empty-text">{ this.t('el.cascader.noData') }</div>
+        <div class="hu-cascader-menu__empty-text">{ this.t('el.cascader.noData') }</div>
       );
     },
     renderNodeList(h) {
@@ -103,7 +103,7 @@ export default {
 
       return [
         ...nodes,
-        isHoverMenu ? <svg ref='hoverZone' class='el-cascader-menu__hover-zone'></svg> : null
+        isHoverMenu ? <svg ref='hoverZone' class='hu-cascader-menu__hover-zone'></svg> : null
       ];
     }
   },
@@ -123,10 +123,10 @@ export default {
         tag="ul"
         role="menu"
         id={ menuId }
-        class="el-cascader-menu"
-        wrap-class="el-cascader-menu__wrap"
+        class="hu-cascader-menu"
+        wrap-class="hu-cascader-menu__wrap"
         view-class={{
-          'el-cascader-menu__list': true,
+          'hu-cascader-menu__list': true,
           'is-empty': isEmpty
         }}
         { ...events }>
