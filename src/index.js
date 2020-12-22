@@ -85,9 +85,9 @@ import Popconfirm from '../packages/popconfirm/index.js';
 import SideMenu from '../packages/side-menu/index.js';
 import SideMenuItem from '../packages/side-menu-item/index.js';
 import SideMenuItemGroup from '../packages/side-menu-item-group/index.js';
-import SideSubMenu from '../packages/side-submenu/index';
 import locale from 'honghu-ui/src/locale';
 import CollapseTransition from 'honghu-ui/src/transitions/collapse-transition';
+import SideSubmenu from '../packages/side-submenu/index';
 
 const components = [
   Pagination,
@@ -170,7 +170,7 @@ const components = [
   SideMenu,
   SideMenuItem,
   SideMenuItemGroup,
-  SideSubMenu,
+  SideSubmenu,
   CollapseTransition
 ];
 
@@ -206,7 +206,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '2.13.4',
+  version: '2.13.5',
   locale: locale.use,
   i18n: locale.i18n,
   install,

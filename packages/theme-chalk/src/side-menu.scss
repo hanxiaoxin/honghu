@@ -239,7 +239,7 @@
   padding-left: 0;
 
   @include e(title) {
-    @include menu-item;
+    @include side-menu-item;
 
     &:hover {
       background-color: $--menu-item-hover-fill;

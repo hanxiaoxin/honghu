@@ -56,22 +56,22 @@
                     <i class="hu-icon-location"></i>
                     <span>导航一</span>
                 </template>
-                <hu-side-menu-item index="zh-CN/component/">
+                <hu-side-menu-item index="zh-CN/component/tabs">
                     <i class="hu-icon-location"></i>
-                    <span>容器服务</span>
+                    <span>tabs</span>
                 </hu-side-menu-item>
-                <hu-side-menu-item index="hc">集群服务</hu-side-menu-item>
+                <hu-side-menu-item index="hc1">集群服务</hu-side-menu-item>
             </hu-side-submenu>
             <hu-side-submenu index="2">
                 <template slot="title">
                     <i class="hu-icon-location"></i>
-                    <span>导航一</span>
+                    <span>导航二</span>
                 </template>
-                <hu-side-menu-item index="zh-CN/component/">
+                <hu-side-menu-item index="zh-CN/component/steps">
                     <i class="hu-icon-location"></i>
-                    <span>容器服务</span>
+                    <span>步骤条</span>
                 </hu-side-menu-item>
-                <hu-side-menu-item index="hc">集群服务</hu-side-menu-item>
+                <hu-side-menu-item index="hc2">集群服务</hu-side-menu-item>
             </hu-side-submenu>
             <hu-side-menu-item index="1-1"><span>选项1</span></hu-side-menu-item>
             <hu-side-menu-item index="1-2"><span>选项2</span></hu-side-menu-item>
