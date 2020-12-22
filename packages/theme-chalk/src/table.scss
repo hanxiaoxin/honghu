@@ -117,8 +117,15 @@
     }
   }
 
-  th, td {
+  td {
     padding: 12px 0;
+  }
+
+  th{
+    padding: 8px 0;
+  }
+
+  th, td {
     min-width: 0;
     box-sizing: border-box;
     text-overflow: ellipsis;
@@ -156,8 +163,12 @@
 
   @include m(small) {
     font-size: 12px;
-    th, td {
+    th {
       padding: 8px 0;
+    }
+
+    td{
+      padding: 12px 0;
     }
   }
 
@@ -188,6 +199,9 @@
     overflow: hidden;
     user-select: none;
     background-color: $--table-header-background-color;
+    font-weight: 500;
+    color: #666666;
+    border-right: 1px solid #fff;
 
     > .cell {
       display: inline-block;
@@ -216,6 +230,9 @@
   }
 
   td {
+    color: rgba(102, 102, 102, 1);
+    font-weight: normal;
+
     div {
       box-sizing: border-box;
     }

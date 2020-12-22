@@ -160,7 +160,8 @@ export default {
           order: ''
         };
       }
-    }
+    },
+    innerBorder: Boolean
   },
 
   components: {
@@ -261,6 +262,8 @@ export default {
 
     getHeaderCellClass(rowIndex, columnIndex, row, column) {
       const classes = [column.id, column.order, column.headerAlign, column.className, column.labelClassName];
+
+      classes.push('hu-table-column-th');
 
       if (rowIndex === 0 && this.isCellHidden(columnIndex, row)) {
         classes.push('is-hidden');

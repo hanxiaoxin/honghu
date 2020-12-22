@@ -26,7 +26,8 @@ export default {
     rowClassName: [String, Function],
     rowStyle: [Object, Function],
     fixed: String,
-    highlight: Boolean
+    highlight: Boolean,
+    innerBorder: Boolean
   },
 
   render(h) {

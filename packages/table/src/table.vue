@@ -155,6 +155,7 @@
         <table-header
           ref="rightFixedTableHeader"
           fixed="right"
+          :innerBorder="innerBorder"
           :border="border"
           :store="store"
           :style="{
@@ -175,6 +176,7 @@
           :row-class-name="rowClassName"
           :row-style="rowStyle"
           :highlight="highlightCurrentRow"
+          :innerBorder="innerBorder"
           :style="{
             width: bodyWidth
           }">
@@ -192,6 +194,7 @@
         <table-footer
           fixed="right"
           :border="border"
+          :innerBorder="innerBorder"
           :sum-text="sumText || t('el.table.sumText')"
           :summary-method="summaryMethod"
           :store="store"
@@ -261,6 +264,11 @@
       stripe: Boolean,
 
       border: Boolean,
+
+      innerBorder: {
+        type: Boolean,
+        default: true
+      },
 
       rowKey: [String, Function],
 
