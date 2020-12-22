@@ -83,5 +83,6 @@
   "popconfirm": "./packages/popconfirm/index.js",
   "side-menu": "./packages/side-menu/index.js",
   "side-menu-item": "./packages/side-menu-item/index.js",
-  "side-menu-item-group": "./packages/side-menu-item-group/index.js"
+  "side-menu-item-group": "./packages/side-menu-item-group/index.js",
+  "side-submenu": "./packages/side-submenu/index.js"
 }
