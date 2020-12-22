@@ -33,12 +33,12 @@ export default ${ComponentName};`
   {
     filename: 'src/main.vue',
     content: `<template>
-  <div class="el-${componentname}"></div>
+  <div class="hu-${componentname}"></div>
 </template>
 
 <script>
 export default {
-  name: 'El${ComponentName}'
+  name: 'Hu${ComponentName}'
 };
 </script>`
   },
@@ -117,10 +117,10 @@ const elementTsPath = path.join(__dirname, '../../types/honghu-ui.d.ts');
 
 let elementTsText = `${fs.readFileSync(elementTsPath)}
 /** ${ComponentName} Component */
-export class ${ComponentName} extends El${ComponentName} {}`;
+export class ${ComponentName} extends Hu${ComponentName} {}`;
 
 const index = elementTsText.indexOf('export') - 1;
-const importString = `import { El${ComponentName} } from './${componentname}'`;
+const importString = `import { Hu${ComponentName} } from './${componentname}'`;
 
 elementTsText = elementTsText.slice(0, index) + importString + '\n' + elementTsText.slice(index);
 

@@ -1,4 +1,4 @@
-.demo-block.demo-menu {
+.demo-block.demo-menu, .demo-block.demo-side-menu {
   .hu-menu-demo {
     padding-left: 55px;
   }
@@ -6,6 +6,7 @@
     width: 240px;
     min-height: 400px;
   }
+
   .line {
     height: 1px;
     background-color: #e0e6ed;
@@ -24,4 +25,13 @@
       text-align: left;
     }
   }
+}
+
+.hu-side-submenu-hover i{
+  color: #fff;
+}
+
+
+.hu-side-menu--default{
+  height: 400px;
 }

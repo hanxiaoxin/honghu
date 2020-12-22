@@ -787,6 +787,16 @@ $--menu-item-font-color: $--color-text-primary !default;
 $--menu-background-color: $--color-white !default;
 $--menu-item-hover-fill: $--color-primary-light-9 !default;
 
+/* Side Menu
+--------------------------*/
+/// fontSize||Font|1
+$--side-menu-item-font-size: $--font-size-base !default;
+/// color||Color|0
+$--side-menu-item-font-color: $--color-text-primary !default;
+/// color||Color|0
+$--side-menu-background-color: $--color-white !default;
+$--side-menu-item-hover-fill: $--color-primary-light-9 !default;
+
 /* Rate
 --------------------------*/
 $--rate-height: 20px !default;

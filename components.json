@@ -80,5 +80,8 @@
   "cascader-panel": "./packages/cascader-panel/index.js",
   "avatar": "./packages/avatar/index.js",
   "drawer": "./packages/drawer/index.js",
-  "popconfirm": "./packages/popconfirm/index.js"
+  "popconfirm": "./packages/popconfirm/index.js",
+  "side-menu": "./packages/side-menu/index.js",
+  "side-menu-item": "./packages/side-menu-item/index.js",
+  "side-menu-item-group": "./packages/side-menu-item-group/index.js"
 }

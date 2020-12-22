@@ -204,6 +204,10 @@
               "title": "NavMenu 导航菜单"
             },
             {
+              "path": "/side-menu",
+              "title": "SideMenu 侧边菜单"
+            },
+            {
               "path": "/tabs",
               "title": "Tabs 标签页"
             },
@@ -496,6 +500,10 @@
             {
               "path": "/menu",
               "title": "NavMenu"
+            },
+            {
+              "path": "/side-menu",
+              "title": "SideMenu"
             },
             {
               "path": "/tabs",

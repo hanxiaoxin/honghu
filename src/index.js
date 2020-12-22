@@ -82,6 +82,10 @@ import CascaderPanel from '../packages/cascader-panel/index.js';
 import Avatar from '../packages/avatar/index.js';
 import Drawer from '../packages/drawer/index.js';
 import Popconfirm from '../packages/popconfirm/index.js';
+import SideMenu from '../packages/side-menu/index.js';
+import SideMenuItem from '../packages/side-menu-item/index.js';
+import SideMenuItemGroup from '../packages/side-menu-item-group/index.js';
+import SideSubMenu from '../packages/side-submenu/index';
 import locale from 'honghu-ui/src/locale';
 import CollapseTransition from 'honghu-ui/src/transitions/collapse-transition';
 
@@ -163,6 +167,10 @@ const components = [
   Avatar,
   Drawer,
   Popconfirm,
+  SideMenu,
+  SideMenuItem,
+  SideMenuItemGroup,
+  SideSubMenu,
   CollapseTransition
 ];
 
@@ -198,7 +206,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '2.13.3',
+  version: '2.13.4',
   locale: locale.use,
   i18n: locale.i18n,
   install,
@@ -284,5 +292,8 @@ export default {
   CascaderPanel,
   Avatar,
   Drawer,
-  Popconfirm
+  Popconfirm,
+  SideMenu,
+  SideMenuItem,
+  SideMenuItemGroup
 };
