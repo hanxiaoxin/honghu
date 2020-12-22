@@ -170,8 +170,8 @@ const components = [
   SideMenu,
   SideMenuItem,
   SideMenuItemGroup,
-  SideSubmenu,
-  CollapseTransition
+  CollapseTransition,
+  SideSubmenu
 ];
 
 const install = function(Vue, opts = {}) {
