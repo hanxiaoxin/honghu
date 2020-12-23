@@ -320,6 +320,8 @@ export default {
         rootMenu.mode === 'vertical' && !rootMenu.collapse
     ) ? 'hu-icon-arrow-down' : 'hu-icon-arrow-right';
 
+    const arrow = rootMenu.isCollapse ? '' : (<i class={['hu-side-submenu__icon-arrow', submenuTitleIcon]}></i>);
+
     return (
       <li
         class={{
@@ -344,7 +346,7 @@ export default {
           style={[paddingStyle, titleStyle, { backgroundColor }]}
         >
           {$slots.title}
-          <i class={[ 'hu-side-submenu__icon-arrow', submenuTitleIcon ]}></i>
+          {arrow}
         </div>
         {this.isMenuPopup ? popupMenu : inlineMenu}
       </li>

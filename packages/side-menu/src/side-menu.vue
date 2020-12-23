@@ -137,6 +137,12 @@ export default {
 
     isCollapse(value) {
       this.$emit('menu-fold', value);
+
+      if (value) {
+        // 关闭所有的menu
+        this.openedMenus = [];
+        this.broadcast('HuSideSubmenu', 'toggle-collapse', value);
+      }
     }
   },
 
