@@ -42,6 +42,7 @@
         <h5>深色</h5>
         <hu-side-menu
                 fold
+                @menu-fold="handleFold"
                 default-active="1-2"
                 class="hu-menu-vertical-demo"
                 @open="handleOpen"
@@ -91,7 +92,10 @@
       },
       handleClose(key, keyPath) {
         console.log(key, keyPath);
-      }
+      },
+        handleFold(key, value){
+          console.log(key)
+        }
     }
   }
 </script>

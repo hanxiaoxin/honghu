@@ -133,6 +133,10 @@ export default {
     collapse(value) {
       if (value) this.openedMenus = [];
       this.broadcast('HuSubmenu', 'toggle-collapse', value);
+    },
+
+    isCollapse(value) {
+      this.$emit('menu-fold', value);
     }
   },
 
@@ -302,6 +306,9 @@ export default {
 
       // 记录icon状态
       this.iconFold = this.isCollapse;
+
+      // 关闭所有的menu
+      this.openedMenus = [];
     },
 
     onMouseEnter() {
@@ -313,8 +320,6 @@ export default {
     },
 
     onMouseLeave() {
-      console.log(this.fold, this.iconFold, this.isCollapse);
-
       if (!this.fold) return;
 
       if (this.iconFold && !this.isCollapse) {
@@ -375,10 +380,10 @@ export default {
           on: {
             click: () => this.collapseMenu(),
             mouseenter: function() {
-              console.log(this);
+              // console.log(this);
             },
             mouseleave: function() {
-              console.log(this);
+              // console.log(this);
             }
           }
         })
