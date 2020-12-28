@@ -21,11 +21,11 @@
         @focus="handleFocus"
         @blur="focusing = false"
       >
-        <slot name="title">{{title}}</slot>
-        <i
-          class="hu-collapse-item__arrow hu-icon-arrow-right"
-          :class="{'is-active': isActive}">
-        </i>
+        <slot name="title"><span class="hu-collapse-item__title"></span>{{title}}</slot>
+        <span class="hu-collapse-item__arrow-box">收起  <i
+            class="hu-collapse-item__arrow hu-icon-arrow-right"
+            :class="{'is-active': isActive}">
+        </i></span>
       </div>
     </div>
     <hu-collapse-transition>
