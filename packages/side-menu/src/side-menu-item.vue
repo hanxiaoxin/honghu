@@ -2,7 +2,7 @@
   <li class="hu-side-menu-item"
       role="menuitem"
       tabindex="-1"
-      :style="[paddingStyle, itemStyle, { backgroundColor }]"
+      :style="[paddingStyle, itemStyle, { backgroundColor }, additionStyle]"
       :class="{
       'is-active': active,
       'is-disabled': disabled
@@ -36,6 +36,14 @@ export default {
     },
     route: [String, Object],
     disabled: Boolean
+  },
+
+  data() {
+    return {
+      additionStyle: {
+
+      }
+    };
   },
 
   computed: {
@@ -72,14 +80,21 @@ export default {
   },
 
   watch: {
-    active: function(val) {
-      if (val) {
-        this.$el.style.backgroundColor = this.hoverBackground;
-        this.$el.style.color = this.hoverTextColor;
-      } else {
-        this.$el.style.backgroundColor = '';
-        this.$el.style.color = '';
-      }
+    active: {
+      handler: function(val) {
+        if (val) {
+          this.additionStyle = {
+            backgroundColor: this.hoverBackground,
+            color: this.hoverTextColor
+          };
+        } else {
+          this.additionStyle = {
+            backgroundColor: '',
+            color: ''
+          };
+        }
+      },
+      immediate: true
     }
   },
 

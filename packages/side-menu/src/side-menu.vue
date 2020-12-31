@@ -369,11 +369,18 @@ export default {
     }, this.$slots.default)];
 
     if (this.$slots.title) {
-      content.unshift(
-        (<div class="hu-side-menu--title">
-          {this.$slots.title}
-        </div>)
-      );
+      const header = [
+        h('div', {
+          class: {
+            'hu-side-menu--title': true
+          },
+          on: {
+            mouseenter: () => this.onMouseEnter(),
+            mouseleave: () => this.onMouseLeave()
+          }
+        }, [this.$slots.title])
+      ];
+      content.unshift(header);
     }
 
     if (this.fold) {

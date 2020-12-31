@@ -53,6 +53,10 @@
                     text-color="#AAAAAA"
                     hover-text-color="#FFFFFF"
                     active-text-color="#FFFFFF">
+                <template slot="title">
+                    <i class="hu-icon-location"></i>
+                    <span>支持顶部渲染slot</span>
+                </template>
                 <hu-side-submenu index="1">
                     <template slot="title">
                         <i class="hu-icon-location"></i>
