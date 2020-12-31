@@ -40,47 +40,50 @@
   </hu-col>
     <hu-col :span="12">
         <h5>深色</h5>
-        <hu-side-menu
-                fold
-                @menu-fold="handleFold"
-                default-active="1-2"
-                class="hu-menu-vertical-demo"
-                @open="handleOpen"
-                @close="handleClose"
-                hoverBackgroundColor="rgba(42,51,68,.6)"
-                background-color="#1D2535"
-                text-color="#AAAAAA"
-                hover-text-color="#FFFFFF"
-                active-text-color="#FFFFFF">
-            <hu-side-submenu index="1">
-                <template slot="title">
-                    <i class="hu-icon-location"></i>
-                    <span>导航一</span>
-                </template>
-                <hu-side-menu-item index="zh-CN/component/tabs">
-                    <i class="hu-icon-location"></i>
-                    <span>tabs</span>
-                </hu-side-menu-item>
-                <hu-side-menu-item index="hc1">集群服务</hu-side-menu-item>
-            </hu-side-submenu>
-            <hu-side-submenu index="2">
-                <template slot="title">
-                    <i class="hu-icon-location"></i>
-                    <span>导航二</span>
-                </template>
-                <hu-side-menu-item index="zh-CN/component/steps">
-                    <i class="hu-icon-location"></i>
-                    <span>步骤条</span>
-                </hu-side-menu-item>
-                <hu-side-menu-item index="hc2">集群服务</hu-side-menu-item>
-            </hu-side-submenu>
-            <hu-side-menu-item index="1-1"><span>选项1</span></hu-side-menu-item>
-            <hu-side-menu-item index="1-2"><span>选项2</span></hu-side-menu-item>
-            <hu-side-menu-item-group>
-                <template slot="title">分组一</template>
-                <hu-side-menu-item index="1-3"><i class="hu-icon-location"></i><span style="margin-left: 12px;">选项3</span></hu-side-menu-item>
-            </hu-side-menu-item-group>
-        </hu-side-menu>
+        <div style="display:flex;">
+            <hu-side-menu
+                    fold
+                    @menu-fold="handleFold"
+                    :default-active="$route.path"
+                    class="hu-menu-vertical-demo"
+                    @open="handleOpen"
+                    @close="handleClose"
+                    hoverBackgroundColor="rgba(42,51,68,.6)"
+                    background-color="#1D2535"
+                    text-color="#AAAAAA"
+                    hover-text-color="#FFFFFF"
+                    active-text-color="#FFFFFF">
+                <hu-side-submenu index="1">
+                    <template slot="title">
+                        <i class="hu-icon-location"></i>
+                        <span>导航一</span>
+                    </template>
+                    <hu-side-menu-item index="zh-CN/component/tabs">
+                        <i class="hu-icon-location"></i>
+                        <span>tabs</span>
+                    </hu-side-menu-item>
+                    <hu-side-menu-item index="hc1">集群服务</hu-side-menu-item>
+                </hu-side-submenu>
+                <hu-side-submenu index="2">
+                    <template slot="title">
+                        <i class="hu-icon-location"></i>
+                        <span>导航二</span>
+                    </template>
+                    <hu-side-menu-item index="zh-CN/component/steps">
+                        <i class="hu-icon-location"></i>
+                        <span>步骤条</span>
+                    </hu-side-menu-item>
+                    <hu-side-menu-item index="hc2">集群服务</hu-side-menu-item>
+                </hu-side-submenu>
+                <hu-side-menu-item index="/zh-CN/component/side-menu"><span>选项1</span></hu-side-menu-item>
+                <hu-side-menu-item index="/zh-CN/component/side-menu"><span>选项2</span></hu-side-menu-item>
+                <hu-side-menu-item-group>
+                    <template slot="title">分组一</template>
+                    <hu-side-menu-item index="1-3"><i class="hu-icon-location"></i><span style="margin-left: 12px;">选项3</span></hu-side-menu-item>
+                </hu-side-menu-item-group>
+            </hu-side-menu>
+            <span>11111111111111111111111111111111111111111111111111111</span>
+        </div>
     </hu-col>
 </hu-row>
 

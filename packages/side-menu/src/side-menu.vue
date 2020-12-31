@@ -106,8 +106,8 @@ export default {
       openedMenus: this.defaultOpeneds ? this.defaultOpeneds.slice(0) : [],
       items: {},
       submenus: {},
-      isCollapse: false,
-      iconFold: false
+      isCollapse: false, // 是否处于收缩状态
+      iconFold: false // 收缩icon状态
     };
   },
 
@@ -305,10 +305,17 @@ export default {
     },
 
     collapseMenu() {
-      this.isCollapse = !this.isCollapse;
-      this.$emit('hu-menu-collapse', this);
-
       if (!this.fold) return;
+
+      this.isCollapse = !this.isCollapse;
+      console.log(this.$el);
+      if (this.isCollapse) {
+        this.$el.style.position = 'absolute';
+      } else {
+        this.$el.style.position = 'relative';
+      }
+
+      this.$emit('hu-menu-collapse', this);
 
       // 记录icon状态
       this.iconFold = this.isCollapse;
