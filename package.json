@@ -1,6 +1,6 @@
 {
   "name": "honghu-ui",
-  "version": "2.13.12",
+  "version": "2.13.13",
   "description": "A Component Library for Vue.js.",
   "main": "lib/honghu-ui.common.js",
   "files": [
